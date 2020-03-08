@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ImageViewCell.layoutSubviews():ImageViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cellImageView?.image?.size.width">
+            </PersistentString>
+            <PersistentString
+               value = "UIScreen.main.bounds.width - 32">
+            </PersistentString>
+            <PersistentString
+               value = "cellImageViewWidth?.constant">
+            </PersistentString>
+            <PersistentString
+               value = "cellImageView?.image?.size.height">
+            </PersistentString>
+            <PersistentString
+               value = "cellImageView?.frame.height">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MainNavigationTabBarView.set(selected:identifier:animated:):MainNavigationTabBarView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "view.frame.origin.x">
+            </PersistentString>
+            <PersistentString
+               value = "view.superview?.convert(view.frame.origin, to: nil)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PhotoAnalyserViewControllerPresenter.viewDidLoad():PhotoAnalyserViewControllerPresenter.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "tableViewAdapter?.tableView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ImageViewCellData.init(cellIdentifier:image:):ImageViewCellData.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ImageViewCell.fill(data:):ImageViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ImageViewCellData.cellHeight():ImageViewCellData.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UITableView.automaticDimension &gt; UIScreen.main.bounds.height/3 ? UIScreen.main.bounds.height/3 : UITableView.automaticDimension">
+            </PersistentString>
+            <PersistentString
+               value = "UITableView.automaticDimension">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

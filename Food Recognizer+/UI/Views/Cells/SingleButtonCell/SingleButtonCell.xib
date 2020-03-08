@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FbH-P8-63I" customClass="SingleButtonCell" customModule="True_Photo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FbH-P8-63I" id="6u7-YZ-Pez">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jqb-7u-gP8">
+                        <rect key="frame" x="16" y="7" width="382" height="30"/>
+                        <connections>
+                            <action selector="buttonTap:" destination="FbH-P8-63I" eventType="touchUpInside" id="2JH-Af-f24"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Jqb-7u-gP8" secondAttribute="bottom" constant="7" id="7JR-LS-c25"/>
+                    <constraint firstItem="Jqb-7u-gP8" firstAttribute="top" secondItem="6u7-YZ-Pez" secondAttribute="top" constant="7" id="RKq-PW-n5k"/>
+                    <constraint firstItem="Jqb-7u-gP8" firstAttribute="leading" secondItem="6u7-YZ-Pez" secondAttribute="leading" constant="16" id="hGU-pX-AT6"/>
+                    <constraint firstAttribute="trailing" secondItem="Jqb-7u-gP8" secondAttribute="trailing" constant="16" id="zfj-fa-VcA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="button" destination="Jqb-7u-gP8" id="Zk1-id-SiT"/>
+                <outlet property="leading" destination="hGU-pX-AT6" id="U8G-IO-LcC"/>
+                <outlet property="trailing" destination="zfj-fa-VcA" id="KSK-0j-Y8I"/>
+            </connections>
+            <point key="canvasLocation" x="200.00000000000003" y="51.5625"/>
+        </tableViewCell>
+    </objects>
+</document>
