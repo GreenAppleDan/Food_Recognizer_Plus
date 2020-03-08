@@ -47,6 +47,15 @@
 		14B2AD232414F012005E1B2F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD152414EFE2005E1B2F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		14B2AD592414F1DA005E1B2F /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD502414F17F005E1B2F /* Nuke.framework */; };
 		14B2AD5A2414F1DA005E1B2F /* Nuke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD502414F17F005E1B2F /* Nuke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		14B2AD5C2414F4DE005E1B2F /* Clarifai_Apple_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD5B2414F4DE005E1B2F /* Clarifai_Apple_SDK.framework */; };
+		14B2AD5D2414F4DE005E1B2F /* Clarifai_Apple_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD5B2414F4DE005E1B2F /* Clarifai_Apple_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		14B2AD5F2414F4FA005E1B2F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD5E2414F4F9005E1B2F /* Accelerate.framework */; };
+		14B2AD612414F500005E1B2F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD602414F500005E1B2F /* CoreGraphics.framework */; };
+		14B2AD632414F507005E1B2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD622414F507005E1B2F /* Foundation.framework */; };
+		14B2AD652414F514005E1B2F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD642414F50E005E1B2F /* libc++.tbd */; };
+		14B2AD672414F523005E1B2F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD662414F51E005E1B2F /* libsqlite3.tbd */; };
+		14B2AD692414F52F005E1B2F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD682414F52A005E1B2F /* libz.tbd */; };
+		14B2AD6B2414F536005E1B2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD6A2414F536005E1B2F /* UIKit.framework */; };
 		14C341CD23998DAD007A2D97 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C341CC23998DAD007A2D97 /* UIViewController.swift */; };
 		14C341D123998E8E007A2D97 /* ScreensFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C341D023998E8E007A2D97 /* ScreensFactory.swift */; };
 		14C341D423999072007A2D97 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C341D323999072007A2D97 /* MainNavigationViewController.swift */; };
@@ -180,6 +189,7 @@
 			files = (
 				14B2AD232414F012005E1B2F /* Alamofire.framework in Embed Frameworks */,
 				14B2AD5A2414F1DA005E1B2F /* Nuke.framework in Embed Frameworks */,
+				14B2AD5D2414F4DE005E1B2F /* Clarifai_Apple_SDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +237,14 @@
 		14724E7A23F975D000809B80 /* PhotoAnalyserViewControllerPresenterItemIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAnalyserViewControllerPresenterItemIdentifier.swift; sourceTree = "<group>"; };
 		14B2AD0A2414EFE2005E1B2F /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = SOURCE_ROOT; };
 		14B2AD472414F17F005E1B2F /* Nuke.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nuke.xcodeproj; path = Nuke/Nuke.xcodeproj; sourceTree = SOURCE_ROOT; };
+		14B2AD5B2414F4DE005E1B2F /* Clarifai_Apple_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Clarifai_Apple_SDK.framework; path = Clarifai/Clarifai_Apple_SDK.framework; sourceTree = SOURCE_ROOT; };
+		14B2AD5E2414F4F9005E1B2F /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		14B2AD602414F500005E1B2F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		14B2AD622414F507005E1B2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		14B2AD642414F50E005E1B2F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		14B2AD662414F51E005E1B2F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		14B2AD682414F52A005E1B2F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		14B2AD6A2414F536005E1B2F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		14C341CC23998DAD007A2D97 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		14C341D023998E8E007A2D97 /* ScreensFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensFactory.swift; sourceTree = "<group>"; };
 		14C341D323999072007A2D97 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
@@ -270,7 +288,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				14B2AD222414F012005E1B2F /* Alamofire.framework in Frameworks */,
+				14B2AD652414F514005E1B2F /* libc++.tbd in Frameworks */,
+				14B2AD672414F523005E1B2F /* libsqlite3.tbd in Frameworks */,
+				14B2AD632414F507005E1B2F /* Foundation.framework in Frameworks */,
+				14B2AD5F2414F4FA005E1B2F /* Accelerate.framework in Frameworks */,
 				14B2AD592414F1DA005E1B2F /* Nuke.framework in Frameworks */,
+				14B2AD612414F500005E1B2F /* CoreGraphics.framework in Frameworks */,
+				14B2AD692414F52F005E1B2F /* libz.tbd in Frameworks */,
+				14B2AD5C2414F4DE005E1B2F /* Clarifai_Apple_SDK.framework in Frameworks */,
+				14B2AD6B2414F536005E1B2F /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +453,14 @@
 		14B2AD092414EFB7005E1B2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				14B2AD6A2414F536005E1B2F /* UIKit.framework */,
+				14B2AD682414F52A005E1B2F /* libz.tbd */,
+				14B2AD662414F51E005E1B2F /* libsqlite3.tbd */,
+				14B2AD642414F50E005E1B2F /* libc++.tbd */,
+				14B2AD622414F507005E1B2F /* Foundation.framework */,
+				14B2AD602414F500005E1B2F /* CoreGraphics.framework */,
+				14B2AD5E2414F4F9005E1B2F /* Accelerate.framework */,
+				14B2AD5B2414F4DE005E1B2F /* Clarifai_Apple_SDK.framework */,
 				14B2AD472414F17F005E1B2F /* Nuke.xcodeproj */,
 				14B2AD0A2414EFE2005E1B2F /* Alamofire.xcodeproj */,
 			);
@@ -656,6 +690,7 @@
 			buildConfigurationList = 142AF91B23983C9A00AC1164 /* Build configuration list for PBXNativeTarget "Food Recognizer+" */;
 			buildPhases = (
 				142AF90323983C9800AC1164 /* Sources */,
+				14B2AD6C2414F545005E1B2F /* ShellScript */,
 				142AF90423983C9800AC1164 /* Frameworks */,
 				142AF90523983C9800AC1164 /* Resources */,
 				14B2AD242414F012005E1B2F /* Embed Frameworks */,
@@ -819,6 +854,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14B2AD6C2414F545005E1B2F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PROJECT_DIR/Clarifai/setup_framework.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		142AF90323983C9800AC1164 /* Sources */ = {
@@ -1022,6 +1077,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R32RNVFC97;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Clarifai",
+				);
 				INFOPLIST_FILE = "Food Recognizer+/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1040,6 +1099,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R32RNVFC97;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Clarifai",
+				);
 				INFOPLIST_FILE = "Food Recognizer+/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
