@@ -690,10 +690,10 @@
 			buildConfigurationList = 142AF91B23983C9A00AC1164 /* Build configuration list for PBXNativeTarget "Food Recognizer+" */;
 			buildPhases = (
 				142AF90323983C9800AC1164 /* Sources */,
-				14B2AD6C2414F545005E1B2F /* ShellScript */,
 				142AF90423983C9800AC1164 /* Frameworks */,
 				142AF90523983C9800AC1164 /* Resources */,
 				14B2AD242414F012005E1B2F /* Embed Frameworks */,
+				14B2AD6C2414F545005E1B2F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -871,7 +871,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PROJECT_DIR/Clarifai/setup_framework.sh\"\n";
+			shellScript = "
+
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 
