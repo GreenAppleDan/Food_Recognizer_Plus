@@ -45,6 +45,8 @@
 		14724E7B23F975D000809B80 /* PhotoAnalyserViewControllerPresenterItemIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14724E7A23F975D000809B80 /* PhotoAnalyserViewControllerPresenterItemIdentifier.swift */; };
 		14B2AD222414F012005E1B2F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD152414EFE2005E1B2F /* Alamofire.framework */; };
 		14B2AD232414F012005E1B2F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD152414EFE2005E1B2F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		14B2AD592414F1DA005E1B2F /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD502414F17F005E1B2F /* Nuke.framework */; };
+		14B2AD5A2414F1DA005E1B2F /* Nuke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD502414F17F005E1B2F /* Nuke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		14C341CD23998DAD007A2D97 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C341CC23998DAD007A2D97 /* UIViewController.swift */; };
 		14C341D123998E8E007A2D97 /* ScreensFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C341D023998E8E007A2D97 /* ScreensFactory.swift */; };
 		14C341D423999072007A2D97 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C341D323999072007A2D97 /* MainNavigationViewController.swift */; };
@@ -132,6 +134,41 @@
 			remoteGlobalIDString = E4202FE01B667AA100C997FB;
 			remoteInfo = "Alamofire watchOS";
 		};
+		14B2AD4F2414F17F005E1B2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14B2AD472414F17F005E1B2F /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C9174901BAE99EE004A7905;
+			remoteInfo = Nuke;
+		};
+		14B2AD512414F17F005E1B2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14B2AD472414F17F005E1B2F /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C7C06771BCA882A00089D7F;
+			remoteInfo = "Nuke Unit Tests";
+		};
+		14B2AD532414F17F005E1B2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14B2AD472414F17F005E1B2F /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C4F8FDF22E4B6ED0070ECFD;
+			remoteInfo = "Nuke Thread Safety Tests";
+		};
+		14B2AD552414F17F005E1B2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14B2AD472414F17F005E1B2F /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C8D7BE81D9DC02B00D12EB7;
+			remoteInfo = "Nuke Performance Tests";
+		};
+		14B2AD572414F17F005E1B2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14B2AD472414F17F005E1B2F /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C8D7BD01D9DBF1600D12EB7;
+			remoteInfo = "Nuke Tests Host";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -142,6 +179,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				14B2AD232414F012005E1B2F /* Alamofire.framework in Embed Frameworks */,
+				14B2AD5A2414F1DA005E1B2F /* Nuke.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +226,7 @@
 		14724E7823F9737600809B80 /* SingleButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleButtonCell.xib; sourceTree = "<group>"; };
 		14724E7A23F975D000809B80 /* PhotoAnalyserViewControllerPresenterItemIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAnalyserViewControllerPresenterItemIdentifier.swift; sourceTree = "<group>"; };
 		14B2AD0A2414EFE2005E1B2F /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = SOURCE_ROOT; };
+		14B2AD472414F17F005E1B2F /* Nuke.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nuke.xcodeproj; path = Nuke/Nuke.xcodeproj; sourceTree = SOURCE_ROOT; };
 		14C341CC23998DAD007A2D97 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		14C341D023998E8E007A2D97 /* ScreensFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensFactory.swift; sourceTree = "<group>"; };
 		14C341D323999072007A2D97 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
@@ -231,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14B2AD222414F012005E1B2F /* Alamofire.framework in Frameworks */,
+				14B2AD592414F1DA005E1B2F /* Nuke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +427,7 @@
 		14B2AD092414EFB7005E1B2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				14B2AD472414F17F005E1B2F /* Nuke.xcodeproj */,
 				14B2AD0A2414EFE2005E1B2F /* Alamofire.xcodeproj */,
 			);
 			path = Frameworks;
@@ -402,6 +443,18 @@
 				14B2AD1D2414EFE2005E1B2F /* Alamofire.framework */,
 				14B2AD1F2414EFE2005E1B2F /* Alamofire tvOS Tests.xctest */,
 				14B2AD212414EFE2005E1B2F /* Alamofire.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14B2AD482414F17F005E1B2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14B2AD502414F17F005E1B2F /* Nuke.framework */,
+				14B2AD522414F17F005E1B2F /* Nuke Unit Tests.xctest */,
+				14B2AD542414F17F005E1B2F /* Nuke Thread Safety Tests.xctest */,
+				14B2AD562414F17F005E1B2F /* Nuke Performance Tests.xctest */,
+				14B2AD582414F17F005E1B2F /* Nuke Tests Host.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -647,6 +700,10 @@
 					ProductGroup = 14B2AD0B2414EFE2005E1B2F /* Products */;
 					ProjectRef = 14B2AD0A2414EFE2005E1B2F /* Alamofire.xcodeproj */;
 				},
+				{
+					ProductGroup = 14B2AD482414F17F005E1B2F /* Products */;
+					ProjectRef = 14B2AD472414F17F005E1B2F /* Nuke.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -703,6 +760,41 @@
 			fileType = wrapper.framework;
 			path = Alamofire.framework;
 			remoteRef = 14B2AD202414EFE2005E1B2F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14B2AD502414F17F005E1B2F /* Nuke.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nuke.framework;
+			remoteRef = 14B2AD4F2414F17F005E1B2F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14B2AD522414F17F005E1B2F /* Nuke Unit Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Nuke Unit Tests.xctest";
+			remoteRef = 14B2AD512414F17F005E1B2F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14B2AD542414F17F005E1B2F /* Nuke Thread Safety Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Nuke Thread Safety Tests.xctest";
+			remoteRef = 14B2AD532414F17F005E1B2F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14B2AD562414F17F005E1B2F /* Nuke Performance Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Nuke Performance Tests.xctest";
+			remoteRef = 14B2AD552414F17F005E1B2F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14B2AD582414F17F005E1B2F /* Nuke Tests Host.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Nuke Tests Host.app";
+			remoteRef = 14B2AD572414F17F005E1B2F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

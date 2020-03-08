@@ -7,9 +7,7 @@
 //
 
 import UIKit
-
 class PhotoAnalyserViewController: ViewController<PhotoAnalyserViewControllerPresenter> {
-    
     @IBOutlet weak var navigationView: NavigationView!
     
     override func viewDidLoad() {
