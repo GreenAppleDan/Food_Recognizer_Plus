@@ -48,10 +48,15 @@ extension PhotoAnalyserViewControllerPresenter: TableViewAdapterCellActionHandle
     func tableViewAdapterCellDidTap(_ tableViewAdapterCell: TableViewAdapterCell, withIdentifier identifier: String) {
         guard let identifier = PhotoAnalyserViewControllerPresenterItemIdentifier(rawValue: identifier) else { return }
         switch identifier {
-        case .choosePhoto:
+        case .choosePhotoFromLibrary:
             guard UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) else { return }
             
             imagePicker.sourceType = .savedPhotosAlbum
+            viewController?.present(imagePicker, animated: true, completion: nil)
+        case .takePicture:
+            guard UIImagePickerController.isSourceTypeAvailable(.camera) else { return }
+            
+            imagePicker.sourceType = .camera
             viewController?.present(imagePicker, animated: true, completion: nil)
         }
     }

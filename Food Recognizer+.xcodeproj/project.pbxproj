@@ -316,6 +316,7 @@
 		14C341CA2399877B007A2D97 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				14C341DC23999E56007A2D97 /* Parents */,
 				142187B8239D4C37002FE7C2 /* Views */,
 				14C341CE23998E68007A2D97 /* Screens */,
 				142AF93D23984E3100AC1164 /* ScreensRouterViewController */,
@@ -339,7 +340,6 @@
 			isa = PBXGroup;
 			children = (
 				142187D7239D7508002FE7C2 /* ConfigurationViewController */,
-				14C341DC23999E56007A2D97 /* Parents */,
 				14C341D723999423007A2D97 /* PhotoAnalyser */,
 				14C341D22399900D007A2D97 /* MainNavigation */,
 				14C341CF23998E6F007A2D97 /* Factory */,
@@ -783,7 +783,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "denis.zhukoborsky.FoodRecognizer--";
+				PRODUCT_BUNDLE_IDENTIFIER = denis.zhukoborsky.FoodRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -801,7 +801,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "denis.zhukoborsky.FoodRecognizer--";
+				PRODUCT_BUNDLE_IDENTIFIER = denis.zhukoborsky.FoodRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

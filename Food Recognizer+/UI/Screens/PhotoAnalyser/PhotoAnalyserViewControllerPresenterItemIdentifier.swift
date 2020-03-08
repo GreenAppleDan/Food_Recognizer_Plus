@@ -9,5 +9,7 @@
 import Foundation
 
 enum PhotoAnalyserViewControllerPresenterItemIdentifier: String {
-    case choosePhoto
+    case choosePhotoFromLibrary
+    case takePicture
+    
 }

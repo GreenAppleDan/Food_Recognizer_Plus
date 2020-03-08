@@ -16,7 +16,9 @@ class PhotoAnalyserViewControllerItemsFactory {
         
         items.append(CellItemsFactory.imageViewItem(image: photoImage))
         
-        items.append(CellItemsFactory.singleButtonItem(cellIdentifier: PhotoAnalyserViewControllerPresenterItemIdentifier.choosePhoto.rawValue, backgroundColor: UIColor(red: 50, green: 200, blue: 50), buttonText: "Choose photo", buttonTextColor: UIColor.white, leadingAndTrailingConstraintsValue: 25))
+        items.append(CellItemsFactory.singleButtonItem(cellIdentifier: PhotoAnalyserViewControllerPresenterItemIdentifier.choosePhotoFromLibrary.rawValue, backgroundColor: UIColor(red: 50, green: 200, blue: 50), buttonText: "Choose photo", buttonTextColor: UIColor.white, leadingAndTrailingConstraintsValue: 25))
+        
+        items.append(CellItemsFactory.singleButtonItem(cellIdentifier: PhotoAnalyserViewControllerPresenterItemIdentifier.takePicture.rawValue, backgroundColor: UIColor(red: 50, green: 200, blue: 50), buttonText: "Take a picture", buttonTextColor: UIColor.white, leadingAndTrailingConstraintsValue: 25))
         return items
     }
 }
