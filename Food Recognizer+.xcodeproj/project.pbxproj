@@ -48,8 +48,6 @@
 		14724E7723F9728000809B80 /* SingleButtonCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14724E7623F9728000809B80 /* SingleButtonCellData.swift */; };
 		14724E7923F9737600809B80 /* SingleButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14724E7823F9737600809B80 /* SingleButtonCell.xib */; };
 		14724E7B23F975D000809B80 /* PhotoAnalyserViewControllerPresenterItemIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14724E7A23F975D000809B80 /* PhotoAnalyserViewControllerPresenterItemIdentifier.swift */; };
-		14B2AD5C2414F4DE005E1B2F /* Clarifai_Apple_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD5B2414F4DE005E1B2F /* Clarifai_Apple_SDK.framework */; };
-		14B2AD5D2414F4DE005E1B2F /* Clarifai_Apple_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD5B2414F4DE005E1B2F /* Clarifai_Apple_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		14B2AD5F2414F4FA005E1B2F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD5E2414F4F9005E1B2F /* Accelerate.framework */; };
 		14B2AD612414F500005E1B2F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD602414F500005E1B2F /* CoreGraphics.framework */; };
 		14B2AD632414F507005E1B2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD622414F507005E1B2F /* Foundation.framework */; };
@@ -92,6 +90,7 @@
 		14C8CA2823A97A2A006FBBFB /* TableCellActionHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C8CA2723A97A2A006FBBFB /* TableCellActionHandlerDelegate.swift */; };
 		14C8CA2B23A97AB7006FBBFB /* CellsActionIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C8CA2A23A97AB7006FBBFB /* CellsActionIdentifiers.swift */; };
 		14C8CA2E23A97B56006FBBFB /* Macro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C8CA2D23A97B56006FBBFB /* Macro.swift */; };
+		3393D55A37451A3A89B1F3C3 /* Pods_Food_Recognizer_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18ECB7D0BF4F7696E066314A /* Pods_Food_Recognizer_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -101,7 +100,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				14B2AD5D2414F4DE005E1B2F /* Clarifai_Apple_SDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,7 +150,6 @@
 		14724E7623F9728000809B80 /* SingleButtonCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleButtonCellData.swift; sourceTree = "<group>"; };
 		14724E7823F9737600809B80 /* SingleButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleButtonCell.xib; sourceTree = "<group>"; };
 		14724E7A23F975D000809B80 /* PhotoAnalyserViewControllerPresenterItemIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAnalyserViewControllerPresenterItemIdentifier.swift; sourceTree = "<group>"; };
-		14B2AD5B2414F4DE005E1B2F /* Clarifai_Apple_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Clarifai_Apple_SDK.framework; path = Clarifai/Clarifai_Apple_SDK.framework; sourceTree = SOURCE_ROOT; };
 		14B2AD5E2414F4F9005E1B2F /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		14B2AD602414F500005E1B2F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		14B2AD622414F507005E1B2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -195,6 +192,9 @@
 		14C8CA2723A97A2A006FBBFB /* TableCellActionHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellActionHandlerDelegate.swift; sourceTree = "<group>"; };
 		14C8CA2A23A97AB7006FBBFB /* CellsActionIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsActionIdentifiers.swift; sourceTree = "<group>"; };
 		14C8CA2D23A97B56006FBBFB /* Macro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Macro.swift; sourceTree = "<group>"; };
+		18ECB7D0BF4F7696E066314A /* Pods_Food_Recognizer_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food_Recognizer_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F275EEEBA98A6B8D6CC7BE2 /* Pods-Food Recognizer+.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Recognizer+.release.xcconfig"; path = "Pods/Target Support Files/Pods-Food Recognizer+/Pods-Food Recognizer+.release.xcconfig"; sourceTree = "<group>"; };
+		CD8F4CC33984CE31470BD8CF /* Pods-Food Recognizer+.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Recognizer+.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Food Recognizer+/Pods-Food Recognizer+.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,8 +208,8 @@
 				14B2AD5F2414F4FA005E1B2F /* Accelerate.framework in Frameworks */,
 				14B2AD612414F500005E1B2F /* CoreGraphics.framework in Frameworks */,
 				14B2AD692414F52F005E1B2F /* libz.tbd in Frameworks */,
-				14B2AD5C2414F4DE005E1B2F /* Clarifai_Apple_SDK.framework in Frameworks */,
 				14B2AD6B2414F536005E1B2F /* UIKit.framework in Frameworks */,
+				3393D55A37451A3A89B1F3C3 /* Pods_Food_Recognizer_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +285,7 @@
 				14B2AD092414EFB7005E1B2F /* Frameworks */,
 				142AF90923983C9800AC1164 /* Food Recognizer+ */,
 				142AF90823983C9800AC1164 /* Products */,
+				932390B4DE524305429D6D0E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -393,7 +394,7 @@
 				14B2AD622414F507005E1B2F /* Foundation.framework */,
 				14B2AD602414F500005E1B2F /* CoreGraphics.framework */,
 				14B2AD5E2414F4F9005E1B2F /* Accelerate.framework */,
-				14B2AD5B2414F4DE005E1B2F /* Clarifai_Apple_SDK.framework */,
+				18ECB7D0BF4F7696E066314A /* Pods_Food_Recognizer_.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -588,6 +589,15 @@
 			path = Macro;
 			sourceTree = "<group>";
 		};
+		932390B4DE524305429D6D0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD8F4CC33984CE31470BD8CF /* Pods-Food Recognizer+.debug.xcconfig */,
+				4F275EEEBA98A6B8D6CC7BE2 /* Pods-Food Recognizer+.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -595,11 +605,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 142AF91B23983C9A00AC1164 /* Build configuration list for PBXNativeTarget "Food Recognizer+" */;
 			buildPhases = (
+				EE42B7367937A12E155B7477 /* [CP] Check Pods Manifest.lock */,
 				142AF90323983C9800AC1164 /* Sources */,
 				142AF90423983C9800AC1164 /* Frameworks */,
 				142AF90523983C9800AC1164 /* Resources */,
 				14B2AD242414F012005E1B2F /* Embed Frameworks */,
 				14B2AD6C2414F545005E1B2F /* ShellScript */,
+				064660650FFB3038456C44CB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -667,24 +679,60 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		064660650FFB3038456C44CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Food Recognizer+/Pods-Food Recognizer+-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Clarifai/Clarifai.framework",
+				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Clarifai.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Food Recognizer+/Pods-Food Recognizer+-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		14B2AD6C2414F545005E1B2F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-			);
-			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-
-";
+			shellScript = "\n\n";
+		};
+		EE42B7367937A12E155B7477 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Food Recognizer+-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -889,6 +937,7 @@
 		};
 		142AF91C23983C9A00AC1164 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD8F4CC33984CE31470BD8CF /* Pods-Food Recognizer+.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -911,6 +960,7 @@
 		};
 		142AF91D23983C9A00AC1164 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F275EEEBA98A6B8D6CC7BE2 /* Pods-Food Recognizer+.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

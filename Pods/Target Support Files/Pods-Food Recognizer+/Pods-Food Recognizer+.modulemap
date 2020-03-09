@@ -1,0 +1,6 @@
+framework module Pods_Food_Recognizer_ {
+  umbrella header "Pods-Food Recognizer+-umbrella.h"
+
+  export *
+  module * { export * }
+}
