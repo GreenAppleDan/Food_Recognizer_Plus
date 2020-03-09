@@ -13,6 +13,9 @@ class FoodPredictionsViewControllerPresenter: TableViewAdapterPresenter {
     private weak var navigationView: NavigationView?
     var clarifaiPredictions: [ClarifaiFoodPrediction]
     
+    
+    var chosenIngridientNames = Set<String>()
+    
     init(tableViewAdapter: TableViewAdapter?, viewController: UIViewController?, navigationView: NavigationView?, clarifaiPredictions: [ClarifaiFoodPrediction]) {
         self.navigationView = navigationView
         self.clarifaiPredictions = clarifaiPredictions
@@ -24,6 +27,8 @@ class FoodPredictionsViewControllerPresenter: TableViewAdapterPresenter {
         super.viewDidLoad()
         tableViewAdapter?.tableView?.separatorStyle = .none
         setupNavigationView()
+        
+        reloadItems()
     }
     
     // MARK: - Private
@@ -46,6 +51,19 @@ extension FoodPredictionsViewControllerPresenter: NavigationViewDelegate {
     }
     
     func navigationViewDidTapRightButton(_ view: NavigationView) {
+    }
+}
+
+extension FoodPredictionsViewControllerPresenter: IngridientProbabilityPredictionCellActionHandlerDelegate {
+    func ingridientProbabilityCellOverlayingbuttonDidTap(_ cell: IngridientProbabilityPredictionCell, cellIdentifier: String) {
+        guard let cellData = cell.data else { return }
+        if cell.isChosen == true {
+            cell.toggleSelection()
+            chosenIngridientNames.remove(cellData.ingridientName)
+        } else {
+            cell.toggleSelection()
+            chosenIngridientNames.insert(cellData.ingridientName)
+        }
     }
     
     

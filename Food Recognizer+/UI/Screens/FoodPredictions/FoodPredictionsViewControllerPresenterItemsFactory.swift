@@ -12,7 +12,10 @@ class FoodPredictionsViewControllerPresenterItemsFactory{
     public static func items(predictions: [ClarifaiFoodPrediction]) -> [TableViewAdapterItem] {
         var items = [TableViewAdapterItem]()
         
-        items.append(CellItemsFactory.emptySpaceItem())
+        for prediction in predictions {
+            let item = CellItemsFactory.ingridientProbabilityPredictionItem(ingridientName: prediction.name, ingridientProbability: prediction.score, isChosen: false)
+            items.append(item)
+        }
         return items
     }
 }
