@@ -46,7 +46,6 @@ class RecipePuppyService {
                                 } else {
                                     main { completion((nil, nil, ErrorsFactory.unknownError()))}
                                 }
-                                
         }
     }
 }
