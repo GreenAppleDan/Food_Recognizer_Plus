@@ -31,6 +31,11 @@
 		142AF91723983C9A00AC1164 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142AF91523983C9A00AC1164 /* LaunchScreen.storyboard */; };
 		142AF93C23984DAD00AC1164 /* ScreensRouterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142AF93B23984DAD00AC1164 /* ScreensRouterViewController.storyboard */; };
 		142AF93F23984E7200AC1164 /* ScreensRouterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142AF93E23984E7200AC1164 /* ScreensRouterViewController.swift */; };
+		145C9DD924165622000D4F70 /* EmptySpaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9DD824165622000D4F70 /* EmptySpaceCell.swift */; };
+		145C9DDB24165639000D4F70 /* EmptySpaceCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9DDA24165639000D4F70 /* EmptySpaceCellData.swift */; };
+		145C9DDD24165657000D4F70 /* EmptySpaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 145C9DDC24165657000D4F70 /* EmptySpaceCell.xib */; };
+		145C9DE024165789000D4F70 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9DDF24165789000D4F70 /* ActivityIndicatorView.swift */; };
+		145C9DE2241657B0000D4F70 /* ActivityIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 145C9DE1241657B0000D4F70 /* ActivityIndicatorView.xib */; };
 		146122F923AAC5DB00107582 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146122F823AAC5DB00107582 /* Colors.swift */; };
 		146122FC23AACE9D00107582 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146122FB23AACE9C00107582 /* ImageViewCell.swift */; };
 		146122FE23AACEBF00107582 /* ImageViewCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146122FD23AACEBF00107582 /* ImageViewCellData.swift */; };
@@ -223,6 +228,11 @@
 		142AF91823983C9A00AC1164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		142AF93B23984DAD00AC1164 /* ScreensRouterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScreensRouterViewController.storyboard; sourceTree = "<group>"; };
 		142AF93E23984E7200AC1164 /* ScreensRouterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensRouterViewController.swift; sourceTree = "<group>"; };
+		145C9DD824165622000D4F70 /* EmptySpaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySpaceCell.swift; sourceTree = "<group>"; };
+		145C9DDA24165639000D4F70 /* EmptySpaceCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySpaceCellData.swift; sourceTree = "<group>"; };
+		145C9DDC24165657000D4F70 /* EmptySpaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptySpaceCell.xib; sourceTree = "<group>"; };
+		145C9DDF24165789000D4F70 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		145C9DE1241657B0000D4F70 /* ActivityIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityIndicatorView.xib; sourceTree = "<group>"; };
 		146122F823AAC5DB00107582 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		146122FB23AACE9C00107582 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
 		146122FD23AACEBF00107582 /* ImageViewCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCellData.swift; sourceTree = "<group>"; };
@@ -306,6 +316,7 @@
 		142187B8239D4C37002FE7C2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				145C9DDE24165714000D4F70 /* ActivityIndicatorView */,
 				1461230A23AAE68C00107582 /* ScaledHeightImageView */,
 				14C8CA2923A97AAA006FBBFB /* Cells */,
 				142187DE239D80CE002FE7C2 /* NavigationView */,
@@ -404,6 +415,25 @@
 				142AF93E23984E7200AC1164 /* ScreensRouterViewController.swift */,
 			);
 			path = ScreensRouterViewController;
+			sourceTree = "<group>";
+		};
+		145C9DCB2416543C000D4F70 /* EmptySpaceCell */ = {
+			isa = PBXGroup;
+			children = (
+				145C9DD824165622000D4F70 /* EmptySpaceCell.swift */,
+				145C9DDA24165639000D4F70 /* EmptySpaceCellData.swift */,
+				145C9DDC24165657000D4F70 /* EmptySpaceCell.xib */,
+			);
+			path = EmptySpaceCell;
+			sourceTree = "<group>";
+		};
+		145C9DDE24165714000D4F70 /* ActivityIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				145C9DDF24165789000D4F70 /* ActivityIndicatorView.swift */,
+				145C9DE1241657B0000D4F70 /* ActivityIndicatorView.xib */,
+			);
+			path = ActivityIndicatorView;
 			sourceTree = "<group>";
 		};
 		146122F723AAC5D100107582 /* Color */ = {
@@ -666,6 +696,7 @@
 		14C8CA2923A97AAA006FBBFB /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				145C9DCB2416543C000D4F70 /* EmptySpaceCell */,
 				14724E7323F9724C00809B80 /* SingleButtonCell */,
 				146122FA23AACE8200107582 /* ImageViewCell */,
 				14C8CA2A23A97AB7006FBBFB /* CellsActionIdentifiers.swift */,
@@ -841,6 +872,7 @@
 			files = (
 				142187CF239D5A25002FE7C2 /* MainNavigationTabBarView.xib in Resources */,
 				14C341DB2399948D007A2D97 /* PhotoAnalyserViewController.storyboard in Resources */,
+				145C9DDD24165657000D4F70 /* EmptySpaceCell.xib in Resources */,
 				142AF93C23984DAD00AC1164 /* ScreensRouterViewController.storyboard in Resources */,
 				142AF91723983C9A00AC1164 /* LaunchScreen.storyboard in Resources */,
 				142187DD239D7582002FE7C2 /* ConfigurationViewController.storyboard in Resources */,
@@ -850,6 +882,7 @@
 				142AF91423983C9A00AC1164 /* Assets.xcassets in Resources */,
 				142187C2239D50D1002FE7C2 /* MainNavigationTabBarButtonView.xib in Resources */,
 				142187E2239D8109002FE7C2 /* NavigationView.xib in Resources */,
+				145C9DE2241657B0000D4F70 /* ActivityIndicatorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -888,6 +921,7 @@
 				14C341D123998E8E007A2D97 /* ScreensFactory.swift in Sources */,
 				142187DB239D7546002FE7C2 /* ConfigurationViewControllerPresenter.swift in Sources */,
 				14C8CA0E23A977B0006FBBFB /* TableViewAdapter.swift in Sources */,
+				145C9DE024165789000D4F70 /* ActivityIndicatorView.swift in Sources */,
 				142AF93F23984E7200AC1164 /* ScreensRouterViewController.swift in Sources */,
 				14C341E42399A0B1007A2D97 /* MainNavigationViewControllerPresenter.swift in Sources */,
 				14C341E023999ED8007A2D97 /* TableViewAdapterPresenter.swift in Sources */,
@@ -895,6 +929,7 @@
 				14C8CA1A23A9784C006FBBFB /* TableViewAdapterItem.swift in Sources */,
 				142187D9239D751E002FE7C2 /* ConfigurationViewController.swift in Sources */,
 				1461230323AAD1B800107582 /* PhotoAnalyserViewControllerItemsFactory.swift in Sources */,
+				145C9DD924165622000D4F70 /* EmptySpaceCell.swift in Sources */,
 				142187CB239D582C002FE7C2 /* UIColor.swift in Sources */,
 				142AF90B23983C9800AC1164 /* AppDelegate.swift in Sources */,
 				14C8CA2823A97A2A006FBBFB /* TableCellActionHandlerDelegate.swift in Sources */,
@@ -915,6 +950,7 @@
 				142187D3239D6414002FE7C2 /* MainNavigationViewControllerPresenterBarItemIdentifier.swift in Sources */,
 				142187C9239D5526002FE7C2 /* MainNavigationTabBarView.swift in Sources */,
 				146122FC23AACE9D00107582 /* ImageViewCell.swift in Sources */,
+				145C9DDB24165639000D4F70 /* EmptySpaceCellData.swift in Sources */,
 				14C8CA0A23A9777C006FBBFB /* TableViewAdapterUpdateCommand.swift in Sources */,
 				14C8CA1E23A97873006FBBFB /* TableViewAdapterCellDelegate.swift in Sources */,
 				142187D5239D6C65002FE7C2 /* Array.swift in Sources */,

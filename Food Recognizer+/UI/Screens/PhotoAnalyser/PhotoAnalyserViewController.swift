@@ -8,12 +8,13 @@
 
 import UIKit
 class PhotoAnalyserViewController: ViewController<PhotoAnalyserViewControllerPresenter> {
-    @IBOutlet weak var navigationView: NavigationView!
+    @IBOutlet weak var navigationView: NavigationView?
+    @IBOutlet weak var activityIndicatorView: ActivityIndicatorView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter = PhotoAnalyserViewControllerPresenter(tableViewAdapter: tableViewAdapter, viewController: self, navigationView: navigationView)
+        presenter = PhotoAnalyserViewControllerPresenter(tableViewAdapter: tableViewAdapter, viewController: self, navigationView: navigationView, activityIndicatorView: activityIndicatorView)
         
         presenter?.viewDidLoad()
     }

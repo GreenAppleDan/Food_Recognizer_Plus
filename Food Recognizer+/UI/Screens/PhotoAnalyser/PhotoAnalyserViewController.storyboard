@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hGR-cD-qqp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hGR-cD-qqp">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,12 +10,12 @@
         <!--Photo Analyser View Controller-->
         <scene sceneID="Ycv-Hp-1Tm">
             <objects>
-                <viewController id="hGR-cD-qqp" customClass="PhotoAnalyserViewController" customModule="True_Photo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hGR-cD-qqp" customClass="PhotoAnalyserViewController" customModule="Food_Recognizer_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="znc-pv-rSl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cri-qU-6Fb" customClass="NavigationView" customModule="True_Photo" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cri-qU-6Fb" customClass="NavigationView" customModule="Food_Recognizer_" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -26,6 +26,10 @@
                                 <rect key="frame" x="0.0" y="40" width="375" height="627"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59h-48-OVZ" customClass="ActivityIndicatorView" customModule="Food_Recognizer_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -33,13 +37,18 @@
                             <constraint firstItem="j1Q-SR-heh" firstAttribute="leading" secondItem="5Vd-9a-rGj" secondAttribute="leading" id="5gw-ev-XwK"/>
                             <constraint firstItem="j1Q-SR-heh" firstAttribute="bottom" secondItem="5Vd-9a-rGj" secondAttribute="bottom" id="Dyf-e2-O5s"/>
                             <constraint firstItem="Cri-qU-6Fb" firstAttribute="leading" secondItem="5Vd-9a-rGj" secondAttribute="leading" id="FtT-Ar-spr"/>
+                            <constraint firstItem="59h-48-OVZ" firstAttribute="top" secondItem="Cri-qU-6Fb" secondAttribute="bottom" id="Iqq-1a-gRy"/>
                             <constraint firstItem="j1Q-SR-heh" firstAttribute="top" secondItem="Cri-qU-6Fb" secondAttribute="bottom" id="NUW-HR-kge"/>
                             <constraint firstItem="Cri-qU-6Fb" firstAttribute="top" secondItem="5Vd-9a-rGj" secondAttribute="top" id="QW3-6s-97F"/>
+                            <constraint firstAttribute="trailing" secondItem="59h-48-OVZ" secondAttribute="trailing" id="ZZ1-vA-fQf"/>
+                            <constraint firstItem="59h-48-OVZ" firstAttribute="leading" secondItem="znc-pv-rSl" secondAttribute="leading" id="db1-gf-Zer"/>
                             <constraint firstItem="j1Q-SR-heh" firstAttribute="trailing" secondItem="5Vd-9a-rGj" secondAttribute="trailing" id="hIH-vA-ieP"/>
+                            <constraint firstAttribute="bottom" secondItem="59h-48-OVZ" secondAttribute="bottom" id="ySY-SK-uSj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5Vd-9a-rGj"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="59h-48-OVZ" id="G4F-Cc-qmd"/>
                         <outlet property="navigationView" destination="Cri-qU-6Fb" id="O4L-ZU-cKT"/>
                         <outlet property="tableView" destination="j1Q-SR-heh" id="k2s-Ze-1xO"/>
                     </connections>

@@ -26,4 +26,16 @@ class CellItemsFactory {
         
         return item
     }
+    
+    static public func emptySpaceItem(cellIdentifier: String? = nil,
+                                      color: UIColor = .clear,
+                                      height: CGFloat? = 44) -> TableViewAdapterItem {
+        let cellData = EmptySpaceCellData(cellIdentifier: cellIdentifier,
+                                          color: color,
+                                          height: height)
+        let item = TableViewAdapterItem(cellClass: EmptySpaceCell.self, cellData: cellData)
+        
+        return item
+    }
+    
 }

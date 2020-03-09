@@ -10,12 +10,14 @@ import UIKit
 
 class PhotoAnalyserViewControllerPresenter: TableViewAdapterPresenter {
     
-    private var navigationView: NavigationView?
+    private weak var navigationView: NavigationView?
+    private weak var activityIndicatorView: ActivityIndicatorView?
     private var imagePicker: UIImagePickerController
     private var chosenImage: UIImage?
     
-    init(tableViewAdapter: TableViewAdapter?, viewController: UIViewController, navigationView: NavigationView?) {
+    init(tableViewAdapter: TableViewAdapter?, viewController: UIViewController, navigationView: NavigationView?, activityIndicatorView: ActivityIndicatorView?) {
         self.navigationView = navigationView
+        self.activityIndicatorView = activityIndicatorView
         imagePicker = UIImagePickerController()
         super.init(tableViewAdapter: tableViewAdapter, viewController: viewController)
     }
