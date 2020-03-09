@@ -8,17 +8,20 @@
 
 import UIKit
 class PhotoAnalyserViewController: ViewController<PhotoAnalyserViewControllerPresenter> {
+    // MARK: - Outlets
     @IBOutlet weak var navigationView: NavigationView?
     @IBOutlet weak var activityIndicatorView: ActivityIndicatorView?
     
-    
+    // MARK: - Properties
     var clarifaiService: ClarifaiService?
-    
+    var screensFactory: ScreensFactory?
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         guard let clarifaiService = clarifaiService else { return }
-        presenter = PhotoAnalyserViewControllerPresenter(tableViewAdapter: tableViewAdapter, viewController: self, navigationView: navigationView, activityIndicatorView: activityIndicatorView, clarifaiService: clarifaiService)
+        guard let screensFactory = screensFactory else { return }
+        presenter = PhotoAnalyserViewControllerPresenter(tableViewAdapter: tableViewAdapter, viewController: self, screensFactory: screensFactory, navigationView: navigationView, activityIndicatorView: activityIndicatorView, clarifaiService: clarifaiService)
         
         presenter?.viewDidLoad()
     }

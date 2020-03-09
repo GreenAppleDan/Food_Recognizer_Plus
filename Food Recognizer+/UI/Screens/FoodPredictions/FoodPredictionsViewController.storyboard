@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fqc-e9-Vuh">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Food Predictions View Controller-->
+        <scene sceneID="YKe-9Y-odx">
+            <objects>
+                <viewController id="Fqc-e9-Vuh" customClass="FoodPredictionsViewController" customModule="Food_Recognizer_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Owp-uG-tVL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z4g-v3-aHd" customClass="NavigationView" customModule="Food_Recognizer_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gtt-ui-s5F"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xi2-at-RsN">
+                                <rect key="frame" x="0.0" y="40" width="414" height="696"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Z4g-v3-aHd" firstAttribute="leading" secondItem="Gg4-UF-ugs" secondAttribute="leading" id="EHH-An-dtM"/>
+                            <constraint firstItem="Xi2-at-RsN" firstAttribute="leading" secondItem="Gg4-UF-ugs" secondAttribute="leading" id="HVY-pt-FEr"/>
+                            <constraint firstItem="Xi2-at-RsN" firstAttribute="trailing" secondItem="Gg4-UF-ugs" secondAttribute="trailing" id="Ikg-Rc-tOf"/>
+                            <constraint firstItem="Z4g-v3-aHd" firstAttribute="trailing" secondItem="Gg4-UF-ugs" secondAttribute="trailing" id="MCI-zT-x0I"/>
+                            <constraint firstItem="Xi2-at-RsN" firstAttribute="top" secondItem="Z4g-v3-aHd" secondAttribute="bottom" id="iH0-p7-oEK"/>
+                            <constraint firstItem="Z4g-v3-aHd" firstAttribute="top" secondItem="Gg4-UF-ugs" secondAttribute="top" id="oZn-68-Q1S"/>
+                            <constraint firstItem="Xi2-at-RsN" firstAttribute="bottom" secondItem="Gg4-UF-ugs" secondAttribute="bottom" id="sO4-8S-Ld3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gg4-UF-ugs"/>
+                    </view>
+                    <connections>
+                        <outlet property="navigationView" destination="Z4g-v3-aHd" id="1Wg-kQ-7ou"/>
+                        <outlet property="tableView" destination="Xi2-at-RsN" id="OfA-eT-QkR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="48u-Ud-VJb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124.6376811594203" y="85.59782608695653"/>
+        </scene>
+    </scenes>
+</document>

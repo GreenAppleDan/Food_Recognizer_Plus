@@ -38,4 +38,11 @@ class CellItemsFactory {
         return item
     }
     
+    static public func ingridientProbabilityPredictionItem(cellIdentifier: String? = nil, ingridientName: String, ingridientProbability: Float, isChosen: Bool) -> TableViewAdapterItem {
+        let cellData = IngridientProbabilityPredictionCellData(cellIdentifier: cellIdentifier, ingridientName: ingridientName, ingridientProbability: ingridientProbability, isChosen: isChosen)
+        let item = TableViewAdapterItem(cellClass: IngridientProbabilityPredictionCell.self, cellData: cellData, cellHandler: IngridientProbabilityPredictionCellActionHandler())
+        
+        return item
+    }
+    
 }

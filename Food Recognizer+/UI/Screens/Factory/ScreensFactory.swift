@@ -25,11 +25,18 @@ class ScreensFactory {
     func photoAnalyserViewController() -> PhotoAnalyserViewController {
         let viewController: PhotoAnalyserViewController = .fromStoryboard()
         viewController.clarifaiService = clarifaiService
+        viewController.screensFactory = self
         return viewController
     }
     
     func configurationViewController() -> ConfigurationViewController {
         let viewController: ConfigurationViewController = .fromStoryboard()
+        return viewController
+    }
+    
+    func foodPredictionsViewController(clarifaiPredictions: [ClarifaiFoodPrediction]) -> FoodPredictionsViewController {
+        let viewController: FoodPredictionsViewController = .fromStoryboard()
+        viewController.clarifaiPredictions = clarifaiPredictions
         return viewController
     }
 }

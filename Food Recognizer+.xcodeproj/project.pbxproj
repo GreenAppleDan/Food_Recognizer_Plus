@@ -40,6 +40,16 @@
 		145C9E1A24167719000D4F70 /* ClarifaiFoodPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E1924167719000D4F70 /* ClarifaiFoodPrediction.swift */; };
 		145C9E2024167D1D000D4F70 /* ErrorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E1F24167D1D000D4F70 /* ErrorsFactory.swift */; };
 		145C9E222416821F000D4F70 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E212416821F000D4F70 /* UIViewController+Alert.swift */; };
+		145C9E2524168600000D4F70 /* FoodPredictionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E2424168600000D4F70 /* FoodPredictionsViewController.swift */; };
+		145C9E2724168627000D4F70 /* FoodPredictionsViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E2624168627000D4F70 /* FoodPredictionsViewControllerPresenter.swift */; };
+		145C9E292416868A000D4F70 /* FoodPredictionsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 145C9E282416868A000D4F70 /* FoodPredictionsViewController.storyboard */; };
+		145C9E2B24169233000D4F70 /* FoodPredictionsViewControllerPresenterItemsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E2A24169233000D4F70 /* FoodPredictionsViewControllerPresenterItemsFactory.swift */; };
+		145C9E2E24169C84000D4F70 /* IngridientProbabilityPredictionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E2D24169C84000D4F70 /* IngridientProbabilityPredictionCell.swift */; };
+		145C9E3124169CCC000D4F70 /* IngridientProbabilityPredictionCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E3024169CCC000D4F70 /* IngridientProbabilityPredictionCellData.swift */; };
+		145C9E3324169D8A000D4F70 /* IngridientProbabilityPredictionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 145C9E3224169D8A000D4F70 /* IngridientProbabilityPredictionCell.xib */; };
+		145C9E352416A4C8000D4F70 /* IngridientProbabilityPredictionCellActionIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E342416A4C8000D4F70 /* IngridientProbabilityPredictionCellActionIdentifier.swift */; };
+		145C9E372416A53C000D4F70 /* IngridientProbabilityPredictionCellActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E362416A53C000D4F70 /* IngridientProbabilityPredictionCellActionHandler.swift */; };
+		145C9E392416A565000D4F70 /* IngridientProbabilityPredictionCellActionHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E382416A565000D4F70 /* IngridientProbabilityPredictionCellActionHandlerDelegate.swift */; };
 		146122F923AAC5DB00107582 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146122F823AAC5DB00107582 /* Colors.swift */; };
 		146122FC23AACE9D00107582 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146122FB23AACE9C00107582 /* ImageViewCell.swift */; };
 		146122FE23AACEBF00107582 /* ImageViewCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146122FD23AACEBF00107582 /* ImageViewCellData.swift */; };
@@ -146,6 +156,16 @@
 		145C9E1924167719000D4F70 /* ClarifaiFoodPrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarifaiFoodPrediction.swift; sourceTree = "<group>"; };
 		145C9E1F24167D1D000D4F70 /* ErrorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsFactory.swift; sourceTree = "<group>"; };
 		145C9E212416821F000D4F70 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		145C9E2424168600000D4F70 /* FoodPredictionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPredictionsViewController.swift; sourceTree = "<group>"; };
+		145C9E2624168627000D4F70 /* FoodPredictionsViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPredictionsViewControllerPresenter.swift; sourceTree = "<group>"; };
+		145C9E282416868A000D4F70 /* FoodPredictionsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FoodPredictionsViewController.storyboard; sourceTree = "<group>"; };
+		145C9E2A24169233000D4F70 /* FoodPredictionsViewControllerPresenterItemsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPredictionsViewControllerPresenterItemsFactory.swift; sourceTree = "<group>"; };
+		145C9E2D24169C84000D4F70 /* IngridientProbabilityPredictionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientProbabilityPredictionCell.swift; sourceTree = "<group>"; };
+		145C9E3024169CCC000D4F70 /* IngridientProbabilityPredictionCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientProbabilityPredictionCellData.swift; sourceTree = "<group>"; };
+		145C9E3224169D8A000D4F70 /* IngridientProbabilityPredictionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngridientProbabilityPredictionCell.xib; sourceTree = "<group>"; };
+		145C9E342416A4C8000D4F70 /* IngridientProbabilityPredictionCellActionIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientProbabilityPredictionCellActionIdentifier.swift; sourceTree = "<group>"; };
+		145C9E362416A53C000D4F70 /* IngridientProbabilityPredictionCellActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientProbabilityPredictionCellActionHandler.swift; sourceTree = "<group>"; };
+		145C9E382416A565000D4F70 /* IngridientProbabilityPredictionCellActionHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientProbabilityPredictionCellActionHandlerDelegate.swift; sourceTree = "<group>"; };
 		146122F823AAC5DB00107582 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		146122FB23AACE9C00107582 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
 		146122FD23AACEBF00107582 /* ImageViewCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCellData.swift; sourceTree = "<group>"; };
@@ -382,6 +402,39 @@
 			path = ErrorsFactory;
 			sourceTree = "<group>";
 		};
+		145C9E23241685E5000D4F70 /* FoodPredictions */ = {
+			isa = PBXGroup;
+			children = (
+				145C9E2C24169C68000D4F70 /* Cells */,
+				145C9E2424168600000D4F70 /* FoodPredictionsViewController.swift */,
+				145C9E2624168627000D4F70 /* FoodPredictionsViewControllerPresenter.swift */,
+				145C9E282416868A000D4F70 /* FoodPredictionsViewController.storyboard */,
+				145C9E2A24169233000D4F70 /* FoodPredictionsViewControllerPresenterItemsFactory.swift */,
+			);
+			path = FoodPredictions;
+			sourceTree = "<group>";
+		};
+		145C9E2C24169C68000D4F70 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				145C9E2F24169CBA000D4F70 /* IngridientProbabilityPredictionCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		145C9E2F24169CBA000D4F70 /* IngridientProbabilityPredictionCell */ = {
+			isa = PBXGroup;
+			children = (
+				145C9E2D24169C84000D4F70 /* IngridientProbabilityPredictionCell.swift */,
+				145C9E3024169CCC000D4F70 /* IngridientProbabilityPredictionCellData.swift */,
+				145C9E3224169D8A000D4F70 /* IngridientProbabilityPredictionCell.xib */,
+				145C9E342416A4C8000D4F70 /* IngridientProbabilityPredictionCellActionIdentifier.swift */,
+				145C9E362416A53C000D4F70 /* IngridientProbabilityPredictionCellActionHandler.swift */,
+				145C9E382416A565000D4F70 /* IngridientProbabilityPredictionCellActionHandlerDelegate.swift */,
+			);
+			path = IngridientProbabilityPredictionCell;
+			sourceTree = "<group>";
+		};
 		146122F723AAC5D100107582 /* Color */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +521,7 @@
 		14C341CE23998E68007A2D97 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				145C9E23241685E5000D4F70 /* FoodPredictions */,
 				142187D7239D7508002FE7C2 /* ConfigurationViewController */,
 				14C341D723999423007A2D97 /* PhotoAnalyser */,
 				14C341D22399900D007A2D97 /* MainNavigation */,
@@ -706,6 +760,8 @@
 			files = (
 				142187CF239D5A25002FE7C2 /* MainNavigationTabBarView.xib in Resources */,
 				14C341DB2399948D007A2D97 /* PhotoAnalyserViewController.storyboard in Resources */,
+				145C9E3324169D8A000D4F70 /* IngridientProbabilityPredictionCell.xib in Resources */,
+				145C9E292416868A000D4F70 /* FoodPredictionsViewController.storyboard in Resources */,
 				145C9DDD24165657000D4F70 /* EmptySpaceCell.xib in Resources */,
 				142AF93C23984DAD00AC1164 /* ScreensRouterViewController.storyboard in Resources */,
 				142AF91723983C9A00AC1164 /* LaunchScreen.storyboard in Resources */,
@@ -788,6 +844,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				14C341D423999072007A2D97 /* MainNavigationViewController.swift in Sources */,
+				145C9E2524168600000D4F70 /* FoodPredictionsViewController.swift in Sources */,
+				145C9E352416A4C8000D4F70 /* IngridientProbabilityPredictionCellActionIdentifier.swift in Sources */,
 				14C341E62399A36E007A2D97 /* PhotoAnalyserViewControllerPresenter.swift in Sources */,
 				14C8CA1C23A9785F006FBBFB /* TableViewAdapterCellAction.swift in Sources */,
 				14C341D123998E8E007A2D97 /* ScreensFactory.swift in Sources */,
@@ -807,6 +865,7 @@
 				14C8CA2823A97A2A006FBBFB /* TableCellActionHandlerDelegate.swift in Sources */,
 				142187BB239D4C4C002FE7C2 /* XibView.swift in Sources */,
 				14C8CA1223A977EC006FBBFB /* TableViewAdapterDelegate.swift in Sources */,
+				145C9E372416A53C000D4F70 /* IngridientProbabilityPredictionCellActionHandler.swift in Sources */,
 				14C8CA0423A97719006FBBFB /* TableViewAdapterUpdateCommandReplace.swift in Sources */,
 				14C8C9FD23A976B7006FBBFB /* TableViewAdapterUpdater.swift in Sources */,
 				1461230C23AAE6BF00107582 /* ScaledHeightImageView.swift in Sources */,
@@ -835,7 +894,9 @@
 				145C9E222416821F000D4F70 /* UIViewController+Alert.swift in Sources */,
 				142187C0239D50A2002FE7C2 /* MainNavigationTabBarButtonView.swift in Sources */,
 				14724E7B23F975D000809B80 /* PhotoAnalyserViewControllerPresenterItemIdentifier.swift in Sources */,
+				145C9E3124169CCC000D4F70 /* IngridientProbabilityPredictionCellData.swift in Sources */,
 				14C8CA2023A9788A006FBBFB /* TableViewAdapterItemData.swift in Sources */,
+				145C9E2B24169233000D4F70 /* FoodPredictionsViewControllerPresenterItemsFactory.swift in Sources */,
 				146122F923AAC5DB00107582 /* Colors.swift in Sources */,
 				146122FE23AACEBF00107582 /* ImageViewCellData.swift in Sources */,
 				14C8CA0C23A9779D006FBBFB /* TableViewAdapterError.swift in Sources */,
@@ -849,10 +910,13 @@
 				142187C4239D5223002FE7C2 /* MainNavigationTabBarButtonViewData.swift in Sources */,
 				142187E4239D841D002FE7C2 /* NavigationViewDelegate.swift in Sources */,
 				14724E7523F9726E00809B80 /* SingleButtonCell.swift in Sources */,
+				145C9E2724168627000D4F70 /* FoodPredictionsViewControllerPresenter.swift in Sources */,
 				14C8CA2223A978A4006FBBFB /* TableViewAdapterCellActionHandlerDelegate.swift in Sources */,
 				1461230923AADBBA00107582 /* UIImage.swift in Sources */,
 				14C8CA0623A9772F006FBBFB /* TableViewAdapterUpdateCommandInsert.swift in Sources */,
 				145C9E1A24167719000D4F70 /* ClarifaiFoodPrediction.swift in Sources */,
+				145C9E392416A565000D4F70 /* IngridientProbabilityPredictionCellActionHandlerDelegate.swift in Sources */,
+				145C9E2E24169C84000D4F70 /* IngridientProbabilityPredictionCell.swift in Sources */,
 				14C8CA1623A9781A006FBBFB /* TableViewAdapterScrollPosition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,13 +12,15 @@ class PhotoAnalyserViewControllerPresenter: TableViewAdapterPresenter {
     
     private weak var navigationView: NavigationView?
     private weak var activityIndicatorView: ActivityIndicatorView?
+    private var screensFactory: ScreensFactory
     private var clarifaiService: ClarifaiService
     private var imagePicker: UIImagePickerController
     private var chosenImage: UIImage?
     
-    init(tableViewAdapter: TableViewAdapter?, viewController: UIViewController, navigationView: NavigationView?, activityIndicatorView: ActivityIndicatorView?, clarifaiService: ClarifaiService) {
+    init(tableViewAdapter: TableViewAdapter?, viewController: UIViewController, screensFactory: ScreensFactory, navigationView: NavigationView?, activityIndicatorView: ActivityIndicatorView?, clarifaiService: ClarifaiService) {
         self.navigationView = navigationView
         self.activityIndicatorView = activityIndicatorView
+        self.screensFactory = screensFactory
         self.clarifaiService = clarifaiService
         imagePicker = UIImagePickerController()
         super.init(tableViewAdapter: tableViewAdapter, viewController: viewController)
@@ -73,9 +75,8 @@ extension PhotoAnalyserViewControllerPresenter: TableViewAdapterCellActionHandle
                 if let error = result.1 {
                     self.viewController?.show(error)
                 } else if let predictions = result.0 {
-                    for prediction in predictions {
-                        print(prediction.name)
-                    }
+                    let foodPredictionsViewController = self.screensFactory.foodPredictionsViewController(clarifaiPredictions: predictions)
+                    self.viewController?.navigationController?.pushViewController(foodPredictionsViewController, animated: true)
                 }
             }
         }
