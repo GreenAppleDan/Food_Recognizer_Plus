@@ -9,7 +9,10 @@
 import UIKit
 
 class ScreensFactory {
+    
+    let clarifaiService: ClarifaiService
     init() {
+        clarifaiService = ClarifaiService(apiKey: "d1e9d18edef54ba49a7f031eec6db325")
     }
     
     
@@ -21,6 +24,7 @@ class ScreensFactory {
     
     func photoAnalyserViewController() -> PhotoAnalyserViewController {
         let viewController: PhotoAnalyserViewController = .fromStoryboard()
+        viewController.clarifaiService = clarifaiService
         return viewController
     }
     

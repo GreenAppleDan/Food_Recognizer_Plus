@@ -12,12 +12,14 @@ class PhotoAnalyserViewControllerPresenter: TableViewAdapterPresenter {
     
     private weak var navigationView: NavigationView?
     private weak var activityIndicatorView: ActivityIndicatorView?
+    private var clarifaiService: ClarifaiService
     private var imagePicker: UIImagePickerController
     private var chosenImage: UIImage?
     
-    init(tableViewAdapter: TableViewAdapter?, viewController: UIViewController, navigationView: NavigationView?, activityIndicatorView: ActivityIndicatorView?) {
+    init(tableViewAdapter: TableViewAdapter?, viewController: UIViewController, navigationView: NavigationView?, activityIndicatorView: ActivityIndicatorView?, clarifaiService: ClarifaiService) {
         self.navigationView = navigationView
         self.activityIndicatorView = activityIndicatorView
+        self.clarifaiService = clarifaiService
         imagePicker = UIImagePickerController()
         super.init(tableViewAdapter: tableViewAdapter, viewController: viewController)
     }
@@ -61,7 +63,21 @@ extension PhotoAnalyserViewControllerPresenter: TableViewAdapterCellActionHandle
             imagePicker.sourceType = .camera
             viewController?.present(imagePicker, animated: true, completion: nil)
         case .analysePicture:
+            guard let chosenImage = chosenImage else {
+                viewController?.showAlert(title: "Image is not chosen")
+                return
+            }
             activityIndicatorView?.startActivityIndicator()
+            clarifaiService.getFoodPredictions(from: chosenImage) { (result) in
+                self.activityIndicatorView?.stopActivityIndicator()
+                if let error = result.1 {
+                    self.viewController?.show(error)
+                } else if let predictions = result.0 {
+                    for prediction in predictions {
+                        print(prediction.name)
+                    }
+                }
+            }
         }
     }
 }

@@ -11,10 +11,14 @@ class PhotoAnalyserViewController: ViewController<PhotoAnalyserViewControllerPre
     @IBOutlet weak var navigationView: NavigationView?
     @IBOutlet weak var activityIndicatorView: ActivityIndicatorView?
     
+    
+    var clarifaiService: ClarifaiService?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter = PhotoAnalyserViewControllerPresenter(tableViewAdapter: tableViewAdapter, viewController: self, navigationView: navigationView, activityIndicatorView: activityIndicatorView)
+        guard let clarifaiService = clarifaiService else { return }
+        presenter = PhotoAnalyserViewControllerPresenter(tableViewAdapter: tableViewAdapter, viewController: self, navigationView: navigationView, activityIndicatorView: activityIndicatorView, clarifaiService: clarifaiService)
         
         presenter?.viewDidLoad()
     }

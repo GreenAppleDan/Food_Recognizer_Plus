@@ -36,6 +36,10 @@
 		145C9DDD24165657000D4F70 /* EmptySpaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 145C9DDC24165657000D4F70 /* EmptySpaceCell.xib */; };
 		145C9DE024165789000D4F70 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9DDF24165789000D4F70 /* ActivityIndicatorView.swift */; };
 		145C9DE2241657B0000D4F70 /* ActivityIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 145C9DE1241657B0000D4F70 /* ActivityIndicatorView.xib */; };
+		145C9E17241675CF000D4F70 /* ClarifaiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E16241675CF000D4F70 /* ClarifaiService.swift */; };
+		145C9E1A24167719000D4F70 /* ClarifaiFoodPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E1924167719000D4F70 /* ClarifaiFoodPrediction.swift */; };
+		145C9E2024167D1D000D4F70 /* ErrorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E1F24167D1D000D4F70 /* ErrorsFactory.swift */; };
+		145C9E222416821F000D4F70 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E212416821F000D4F70 /* UIViewController+Alert.swift */; };
 		146122F923AAC5DB00107582 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146122F823AAC5DB00107582 /* Colors.swift */; };
 		146122FC23AACE9D00107582 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146122FB23AACE9C00107582 /* ImageViewCell.swift */; };
 		146122FE23AACEBF00107582 /* ImageViewCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146122FD23AACEBF00107582 /* ImageViewCellData.swift */; };
@@ -138,6 +142,10 @@
 		145C9DDC24165657000D4F70 /* EmptySpaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptySpaceCell.xib; sourceTree = "<group>"; };
 		145C9DDF24165789000D4F70 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		145C9DE1241657B0000D4F70 /* ActivityIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityIndicatorView.xib; sourceTree = "<group>"; };
+		145C9E16241675CF000D4F70 /* ClarifaiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarifaiService.swift; sourceTree = "<group>"; };
+		145C9E1924167719000D4F70 /* ClarifaiFoodPrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarifaiFoodPrediction.swift; sourceTree = "<group>"; };
+		145C9E1F24167D1D000D4F70 /* ErrorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsFactory.swift; sourceTree = "<group>"; };
+		145C9E212416821F000D4F70 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		146122F823AAC5DB00107582 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		146122FB23AACE9C00107582 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
 		146122FD23AACEBF00107582 /* ImageViewCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCellData.swift; sourceTree = "<group>"; };
@@ -300,6 +308,7 @@
 		142AF90923983C9800AC1164 /* Food Recognizer+ */ = {
 			isa = PBXGroup;
 			children = (
+				145C9E1424167587000D4F70 /* Services */,
 				14C8C9F423A97408006FBBFB /* Utils */,
 				14C341CB23998D9A007A2D97 /* Extensions */,
 				14C341CA2399877B007A2D97 /* UI */,
@@ -338,6 +347,39 @@
 				145C9DE1241657B0000D4F70 /* ActivityIndicatorView.xib */,
 			);
 			path = ActivityIndicatorView;
+			sourceTree = "<group>";
+		};
+		145C9E1424167587000D4F70 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				145C9E15241675A5000D4F70 /* Clarifai */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		145C9E15241675A5000D4F70 /* Clarifai */ = {
+			isa = PBXGroup;
+			children = (
+				145C9E1824167708000D4F70 /* Models */,
+				145C9E16241675CF000D4F70 /* ClarifaiService.swift */,
+			);
+			path = Clarifai;
+			sourceTree = "<group>";
+		};
+		145C9E1824167708000D4F70 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				145C9E1924167719000D4F70 /* ClarifaiFoodPrediction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		145C9E1E24167D05000D4F70 /* ErrorsFactory */ = {
+			isa = PBXGroup;
+			children = (
+				145C9E1F24167D1D000D4F70 /* ErrorsFactory.swift */,
+			);
+			path = ErrorsFactory;
 			sourceTree = "<group>";
 		};
 		146122F723AAC5D100107582 /* Color */ = {
@@ -418,6 +460,7 @@
 				142187CA239D582C002FE7C2 /* UIColor.swift */,
 				142187D4239D6C65002FE7C2 /* Array.swift */,
 				1461230823AADBB900107582 /* UIImage.swift */,
+				145C9E212416821F000D4F70 /* UIViewController+Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -492,6 +535,7 @@
 		14C8C9F423A97408006FBBFB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				145C9E1E24167D05000D4F70 /* ErrorsFactory */,
 				146122F723AAC5D100107582 /* Color */,
 				14C8CA2C23A97B49006FBBFB /* Macro */,
 				14C8C9F523A97586006FBBFB /* Handlers */,
@@ -714,7 +758,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n\n";
+			shellScript = "
+
+";
 		};
 		EE42B7367937A12E155B7477 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -769,6 +815,7 @@
 				142187D1239D5F82002FE7C2 /* MainNavigationTabBarViewDelegate.swift in Sources */,
 				14C8CA0023A976E7006FBBFB /* TableViewAdapterUpdateCommandAppend.swift in Sources */,
 				142AF90D23983C9800AC1164 /* SceneDelegate.swift in Sources */,
+				145C9E17241675CF000D4F70 /* ClarifaiService.swift in Sources */,
 				14C8CA1823A97830006FBBFB /* TableViewAdapterCell.swift in Sources */,
 				14C8CA2E23A97B56006FBBFB /* Macro.swift in Sources */,
 				14724E7723F9728000809B80 /* SingleButtonCellData.swift in Sources */,
@@ -776,6 +823,7 @@
 				142187D3239D6414002FE7C2 /* MainNavigationViewControllerPresenterBarItemIdentifier.swift in Sources */,
 				142187C9239D5526002FE7C2 /* MainNavigationTabBarView.swift in Sources */,
 				146122FC23AACE9D00107582 /* ImageViewCell.swift in Sources */,
+				145C9E2024167D1D000D4F70 /* ErrorsFactory.swift in Sources */,
 				145C9DDB24165639000D4F70 /* EmptySpaceCellData.swift in Sources */,
 				14C8CA0A23A9777C006FBBFB /* TableViewAdapterUpdateCommand.swift in Sources */,
 				14C8CA1E23A97873006FBBFB /* TableViewAdapterCellDelegate.swift in Sources */,
@@ -784,6 +832,7 @@
 				14C8C9F923A975D2006FBBFB /* TableViewAdapterCellActionHandler.swift in Sources */,
 				14C341CD23998DAD007A2D97 /* UIViewController.swift in Sources */,
 				14C8CA1423A97807006FBBFB /* TableViewAdapterScrollDirection.swift in Sources */,
+				145C9E222416821F000D4F70 /* UIViewController+Alert.swift in Sources */,
 				142187C0239D50A2002FE7C2 /* MainNavigationTabBarButtonView.swift in Sources */,
 				14724E7B23F975D000809B80 /* PhotoAnalyserViewControllerPresenterItemIdentifier.swift in Sources */,
 				14C8CA2023A9788A006FBBFB /* TableViewAdapterItemData.swift in Sources */,
@@ -803,6 +852,7 @@
 				14C8CA2223A978A4006FBBFB /* TableViewAdapterCellActionHandlerDelegate.swift in Sources */,
 				1461230923AADBBA00107582 /* UIImage.swift in Sources */,
 				14C8CA0623A9772F006FBBFB /* TableViewAdapterUpdateCommandInsert.swift in Sources */,
+				145C9E1A24167719000D4F70 /* ClarifaiFoodPrediction.swift in Sources */,
 				14C8CA1623A9781A006FBBFB /* TableViewAdapterScrollPosition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
