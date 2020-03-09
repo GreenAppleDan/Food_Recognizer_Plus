@@ -11,6 +11,7 @@ import HandyJSON
 
 class Recipe: HandyJSON {
     var title: String?
+    var href: String?
     var ingredients: String?
     var thumbnail: String?
     

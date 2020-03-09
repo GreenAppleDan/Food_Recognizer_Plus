@@ -60,6 +60,7 @@ extension FoodPredictionsViewControllerPresenter: NavigationViewDelegate {
                 if let error = response.2 {
                     self.viewController?.show(error)
                 } else if let recipes = response.1 {
+                    //Переходим на другую вьюшку
                     print(recipes)
                 }
             }
