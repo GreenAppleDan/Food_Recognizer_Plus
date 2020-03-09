@@ -29,8 +29,22 @@ class RecipePuppyService {
                             method: HTTPMethod.get).responseJSON { (response) in
                                 if let error = response.error {
                                     main { completion((response.response, nil, error))}
-                                } else if let processedData = (response.data as Any) as? RecipePuppyRequestResponse {
-                                    main { completion((response.response, processedData.recipes, nil))}
+                                    
+                                } else if let data = response.data {
+                                    do {
+                                        if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String : Any], let rawRecipes = json["results"] as? [[String : Any]]  {
+                                            var recipes = [Recipe]()
+                                            for rawRecipe in rawRecipes {
+                                                guard let recipe = Recipe.deserialize(from: rawRecipe) else { continue }
+                                                recipes.append(recipe)
+                                            }
+                                            main { completion((response.response, recipes, nil))}
+                                        }
+                                    } catch {
+                                        main { completion((nil, nil, ErrorsFactory.unknownError()))}
+                                    }
+                                } else {
+                                    main { completion((nil, nil, ErrorsFactory.unknownError()))}
                                 }
                                 
         }
