@@ -31,6 +31,8 @@ class SingleButtonCell: TableViewAdapterCell {
         button?.backgroundColor = data.backgroundColor
         button?.setTitleColor(data.buttonTextColor, for: .normal)
         
+        button?.isEnabled = data.isActive
+        
     }
     
     @IBAction func buttonTap(_ sender: UIButton) {

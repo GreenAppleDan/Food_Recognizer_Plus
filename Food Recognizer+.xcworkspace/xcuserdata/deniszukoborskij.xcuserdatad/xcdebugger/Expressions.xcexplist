@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ActivityIndicatorView.startActivityIndicator(disableTimeout:bgAlpha:color:):ActivityIndicatorView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "activityIndicatorBackgroundView?.alpha">
+            </PersistentString>
+            <PersistentString
+               value = "activityIndicatorBackgroundView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -19,8 +19,8 @@ class CellItemsFactory {
         return item
     }
     
-    static func singleButtonItem(cellIdentifier: String, backgroundColor: UIColor, buttonText: String, buttonTextColor: UIColor, leadingAndTrailingConstraintsValue: CGFloat =  16) -> TableViewAdapterItem {
-        let data = SingleButtonCellData(cellIdentifier: cellIdentifier, backgroundColor: backgroundColor, buttonText: buttonText, buttonTextColor: buttonTextColor, leadingAndTrailingConstraintsValue: leadingAndTrailingConstraintsValue)
+    static func singleButtonItem(cellIdentifier: String, backgroundColor: UIColor, buttonText: String, buttonTextColor: UIColor, leadingAndTrailingConstraintsValue: CGFloat =  16, isActive: Bool = true) -> TableViewAdapterItem {
+        let data = SingleButtonCellData(cellIdentifier: cellIdentifier, backgroundColor: backgroundColor, buttonText: buttonText, buttonTextColor: buttonTextColor, leadingAndTrailingConstraintsValue: leadingAndTrailingConstraintsValue, isActive: isActive)
         
         let item = TableViewAdapterItem(cellClass: SingleButtonCell.self, cellData: data, cellHandler: TableViewAdapterCellActionHandler())
         

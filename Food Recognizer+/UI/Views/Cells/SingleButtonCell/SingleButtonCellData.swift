@@ -14,12 +14,14 @@ class SingleButtonCellData: TableViewAdapterItemData {
     var buttonText: String
     var buttonTextColor: UIColor
     var leadingAndTrailingConstraintsValue: CGFloat
+    var isActive: Bool
     
-    init(cellIdentifier: String, backgroundColor: UIColor, buttonText: String, buttonTextColor: UIColor, leadingAndTrailingConstraintsValue: CGFloat) {
+    init(cellIdentifier: String, backgroundColor: UIColor, buttonText: String, buttonTextColor: UIColor, leadingAndTrailingConstraintsValue: CGFloat, isActive: Bool) {
         self.backgroundColor = backgroundColor
         self.buttonText = buttonText
         self.buttonTextColor = buttonTextColor
         self.leadingAndTrailingConstraintsValue = leadingAndTrailingConstraintsValue
+        self.isActive = isActive
         super.init(cellIdentifier: cellIdentifier)
     }
 }

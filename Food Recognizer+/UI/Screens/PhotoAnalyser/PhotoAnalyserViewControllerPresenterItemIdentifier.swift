@@ -11,5 +11,6 @@ import Foundation
 enum PhotoAnalyserViewControllerPresenterItemIdentifier: String {
     case choosePhotoFromLibrary
     case takePicture
+    case analysePicture
     
 }

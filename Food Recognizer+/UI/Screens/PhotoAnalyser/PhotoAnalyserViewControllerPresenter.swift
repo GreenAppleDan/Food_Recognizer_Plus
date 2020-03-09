@@ -60,6 +60,8 @@ extension PhotoAnalyserViewControllerPresenter: TableViewAdapterCellActionHandle
             
             imagePicker.sourceType = .camera
             viewController?.present(imagePicker, animated: true, completion: nil)
+        case .analysePicture:
+            activityIndicatorView?.startActivityIndicator()
         }
     }
 }
