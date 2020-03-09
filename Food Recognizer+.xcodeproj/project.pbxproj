@@ -50,6 +50,9 @@
 		145C9E352416A4C8000D4F70 /* IngridientProbabilityPredictionCellActionIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E342416A4C8000D4F70 /* IngridientProbabilityPredictionCellActionIdentifier.swift */; };
 		145C9E372416A53C000D4F70 /* IngridientProbabilityPredictionCellActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E362416A53C000D4F70 /* IngridientProbabilityPredictionCellActionHandler.swift */; };
 		145C9E392416A565000D4F70 /* IngridientProbabilityPredictionCellActionHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E382416A565000D4F70 /* IngridientProbabilityPredictionCellActionHandlerDelegate.swift */; };
+		145C9E3C2416BD89000D4F70 /* RecipePuppyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E3B2416BD89000D4F70 /* RecipePuppyService.swift */; };
+		145C9E432416BECB000D4F70 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E422416BECB000D4F70 /* Recipe.swift */; };
+		145C9E462416C0FF000D4F70 /* RecipePuppyRequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E452416C0FF000D4F70 /* RecipePuppyRequestResponse.swift */; };
 		146122F923AAC5DB00107582 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146122F823AAC5DB00107582 /* Colors.swift */; };
 		146122FC23AACE9D00107582 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146122FB23AACE9C00107582 /* ImageViewCell.swift */; };
 		146122FE23AACEBF00107582 /* ImageViewCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146122FD23AACEBF00107582 /* ImageViewCellData.swift */; };
@@ -166,6 +169,9 @@
 		145C9E342416A4C8000D4F70 /* IngridientProbabilityPredictionCellActionIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientProbabilityPredictionCellActionIdentifier.swift; sourceTree = "<group>"; };
 		145C9E362416A53C000D4F70 /* IngridientProbabilityPredictionCellActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientProbabilityPredictionCellActionHandler.swift; sourceTree = "<group>"; };
 		145C9E382416A565000D4F70 /* IngridientProbabilityPredictionCellActionHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientProbabilityPredictionCellActionHandlerDelegate.swift; sourceTree = "<group>"; };
+		145C9E3B2416BD89000D4F70 /* RecipePuppyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePuppyService.swift; sourceTree = "<group>"; };
+		145C9E422416BECB000D4F70 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		145C9E452416C0FF000D4F70 /* RecipePuppyRequestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePuppyRequestResponse.swift; sourceTree = "<group>"; };
 		146122F823AAC5DB00107582 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		146122FB23AACE9C00107582 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
 		146122FD23AACEBF00107582 /* ImageViewCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCellData.swift; sourceTree = "<group>"; };
@@ -372,6 +378,7 @@
 		145C9E1424167587000D4F70 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				145C9E3A2416BD6F000D4F70 /* RecipePuppy */,
 				145C9E15241675A5000D4F70 /* Clarifai */,
 			);
 			path = Services;
@@ -433,6 +440,40 @@
 				145C9E382416A565000D4F70 /* IngridientProbabilityPredictionCellActionHandlerDelegate.swift */,
 			);
 			path = IngridientProbabilityPredictionCell;
+			sourceTree = "<group>";
+		};
+		145C9E3A2416BD6F000D4F70 /* RecipePuppy */ = {
+			isa = PBXGroup;
+			children = (
+				145C9E3D2416BE46000D4F70 /* Models */,
+				145C9E3B2416BD89000D4F70 /* RecipePuppyService.swift */,
+			);
+			path = RecipePuppy;
+			sourceTree = "<group>";
+		};
+		145C9E3D2416BE46000D4F70 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				145C9E442416C0E4000D4F70 /* RequestResponse */,
+				145C9E412416BEB7000D4F70 /* Recipe */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		145C9E412416BEB7000D4F70 /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				145C9E422416BECB000D4F70 /* Recipe.swift */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
+		145C9E442416C0E4000D4F70 /* RequestResponse */ = {
+			isa = PBXGroup;
+			children = (
+				145C9E452416C0FF000D4F70 /* RecipePuppyRequestResponse.swift */,
+			);
+			path = RequestResponse;
 			sourceTree = "<group>";
 		};
 		146122F723AAC5D100107582 /* Color */ = {
@@ -789,6 +830,7 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Clarifai/Clarifai.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -796,6 +838,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Clarifai.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -875,6 +918,7 @@
 				14C8CA0023A976E7006FBBFB /* TableViewAdapterUpdateCommandAppend.swift in Sources */,
 				142AF90D23983C9800AC1164 /* SceneDelegate.swift in Sources */,
 				145C9E17241675CF000D4F70 /* ClarifaiService.swift in Sources */,
+				145C9E462416C0FF000D4F70 /* RecipePuppyRequestResponse.swift in Sources */,
 				14C8CA1823A97830006FBBFB /* TableViewAdapterCell.swift in Sources */,
 				14C8CA2E23A97B56006FBBFB /* Macro.swift in Sources */,
 				14724E7723F9728000809B80 /* SingleButtonCellData.swift in Sources */,
@@ -917,6 +961,8 @@
 				145C9E1A24167719000D4F70 /* ClarifaiFoodPrediction.swift in Sources */,
 				145C9E392416A565000D4F70 /* IngridientProbabilityPredictionCellActionHandlerDelegate.swift in Sources */,
 				145C9E2E24169C84000D4F70 /* IngridientProbabilityPredictionCell.swift in Sources */,
+				145C9E432416BECB000D4F70 /* Recipe.swift in Sources */,
+				145C9E3C2416BD89000D4F70 /* RecipePuppyService.swift in Sources */,
 				14C8CA1623A9781A006FBBFB /* TableViewAdapterScrollPosition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

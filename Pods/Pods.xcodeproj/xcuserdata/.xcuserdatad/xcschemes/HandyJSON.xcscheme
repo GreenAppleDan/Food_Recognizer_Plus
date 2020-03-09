@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F940E1C6BB03E727D464021BE4AFA4CD"
-               BlueprintName = "Pods-Food Recognizer+"
+               BlueprintIdentifier = "F69401AB72A04080E5B23C552BCD6295"
+               BlueprintName = "HandyJSON"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Pods-Food Recognizer+.framework">
+               BuildableName = "HandyJSON.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

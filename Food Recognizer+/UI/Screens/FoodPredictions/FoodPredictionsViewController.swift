@@ -14,11 +14,13 @@ class FoodPredictionsViewController: ViewController<FoodPredictionsViewControlle
     
     // MARK: - Properties
     var clarifaiPredictions: [ClarifaiFoodPrediction]?
+    var recipePuppyService: RecipePuppyService?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let clarifaiPredictions = clarifaiPredictions else { return }
-        presenter = FoodPredictionsViewControllerPresenter(tableViewAdapter: tableViewAdapter, viewController: self, navigationView: navigationView, clarifaiPredictions: clarifaiPredictions)
+        guard let recipePuppyService = recipePuppyService else { return }
+        presenter = FoodPredictionsViewControllerPresenter(tableViewAdapter: tableViewAdapter, viewController: self, navigationView: navigationView, clarifaiPredictions: clarifaiPredictions, recipePuppyService: recipePuppyService)
         
         presenter?.viewDidLoad()
     }

@@ -11,8 +11,10 @@ import UIKit
 class ScreensFactory {
     
     let clarifaiService: ClarifaiService
+    let recipePuppyService: RecipePuppyService
     init() {
         clarifaiService = ClarifaiService(apiKey: "d1e9d18edef54ba49a7f031eec6db325")
+        recipePuppyService = RecipePuppyService()
     }
     
     
@@ -37,6 +39,7 @@ class ScreensFactory {
     func foodPredictionsViewController(clarifaiPredictions: [ClarifaiFoodPrediction]) -> FoodPredictionsViewController {
         let viewController: FoodPredictionsViewController = .fromStoryboard()
         viewController.clarifaiPredictions = clarifaiPredictions
+        viewController.recipePuppyService = recipePuppyService
         return viewController
     }
 }

@@ -9,4 +9,5 @@ target 'Food Recognizer+' do
   pod 'Clarifai'
   pod 'Alamofire', '~> 5.0'
   pod 'Nuke', '~> 8.0'
+  pod 'HandyJSON', '~> 5.0.1'
 end

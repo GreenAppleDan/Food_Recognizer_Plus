@@ -11,14 +11,15 @@ import UIKit
 class FoodPredictionsViewControllerPresenter: TableViewAdapterPresenter {
     
     private weak var navigationView: NavigationView?
-    var clarifaiPredictions: [ClarifaiFoodPrediction]
+    private var clarifaiPredictions: [ClarifaiFoodPrediction]
+    private var recipePuppyService: RecipePuppyService
     
+    private var chosenIngridientNames = Set<String>()
     
-    var chosenIngridientNames = Set<String>()
-    
-    init(tableViewAdapter: TableViewAdapter?, viewController: UIViewController?, navigationView: NavigationView?, clarifaiPredictions: [ClarifaiFoodPrediction]) {
+    init(tableViewAdapter: TableViewAdapter?, viewController: UIViewController?, navigationView: NavigationView?, clarifaiPredictions: [ClarifaiFoodPrediction], recipePuppyService: RecipePuppyService) {
         self.navigationView = navigationView
         self.clarifaiPredictions = clarifaiPredictions
+        self.recipePuppyService = recipePuppyService
         super.init(tableViewAdapter: tableViewAdapter, viewController: viewController)
     }
     
@@ -36,6 +37,7 @@ class FoodPredictionsViewControllerPresenter: TableViewAdapterPresenter {
         navigationView?.delegate = self
         navigationView?.backButtonIsHidden = false
         navigationView?.set(title: "Predictions")
+        navigationView?.setRightButton(title: "Get recipes", image: nil)
     }
     
     private func reloadItems(){
@@ -51,6 +53,17 @@ extension FoodPredictionsViewControllerPresenter: NavigationViewDelegate {
     }
     
     func navigationViewDidTapRightButton(_ view: NavigationView) {
+        if chosenIngridientNames.isEmpty {
+            viewController?.showAlert(title: "You have not chosen any ingridients")
+        } else {
+            recipePuppyService.getRecipesWithIngridientNames(names: Array(chosenIngridientNames)) { (response) in
+                if let error = response.2 {
+                    self.viewController?.show(error)
+                } else if let recipes = response.1 {
+                    print(recipes)
+                }
+            }
+        }
     }
 }
 
