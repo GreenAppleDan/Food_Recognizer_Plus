@@ -116,6 +116,10 @@
 		D76008AB241BAFEF009B6AE9 /* MainNavigationViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76008AA241BAFEF009B6AE9 /* MainNavigationViewControllerProtocol.swift */; };
 		D76008AD241BB395009B6AE9 /* ConfigurationViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76008AC241BB395009B6AE9 /* ConfigurationViewControllerProtocol.swift */; };
 		D76008AF241BBB0F009B6AE9 /* FoodPredictionsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76008AE241BBB0F009B6AE9 /* FoodPredictionsViewControllerProtocol.swift */; };
+		D76008B2241BD0B3009B6AE9 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76008B1241BD0B3009B6AE9 /* RecipesViewController.swift */; };
+		D76008B4241BD0E7009B6AE9 /* RecipesViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76008B3241BD0E7009B6AE9 /* RecipesViewControllerProtocol.swift */; };
+		D76008B6241BD149009B6AE9 /* RecipesViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76008B5241BD149009B6AE9 /* RecipesViewControllerPresenter.swift */; };
+		D76008B8241BD3A4009B6AE9 /* RecipesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D76008B7241BD3A4009B6AE9 /* RecipesViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -245,6 +249,10 @@
 		D76008AA241BAFEF009B6AE9 /* MainNavigationViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewControllerProtocol.swift; sourceTree = "<group>"; };
 		D76008AC241BB395009B6AE9 /* ConfigurationViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewControllerProtocol.swift; sourceTree = "<group>"; };
 		D76008AE241BBB0F009B6AE9 /* FoodPredictionsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPredictionsViewControllerProtocol.swift; sourceTree = "<group>"; };
+		D76008B1241BD0B3009B6AE9 /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
+		D76008B3241BD0E7009B6AE9 /* RecipesViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewControllerProtocol.swift; sourceTree = "<group>"; };
+		D76008B5241BD149009B6AE9 /* RecipesViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewControllerPresenter.swift; sourceTree = "<group>"; };
+		D76008B7241BD3A4009B6AE9 /* RecipesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipesViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -570,6 +578,7 @@
 		14C341CE23998E68007A2D97 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D76008B0241BD02A009B6AE9 /* RecipesViewController */,
 				145C9E23241685E5000D4F70 /* FoodPredictions */,
 				142187D7239D7508002FE7C2 /* ConfigurationViewController */,
 				14C341D723999423007A2D97 /* PhotoAnalyser */,
@@ -777,6 +786,17 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		D76008B0241BD02A009B6AE9 /* RecipesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D76008B1241BD0B3009B6AE9 /* RecipesViewController.swift */,
+				D76008B3241BD0E7009B6AE9 /* RecipesViewControllerProtocol.swift */,
+				D76008B5241BD149009B6AE9 /* RecipesViewControllerPresenter.swift */,
+				D76008B7241BD3A4009B6AE9 /* RecipesViewController.storyboard */,
+			);
+			path = RecipesViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -841,6 +861,7 @@
 			files = (
 				142187CF239D5A25002FE7C2 /* MainNavigationTabBarView.xib in Resources */,
 				14C341DB2399948D007A2D97 /* PhotoAnalyserViewController.storyboard in Resources */,
+				D76008B8241BD3A4009B6AE9 /* RecipesViewController.storyboard in Resources */,
 				145C9E3324169D8A000D4F70 /* IngridientProbabilityPredictionCell.xib in Resources */,
 				145C9E292416868A000D4F70 /* FoodPredictionsViewController.storyboard in Resources */,
 				145C9DDD24165657000D4F70 /* EmptySpaceCell.xib in Resources */,
@@ -934,6 +955,7 @@
 				D76008A1241B8A58009B6AE9 /* BaseViewController.swift in Sources */,
 				14C8CA1C23A9785F006FBBFB /* TableViewAdapterCellAction.swift in Sources */,
 				14C341D123998E8E007A2D97 /* ScreensFactory.swift in Sources */,
+				D76008B6241BD149009B6AE9 /* RecipesViewControllerPresenter.swift in Sources */,
 				142187DB239D7546002FE7C2 /* ConfigurationViewControllerPresenter.swift in Sources */,
 				D76008AF241BBB0F009B6AE9 /* FoodPredictionsViewControllerProtocol.swift in Sources */,
 				14C8CA0E23A977B0006FBBFB /* TableViewAdapter.swift in Sources */,
@@ -952,8 +974,10 @@
 				D760089E241B893B009B6AE9 /* ViewControllerRouter.swift in Sources */,
 				142187BB239D4C4C002FE7C2 /* XibView.swift in Sources */,
 				14C8CA1223A977EC006FBBFB /* TableViewAdapterDelegate.swift in Sources */,
+				D76008B4241BD0E7009B6AE9 /* RecipesViewControllerProtocol.swift in Sources */,
 				145C9E372416A53C000D4F70 /* IngridientProbabilityPredictionCellActionHandler.swift in Sources */,
 				14C8CA0423A97719006FBBFB /* TableViewAdapterUpdateCommandReplace.swift in Sources */,
+				D76008B2241BD0B3009B6AE9 /* RecipesViewController.swift in Sources */,
 				14C8C9FD23A976B7006FBBFB /* TableViewAdapterUpdater.swift in Sources */,
 				1461230C23AAE6BF00107582 /* ScaledHeightImageView.swift in Sources */,
 				142187BD239D4CD2002FE7C2 /* UIView.swift in Sources */,
