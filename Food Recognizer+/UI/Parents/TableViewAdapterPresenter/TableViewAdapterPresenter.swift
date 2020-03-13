@@ -50,7 +50,6 @@ open class TableViewAdapterPresenter<T>: TableViewAdapterPresenterProtocol {
     }
     
     open func viewWillAppear() {
-        print("hi")
     }
     
     open func viewWillDisappear() {

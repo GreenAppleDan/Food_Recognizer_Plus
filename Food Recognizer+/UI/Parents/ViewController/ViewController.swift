@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class ViewController<T>: UIViewController, UIGestureRecognizerDelegate {
+open class ViewController<T>: UIViewController, UIGestureRecognizerDelegate, NavigationViewDelegate {
     
     @IBOutlet public weak var tableView: UITableView?
     @IBOutlet weak var navigationView: NavigationView?
@@ -141,14 +141,16 @@ open class ViewController<T>: UIViewController, UIGestureRecognizerDelegate {
         }
     }
 
-    // MARK: - Private
-
-    
-    private func backButtonDidTap() {
+    // MARK: - NavigationViewDelegate
+    func navigationViewDidTapBackButton(_ view: NavigationView) {
         navigationController?.popViewController(animated: true)
     }
 
-    private func visibleCellWithIdentifier(_ identifier: String) -> TableViewAdapterCell? {
+    func navigationViewDidTapRightButton(_ view: NavigationView) {
+
+    }
+    // MARK: - getting visible cell with identifier
+    public func visibleCellWithIdentifier(_ identifier: String) -> TableViewAdapterCell? {
         guard
             let visibleCells = tableView?.visibleCells as? [TableViewAdapterCell]
         else {
@@ -306,18 +308,6 @@ extension ViewController: TableViewAdapterDelegate {
         tableViewAdapterPresenter()?.tableViewAdapter(adapter, didReachBorderPosition: borderPosition, offset: offset)
     }
     
-}
-
-extension ViewController: NavigationViewDelegate {
-
-    func navigationViewDidTapBackButton(_ view: NavigationView) {
-        
-    }
-
-    func navigationViewDidTapRightButton(_ view: NavigationView) {
-
-    }
-
 }
 
 extension ViewController: TableCellActionHandlerDelegate {

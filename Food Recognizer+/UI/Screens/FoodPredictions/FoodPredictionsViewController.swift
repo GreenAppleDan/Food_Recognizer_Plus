@@ -10,18 +10,66 @@ import UIKit
 
 class FoodPredictionsViewController: ViewController<FoodPredictionsViewControllerPresenter> {
     // MARK: - Outlets
-    @IBOutlet private weak var navigationView: NavigationView?
     
     // MARK: - Properties
     var clarifaiPredictions: [ClarifaiFoodPrediction]?
     var recipePuppyService: RecipePuppyService?
     
+    private var chosenIngridientNames = Set<String>()
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let clarifaiPredictions = clarifaiPredictions else { return }
         guard let recipePuppyService = recipePuppyService else { return }
-        presenter = FoodPredictionsViewControllerPresenter(tableViewAdapter: tableViewAdapter, viewController: self, navigationView: navigationView, clarifaiPredictions: clarifaiPredictions, recipePuppyService: recipePuppyService)
+        presenter = FoodPredictionsViewControllerPresenter(delegate: self, recipePuppyService: recipePuppyService)
+        
+        
+        tableViewAdapter?.tableView?.separatorStyle = .none
+        setupNavigationView()
+        
+        reloadItems()
         
         presenter?.viewDidLoad()
     }
+    
+    // MARK: - Private
+    private func setupNavigationView() {
+        navigationView?.backButtonIsHidden = false
+        navigationView?.set(title: "Predictions")
+        navigationView?.setRightButton(title: "Get recipes", image: nil)
+    }
+    
+    private func reloadItems(){
+        let items = FoodPredictionsViewControllerPresenterItemsFactory.items(predictions: clarifaiPredictions ?? [])
+        
+        set(items: items, animated: false)
+    }
+    
+   // MARK: - NavigationViewDelegate
+    
+    override func navigationViewDidTapRightButton(_ view: NavigationView) {
+        if chosenIngridientNames.isEmpty {
+            showAlert(title: "You have not chosen any ingridients")
+        } else {
+            presenter?.getRecipesWithIngridientNames(ingridientNames: Array(chosenIngridientNames))
+        }
+    }
 }
+
+
+extension FoodPredictionsViewController: IngridientProbabilityPredictionCellActionHandlerDelegate {
+    func ingridientProbabilityCellOverlayingbuttonDidTap(_ cell: IngridientProbabilityPredictionCell, cellIdentifier: String) {
+        guard let cellData = cell.data else { return }
+        if cell.isChosen == true {
+            cell.toggleSelection()
+            chosenIngridientNames.remove(cellData.ingridientName)
+        } else {
+            cell.toggleSelection()
+            chosenIngridientNames.insert(cellData.ingridientName)
+        }
+    }
+}
+
+extension FoodPredictionsViewController: FoodPredictionsViewControllerProtocol{
+    
+}
+
