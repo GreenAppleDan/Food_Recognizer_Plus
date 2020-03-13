@@ -9,12 +9,22 @@
 import UIKit
 
 class ConfigurationViewController: ViewController<ConfigurationViewControllerPresenter>{
-    @IBOutlet weak var navigationView: NavigationView!
     
     
     override func viewDidLoad() {
-        presenter = ConfigurationViewControllerPresenter(viewController: self, navigationView: navigationView)
+        presenter = ConfigurationViewControllerPresenter(delegate: self)
         
+        setupNavigationView()
         presenter?.viewDidLoad()
     }
+    
+    private func setupNavigationView() {
+        navigationView?.backButtonIsHidden = true
+        navigationView?.set(title: "Configuration")
+    }
+}
+
+
+extension ConfigurationViewController: ConfigurationViewControllerProtocol {
+    
 }

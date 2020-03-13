@@ -8,25 +8,5 @@
 
 import UIKit
 
-class ConfigurationViewControllerPresenter: TableViewAdapterPresenter {
-    
-    private var navigationView: NavigationView?
-    
-    init(viewController: UIViewController, navigationView: NavigationView?) {
-        self.navigationView = navigationView
-        
-        super.init(viewController: viewController)
-    }
-    
-    override func viewDidLoad() {
-        
-        
-        
-        setupNavigationView()
-    }
-    
-    private func setupNavigationView() {
-        navigationView?.backButtonIsHidden = true
-        navigationView?.set(title: "Configuration")
-    }
+class ConfigurationViewControllerPresenter: TableViewAdapterPresenter<ConfigurationViewControllerProtocol> {
 }

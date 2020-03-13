@@ -114,6 +114,7 @@
 		D76008A5241B9EF6009B6AE9 /* ActivityIndicatorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76008A4241B9EF6009B6AE9 /* ActivityIndicatorHandler.swift */; };
 		D76008A9241BAB7F009B6AE9 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76008A8241BAB7F009B6AE9 /* AlertHandler.swift */; };
 		D76008AB241BAFEF009B6AE9 /* MainNavigationViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76008AA241BAFEF009B6AE9 /* MainNavigationViewControllerProtocol.swift */; };
+		D76008AD241BB395009B6AE9 /* ConfigurationViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76008AC241BB395009B6AE9 /* ConfigurationViewControllerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -241,6 +242,7 @@
 		D76008A4241B9EF6009B6AE9 /* ActivityIndicatorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorHandler.swift; sourceTree = "<group>"; };
 		D76008A8241BAB7F009B6AE9 /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 		D76008AA241BAFEF009B6AE9 /* MainNavigationViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewControllerProtocol.swift; sourceTree = "<group>"; };
+		D76008AC241BB395009B6AE9 /* ConfigurationViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewControllerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +313,7 @@
 				142187D8239D751E002FE7C2 /* ConfigurationViewController.swift */,
 				142187DA239D7546002FE7C2 /* ConfigurationViewControllerPresenter.swift */,
 				142187DC239D7582002FE7C2 /* ConfigurationViewController.storyboard */,
+				D76008AC241BB395009B6AE9 /* ConfigurationViewControllerProtocol.swift */,
 			);
 			path = ConfigurationViewController;
 			sourceTree = "<group>";
@@ -959,6 +962,7 @@
 				14C8CA1823A97830006FBBFB /* TableViewAdapterCell.swift in Sources */,
 				14C8CA2E23A97B56006FBBFB /* Macro.swift in Sources */,
 				14724E7723F9728000809B80 /* SingleButtonCellData.swift in Sources */,
+				D76008AD241BB395009B6AE9 /* ConfigurationViewControllerProtocol.swift in Sources */,
 				142187C6239D533B002FE7C2 /* MainNavigationTabBarButtonViewDelegate.swift in Sources */,
 				142187D3239D6414002FE7C2 /* MainNavigationViewControllerPresenterBarItemIdentifier.swift in Sources */,
 				142187C9239D5526002FE7C2 /* MainNavigationTabBarView.swift in Sources */,
