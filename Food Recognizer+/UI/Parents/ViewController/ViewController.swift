@@ -38,24 +38,6 @@ open class ViewController<T>: UIViewController, UIGestureRecognizerDelegate, Nav
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
-
-//    open func viewWillAppear(isNavigationBarHidden: Bool, hidesShadow: Bool) {
-//        guard let navigationController = navigationController else { return }
-//
-//        if hidesShadow == true {
-//            let navigationBar = navigationController.navigationBar
-//            let hidesShadow = "hidesShadow"
-//            if navigationBar.containsValue(hidesShadow) {
-//                navigationBar.setValue(true, forKey: hidesShadow)
-//            }
-//        }
-//
-//        if navigationController.isNavigationBarHidden == !isNavigationBarHidden {
-//            navigationController.setNavigationBarHidden(isNavigationBarHidden, animated: true)
-//        }
-//
-//        presenter?.viewWillAppear(isNavigationBarHidden: true)
-//    }
     
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

@@ -36,8 +36,8 @@ class PhotoAnalyserViewController: BaseViewController<PhotoAnalyserViewControlle
     
     // MARK: - Private. Setup
     private func setupNavigationView() {
-        navigationView?.backButtonIsHidden = true
-        navigationView?.set(title: "Analyser")
+        setNavigationViewRightButtonIsHidden(true)
+        setNavigationViewTitle("Analyser")
     }
     
     private func reloadItems(){
