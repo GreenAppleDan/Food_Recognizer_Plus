@@ -8,87 +8,26 @@
 
 import UIKit
 
-class PhotoAnalyserViewControllerPresenter: TableViewAdapterPresenter {
+class PhotoAnalyserViewControllerPresenter: TableViewAdapterPresenter<PhotoAnalyserViewControllerProtocol> {
     
-    private weak var navigationView: NavigationView?
-    private weak var activityIndicatorView: ActivityIndicatorView?
-    private var screensFactory: ScreensFactory
     private var clarifaiService: ClarifaiService
-    private var imagePicker: UIImagePickerController
-    private var chosenImage: UIImage?
     
-    init(tableViewAdapter: TableViewAdapter?, viewController: UIViewController, screensFactory: ScreensFactory, navigationView: NavigationView?, activityIndicatorView: ActivityIndicatorView?, clarifaiService: ClarifaiService) {
-        self.navigationView = navigationView
-        self.activityIndicatorView = activityIndicatorView
-        self.screensFactory = screensFactory
+    init(delegate: PhotoAnalyserViewControllerProtocol, clarifaiService: ClarifaiService) {
         self.clarifaiService = clarifaiService
-        imagePicker = UIImagePickerController()
-        super.init(tableViewAdapter: tableViewAdapter, viewController: viewController)
+        super.init(delegate: delegate)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        imagePicker.delegate = self
-        imagePicker.allowsEditing = false
-        tableViewAdapter?.tableView?.separatorStyle = .none
-        
-        setupNavigationView()
-        
-        reloadItems()
-    }
+    // MARK: - Private. Setup
     
-    
-    private func setupNavigationView() {
-        navigationView?.backButtonIsHidden = true
-        navigationView?.set(title: "Analyser")
-    }
-    
-    private func reloadItems(){
-        let items = PhotoAnalyserViewControllerItemsFactory.items(photoImage: chosenImage)
-        
-        set(items: items, animated: false)
-    }
-}
-
-extension PhotoAnalyserViewControllerPresenter: TableViewAdapterCellActionHandlerDelegate {
-    func tableViewAdapterCellDidTap(_ tableViewAdapterCell: TableViewAdapterCell, withIdentifier identifier: String) {
-        guard let identifier = PhotoAnalyserViewControllerPresenterItemIdentifier(rawValue: identifier) else { return }
-        switch identifier {
-        case .choosePhotoFromLibrary:
-            guard UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) else { return }
-            
-            imagePicker.sourceType = .savedPhotosAlbum
-            viewController?.present(imagePicker, animated: true, completion: nil)
-        case .takePicture:
-            guard UIImagePickerController.isSourceTypeAvailable(.camera) else { return }
-            
-            imagePicker.sourceType = .camera
-            viewController?.present(imagePicker, animated: true, completion: nil)
-        case .analysePicture:
-            guard let chosenImage = chosenImage else {
-                viewController?.showAlert(title: "Image is not chosen")
-                return
-            }
-            activityIndicatorView?.startActivityIndicator()
-            clarifaiService.getFoodPredictions(from: chosenImage) { (result) in
-                self.activityIndicatorView?.stopActivityIndicator()
-                if let error = result.1 {
-                    self.viewController?.show(error)
-                } else if let predictions = result.0 {
-                    let foodPredictionsViewController = self.screensFactory.foodPredictionsViewController(clarifaiPredictions: predictions)
-                    self.viewController?.navigationController?.pushViewController(foodPredictionsViewController, animated: true)
-                }
+    func getFoodPredictions(for image: UIImage) {
+        clarifaiService.getFoodPredictions(from: image) { (result) in
+            self.delegate?.stopActivityIndicator()
+            if let error = result.1 {
+                self.delegate?.show(error)
+            } else if let predictions = result.0 {
+                self.delegate?.pushFoodPredictionsViewController(predictions: predictions)
             }
         }
     }
-}
 
-extension PhotoAnalyserViewControllerPresenter: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let image = info[.originalImage] as? UIImage else { return }
-        picker.dismiss(animated: true, completion: nil)
-        chosenImage = image
-        reloadItems()
-    }
 }

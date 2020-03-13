@@ -39,7 +39,6 @@
 		145C9E17241675CF000D4F70 /* ClarifaiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E16241675CF000D4F70 /* ClarifaiService.swift */; };
 		145C9E1A24167719000D4F70 /* ClarifaiFoodPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E1924167719000D4F70 /* ClarifaiFoodPrediction.swift */; };
 		145C9E2024167D1D000D4F70 /* ErrorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E1F24167D1D000D4F70 /* ErrorsFactory.swift */; };
-		145C9E222416821F000D4F70 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E212416821F000D4F70 /* UIViewController+Alert.swift */; };
 		145C9E2524168600000D4F70 /* FoodPredictionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E2424168600000D4F70 /* FoodPredictionsViewController.swift */; };
 		145C9E2724168627000D4F70 /* FoodPredictionsViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145C9E2624168627000D4F70 /* FoodPredictionsViewControllerPresenter.swift */; };
 		145C9E292416868A000D4F70 /* FoodPredictionsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 145C9E282416868A000D4F70 /* FoodPredictionsViewController.storyboard */; };
@@ -107,6 +106,13 @@
 		14C8CA2B23A97AB7006FBBFB /* CellsActionIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C8CA2A23A97AB7006FBBFB /* CellsActionIdentifiers.swift */; };
 		14C8CA2E23A97B56006FBBFB /* Macro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C8CA2D23A97B56006FBBFB /* Macro.swift */; };
 		3393D55A37451A3A89B1F3C3 /* Pods_Food_Recognizer_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18ECB7D0BF4F7696E066314A /* Pods_Food_Recognizer_.framework */; };
+		D760089A241B8792009B6AE9 /* TableViewAdapterPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7600899241B8792009B6AE9 /* TableViewAdapterPresenterProtocol.swift */; };
+		D760089C241B88E8009B6AE9 /* ViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D760089B241B88E8009B6AE9 /* ViewControllerProtocol.swift */; };
+		D760089E241B893B009B6AE9 /* ViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D760089D241B893A009B6AE9 /* ViewControllerRouter.swift */; };
+		D76008A1241B8A58009B6AE9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76008A0241B8A58009B6AE9 /* BaseViewController.swift */; };
+		D76008A3241B9A6A009B6AE9 /* PhotoAnalyserViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76008A2241B9A6A009B6AE9 /* PhotoAnalyserViewControllerProtocol.swift */; };
+		D76008A5241B9EF6009B6AE9 /* ActivityIndicatorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76008A4241B9EF6009B6AE9 /* ActivityIndicatorHandler.swift */; };
+		D76008A9241BAB7F009B6AE9 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76008A8241BAB7F009B6AE9 /* AlertHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -157,7 +163,6 @@
 		145C9E16241675CF000D4F70 /* ClarifaiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarifaiService.swift; sourceTree = "<group>"; };
 		145C9E1924167719000D4F70 /* ClarifaiFoodPrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarifaiFoodPrediction.swift; sourceTree = "<group>"; };
 		145C9E1F24167D1D000D4F70 /* ErrorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsFactory.swift; sourceTree = "<group>"; };
-		145C9E212416821F000D4F70 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		145C9E2424168600000D4F70 /* FoodPredictionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPredictionsViewController.swift; sourceTree = "<group>"; };
 		145C9E2624168627000D4F70 /* FoodPredictionsViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPredictionsViewControllerPresenter.swift; sourceTree = "<group>"; };
 		145C9E282416868A000D4F70 /* FoodPredictionsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FoodPredictionsViewController.storyboard; sourceTree = "<group>"; };
@@ -227,6 +232,13 @@
 		18ECB7D0BF4F7696E066314A /* Pods_Food_Recognizer_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food_Recognizer_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F275EEEBA98A6B8D6CC7BE2 /* Pods-Food Recognizer+.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Recognizer+.release.xcconfig"; path = "Pods/Target Support Files/Pods-Food Recognizer+/Pods-Food Recognizer+.release.xcconfig"; sourceTree = "<group>"; };
 		CD8F4CC33984CE31470BD8CF /* Pods-Food Recognizer+.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Recognizer+.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Food Recognizer+/Pods-Food Recognizer+.debug.xcconfig"; sourceTree = "<group>"; };
+		D7600899241B8792009B6AE9 /* TableViewAdapterPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapterPresenterProtocol.swift; sourceTree = "<group>"; };
+		D760089B241B88E8009B6AE9 /* ViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProtocol.swift; sourceTree = "<group>"; };
+		D760089D241B893A009B6AE9 /* ViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRouter.swift; sourceTree = "<group>"; };
+		D76008A0241B8A58009B6AE9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D76008A2241B9A6A009B6AE9 /* PhotoAnalyserViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAnalyserViewControllerProtocol.swift; sourceTree = "<group>"; };
+		D76008A4241B9EF6009B6AE9 /* ActivityIndicatorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorHandler.swift; sourceTree = "<group>"; };
+		D76008A8241BAB7F009B6AE9 /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -543,7 +555,6 @@
 				142187CA239D582C002FE7C2 /* UIColor.swift */,
 				142187D4239D6C65002FE7C2 /* Array.swift */,
 				1461230823AADBB900107582 /* UIImage.swift */,
-				145C9E212416821F000D4F70 /* UIViewController+Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -587,6 +598,7 @@
 				14C341DA2399948D007A2D97 /* PhotoAnalyserViewController.storyboard */,
 				14C341E52399A36E007A2D97 /* PhotoAnalyserViewControllerPresenter.swift */,
 				14724E7A23F975D000809B80 /* PhotoAnalyserViewControllerPresenterItemIdentifier.swift */,
+				D76008A2241B9A6A009B6AE9 /* PhotoAnalyserViewControllerProtocol.swift */,
 			);
 			path = PhotoAnalyser;
 			sourceTree = "<group>";
@@ -594,6 +606,7 @@
 		14C341DC23999E56007A2D97 /* Parents */ = {
 			isa = PBXGroup;
 			children = (
+				D760089F241B8A29009B6AE9 /* BaseViewController */,
 				14C341DE23999EA0007A2D97 /* ViewController */,
 				14C341DD23999E96007A2D97 /* TableViewAdapterPresenter */,
 			);
@@ -604,6 +617,7 @@
 			isa = PBXGroup;
 			children = (
 				14C341DF23999ED8007A2D97 /* TableViewAdapterPresenter.swift */,
+				D7600899241B8792009B6AE9 /* TableViewAdapterPresenterProtocol.swift */,
 			);
 			path = TableViewAdapterPresenter;
 			sourceTree = "<group>";
@@ -611,6 +625,7 @@
 		14C341DE23999EA0007A2D97 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D76008A7241BAAD3009B6AE9 /* Protocols */,
 				14C341E123999F81007A2D97 /* ViewController.swift */,
 			);
 			path = ViewController;
@@ -724,6 +739,33 @@
 				4F275EEEBA98A6B8D6CC7BE2 /* Pods-Food Recognizer+.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D760089F241B8A29009B6AE9 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D76008A0241B8A58009B6AE9 /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		D76008A6241BAAC7009B6AE9 /* MainProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				D760089B241B88E8009B6AE9 /* ViewControllerProtocol.swift */,
+			);
+			path = MainProtocol;
+			sourceTree = "<group>";
+		};
+		D76008A7241BAAD3009B6AE9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D760089D241B893A009B6AE9 /* ViewControllerRouter.swift */,
+				D76008A4241B9EF6009B6AE9 /* ActivityIndicatorHandler.swift */,
+				D76008A6241BAAC7009B6AE9 /* MainProtocol */,
+				D76008A8241BAB7F009B6AE9 /* AlertHandler.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -877,8 +919,10 @@
 			files = (
 				14C341D423999072007A2D97 /* MainNavigationViewController.swift in Sources */,
 				145C9E2524168600000D4F70 /* FoodPredictionsViewController.swift in Sources */,
+				D760089A241B8792009B6AE9 /* TableViewAdapterPresenterProtocol.swift in Sources */,
 				145C9E352416A4C8000D4F70 /* IngridientProbabilityPredictionCellActionIdentifier.swift in Sources */,
 				14C341E62399A36E007A2D97 /* PhotoAnalyserViewControllerPresenter.swift in Sources */,
+				D76008A1241B8A58009B6AE9 /* BaseViewController.swift in Sources */,
 				14C8CA1C23A9785F006FBBFB /* TableViewAdapterCellAction.swift in Sources */,
 				14C341D123998E8E007A2D97 /* ScreensFactory.swift in Sources */,
 				142187DB239D7546002FE7C2 /* ConfigurationViewControllerPresenter.swift in Sources */,
@@ -895,6 +939,7 @@
 				142187CB239D582C002FE7C2 /* UIColor.swift in Sources */,
 				142AF90B23983C9800AC1164 /* AppDelegate.swift in Sources */,
 				14C8CA2823A97A2A006FBBFB /* TableCellActionHandlerDelegate.swift in Sources */,
+				D760089E241B893B009B6AE9 /* ViewControllerRouter.swift in Sources */,
 				142187BB239D4C4C002FE7C2 /* XibView.swift in Sources */,
 				14C8CA1223A977EC006FBBFB /* TableViewAdapterDelegate.swift in Sources */,
 				145C9E372416A53C000D4F70 /* IngridientProbabilityPredictionCellActionHandler.swift in Sources */,
@@ -913,17 +958,19 @@
 				142187C6239D533B002FE7C2 /* MainNavigationTabBarButtonViewDelegate.swift in Sources */,
 				142187D3239D6414002FE7C2 /* MainNavigationViewControllerPresenterBarItemIdentifier.swift in Sources */,
 				142187C9239D5526002FE7C2 /* MainNavigationTabBarView.swift in Sources */,
+				D76008A9241BAB7F009B6AE9 /* AlertHandler.swift in Sources */,
 				146122FC23AACE9D00107582 /* ImageViewCell.swift in Sources */,
+				D76008A3241B9A6A009B6AE9 /* PhotoAnalyserViewControllerProtocol.swift in Sources */,
 				145C9E2024167D1D000D4F70 /* ErrorsFactory.swift in Sources */,
 				145C9DDB24165639000D4F70 /* EmptySpaceCellData.swift in Sources */,
 				14C8CA0A23A9777C006FBBFB /* TableViewAdapterUpdateCommand.swift in Sources */,
 				14C8CA1E23A97873006FBBFB /* TableViewAdapterCellDelegate.swift in Sources */,
+				D760089C241B88E8009B6AE9 /* ViewControllerProtocol.swift in Sources */,
 				142187D5239D6C65002FE7C2 /* Array.swift in Sources */,
 				14C8CA2423A978D8006FBBFB /* TableViewAdapterBorderPosition.swift in Sources */,
 				14C8C9F923A975D2006FBBFB /* TableViewAdapterCellActionHandler.swift in Sources */,
 				14C341CD23998DAD007A2D97 /* UIViewController.swift in Sources */,
 				14C8CA1423A97807006FBBFB /* TableViewAdapterScrollDirection.swift in Sources */,
-				145C9E222416821F000D4F70 /* UIViewController+Alert.swift in Sources */,
 				142187C0239D50A2002FE7C2 /* MainNavigationTabBarButtonView.swift in Sources */,
 				14724E7B23F975D000809B80 /* PhotoAnalyserViewControllerPresenterItemIdentifier.swift in Sources */,
 				145C9E3124169CCC000D4F70 /* IngridientProbabilityPredictionCellData.swift in Sources */,
@@ -936,6 +983,7 @@
 				14C8CA2B23A97AB7006FBBFB /* CellsActionIdentifiers.swift in Sources */,
 				142187E0239D80EA002FE7C2 /* NavigationView.swift in Sources */,
 				14C8CA2623A97A12006FBBFB /* TableCellActionHandler.swift in Sources */,
+				D76008A5241B9EF6009B6AE9 /* ActivityIndicatorHandler.swift in Sources */,
 				14C8CA0223A97702006FBBFB /* TableViewAdapterUpdateCommandRemove.swift in Sources */,
 				14C341E223999F81007A2D97 /* ViewController.swift in Sources */,
 				14C8CA0823A97759006FBBFB /* TableViewAdapterUpdateCommandReload.swift in Sources */,
