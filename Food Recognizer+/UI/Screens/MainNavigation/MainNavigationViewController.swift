@@ -14,22 +14,45 @@ class MainNavigationViewController: ViewController<MainNavigationViewControllerP
     private weak var pageViewController: UITabBarController?
     var screensFactory: ScreensFactory?
     
+    private var identifierToViewController: [MainNavigationViewControllerPresenterBarItemIdentifier : UIViewController] = [:]
+    private var viewControllerToIdentifier: [UIViewController : MainNavigationViewControllerPresenterBarItemIdentifier] = [:]
+    
     // MARK: - IBOutlets
     @IBOutlet private weak var mainNavigationTabBarView: MainNavigationTabBarView?
+    
+    
+    // MARK: - ViewControllers
+    private weak var photoAnalyserViewController: PhotoAnalyserViewController?
+    private weak var configurationViewController: ConfigurationViewController?
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter = MainNavigationViewControllerPresenter(viewController: self, pageViewController: pageViewController, screensFactory: screensFactory, mainNavigationTabBarView: mainNavigationTabBarView)
+        presenter = MainNavigationViewControllerPresenter(delegate: self)
+        
+        pageViewController?.tabBar.isHidden = true
+        
+        prepareTabBarView()
+        
+        prepareViewControllers()
         
         presenter?.viewDidLoad()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        guard let firstItem = mainNavigationTabBarView?.dataArray.entityAt(0) else { return }
+        var selectedIdentifier = mainNavigationTabBarView?.selected()
+        
+        if selectedIdentifier == nil {
+            selectedIdentifier = firstItem.identifier
+        }
+        
+        guard let selected = selectedIdentifier else { return }
         DispatchQueue.main.async { [weak self] in
-            self?.presenter?.viewDidLayoutSubviews()
+            self?.mainNavigationTabBarView?.set(selected: true,
+            identifier: selected, animated: false)
         }
     }
     
@@ -40,4 +63,63 @@ class MainNavigationViewController: ViewController<MainNavigationViewControllerP
             self.pageViewController = segue.destination as? UITabBarController
         }
     }
+    
+    // MARK: - Private
+    
+    private func prepareTabBarView() {
+        mainNavigationTabBarView?.clear()
+        
+        let photoAnalyserTabBarButtonData = MainNavigationTabBarButtonViewData(identifier: MainNavigationViewControllerPresenterBarItemIdentifier.photoAnalyser.rawValue, image: UIImage(named: "Face"), labelText: "Analyser")
+        mainNavigationTabBarView?.add(data: photoAnalyserTabBarButtonData)
+        
+        let configurationViewTabBarButtonData = MainNavigationTabBarButtonViewData(identifier: MainNavigationViewControllerPresenterBarItemIdentifier.configuration.rawValue, image: UIImage(named: "Configuration"), labelText: "Configuration")
+        
+        mainNavigationTabBarView?.delegate = self
+        mainNavigationTabBarView?.add(data: configurationViewTabBarButtonData)
+        
+        mainNavigationTabBarView?.arrangeStackViewSubviews()
+    }
+    
+    private func prepareViewControllers() {
+        var viewControllers: [UIViewController] = []
+        
+        photoAnalyserViewController = screensFactory?.photoAnalyserViewController()
+        guard let photoAnalyserViewController = photoAnalyserViewController else { return }
+        viewControllers.append(photoAnalyserViewController)
+        
+        configurationViewController = screensFactory?.configurationViewController()
+        guard let configurationViewController = configurationViewController else { return }
+        viewControllers.append(configurationViewController)
+        
+        pageViewController?.viewControllers = viewControllers
+        
+        identifierToViewController.removeAll()
+        viewControllerToIdentifier.removeAll()
+        
+        link(identifier: .photoAnalyser, with: photoAnalyserViewController)
+        link(identifier: .configuration, with: configurationViewController)
+    }
+    
+    private func link(identifier: MainNavigationViewControllerPresenterBarItemIdentifier, with viewController: UIViewController?) {
+        guard let viewController = viewController else { return }
+        
+        identifierToViewController[identifier] = viewController
+        viewControllerToIdentifier[viewController] = identifier
+    }
+}
+
+
+extension MainNavigationViewController: MainNavigationTabBarViewDelegate {
+    func mainNavigationTabBarView(_ view: MainNavigationTabBarView, itemDidTapWithIdentifier identifier: String) {
+        guard let itemIdentifier = MainNavigationViewControllerPresenterBarItemIdentifier(rawValue: identifier) else { return }
+        guard let viewController = identifierToViewController[itemIdentifier] else { return }
+        guard let index = pageViewController?.viewControllers?.firstIndex(of: viewController) else { return }
+        
+        mainNavigationTabBarView?.set(selected: true, identifier: identifier, animated: true)
+        pageViewController?.selectedIndex = index
+    }
+}
+
+extension MainNavigationViewController: MainNavigationViewControllerProtocol {
+    
 }

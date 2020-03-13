@@ -113,6 +113,7 @@
 		D76008A3241B9A6A009B6AE9 /* PhotoAnalyserViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76008A2241B9A6A009B6AE9 /* PhotoAnalyserViewControllerProtocol.swift */; };
 		D76008A5241B9EF6009B6AE9 /* ActivityIndicatorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76008A4241B9EF6009B6AE9 /* ActivityIndicatorHandler.swift */; };
 		D76008A9241BAB7F009B6AE9 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76008A8241BAB7F009B6AE9 /* AlertHandler.swift */; };
+		D76008AB241BAFEF009B6AE9 /* MainNavigationViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76008AA241BAFEF009B6AE9 /* MainNavigationViewControllerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -239,6 +240,7 @@
 		D76008A2241B9A6A009B6AE9 /* PhotoAnalyserViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAnalyserViewControllerProtocol.swift; sourceTree = "<group>"; };
 		D76008A4241B9EF6009B6AE9 /* ActivityIndicatorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorHandler.swift; sourceTree = "<group>"; };
 		D76008A8241BAB7F009B6AE9 /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
+		D76008AA241BAFEF009B6AE9 /* MainNavigationViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewControllerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -586,6 +588,7 @@
 				14C341E32399A0B1007A2D97 /* MainNavigationViewControllerPresenter.swift */,
 				14C341D52399912C007A2D97 /* MainNavigationViewController.storyboard */,
 				142187D2239D6414002FE7C2 /* MainNavigationViewControllerPresenterBarItemIdentifier.swift */,
+				D76008AA241BAFEF009B6AE9 /* MainNavigationViewControllerProtocol.swift */,
 			);
 			path = MainNavigation;
 			sourceTree = "<group>";
@@ -948,6 +951,7 @@
 				1461230C23AAE6BF00107582 /* ScaledHeightImageView.swift in Sources */,
 				142187BD239D4CD2002FE7C2 /* UIView.swift in Sources */,
 				1461230523AAD20600107582 /* CellItemsFactory.swift in Sources */,
+				D76008AB241BAFEF009B6AE9 /* MainNavigationViewControllerProtocol.swift in Sources */,
 				142187D1239D5F82002FE7C2 /* MainNavigationTabBarViewDelegate.swift in Sources */,
 				14C8CA0023A976E7006FBBFB /* TableViewAdapterUpdateCommandAppend.swift in Sources */,
 				142AF90D23983C9800AC1164 /* SceneDelegate.swift in Sources */,
