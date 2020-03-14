@@ -50,4 +50,11 @@ class ScreensFactory {
         viewController.recipes = recipes
         return viewController
     }
+    
+    func webViewController(refference: String?, title: String?) -> WebViewController {
+        let viewController: WebViewController = .fromStoryboard()
+        viewController.refference = refference
+        viewController.navigationBarTitle = title
+        return viewController
+    }
 }

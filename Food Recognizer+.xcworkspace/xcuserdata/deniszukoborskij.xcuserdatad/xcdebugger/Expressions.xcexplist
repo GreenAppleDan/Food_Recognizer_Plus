@@ -50,7 +50,10 @@
          contextName = "UIImage.compareTo(_:):UIImage.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.pngData() == self.pngData()">
+               value = "self.pngData() == image.pngData()">
+            </PersistentString>
+            <PersistentString
+               value = "self.jpegData(compressionQuality: 0) == image.jpegData(compressionQuality: 0)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

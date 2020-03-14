@@ -41,5 +41,18 @@ class RecipesViewController: ViewController<RecipesViewControllerPresenter> {
 
 
 extension RecipesViewController: RecipesViewControllerProtocol {
+    func showRecipesWebView(link: String?, title: String?) {
+        guard let viewController = screensFactory?.webViewController(refference: link, title: title) else { return }
+        pushViewController(viewController)
+    }
+    
+    
+}
+
+extension RecipesViewController: RecipeCellActionHandlerDelegate {
+    func recipeCellOverlappingButtonDidTap(_ recipeCell: RecipeCell, linkString: String?, title: String?) {
+        presenter?.processRecipeLinkAndTitle(link: linkString, title: title)
+    }
+    
     
 }

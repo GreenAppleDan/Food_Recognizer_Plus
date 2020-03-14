@@ -34,18 +34,15 @@ class RecipeCell: TableViewAdapterCell {
         arrowImage?.isHidden = data.recipe.href != nil ? false : true
         
         if  let imageView = foodImage {
-            ImageLoader.loadImage(item: data.imageLoaderItem, into: imageView) {
-            }
+            ImageLoader.loadImage(item: data.imageLoaderItem, into: imageView)
         }
-        
-        //осталось задать картинку используя ссылку thumbnail
     }
     
     
     @IBAction func overlappingButtonDidTap(_ sender: UIButton) {
         guard let cellIdentifier = cellData?.cellIdentifier else { return }
         
-        let action = TableViewAdapterCellAction(cellIdentifier: cellIdentifier, identifier: RecipeCellActionIdentifier.overlappingButtonDidTap.rawValue, data: data?.recipe.href)
+        let action = TableViewAdapterCellAction(cellIdentifier: cellIdentifier, identifier: RecipeCellActionIdentifier.overlappingButtonDidTap.rawValue, data: (data?.recipe.href, data?.recipe.title))
         delegate?.handle(action, cell: self)
     }
 }

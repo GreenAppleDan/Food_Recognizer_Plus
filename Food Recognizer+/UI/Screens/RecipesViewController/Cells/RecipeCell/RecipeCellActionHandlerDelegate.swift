@@ -9,5 +9,5 @@
 import UIKit
 
 protocol RecipeCellActionHandlerDelegate: TableCellActionHandlerDelegate{
-    func recipeCellOverlappingButtonDidTap(_ recipeCell: RecipeCell, linkString: String?)
+    func recipeCellOverlappingButtonDidTap(_ recipeCell: RecipeCell, linkString: String?, title: String?)
 }

@@ -10,4 +10,12 @@ import Foundation
 
 class RecipesViewControllerPresenter: TableViewAdapterPresenter<RecipesViewControllerProtocol>{
     
+    func processRecipeLinkAndTitle(link: String?, title: String?) {
+        guard let link = link else {
+            delegate?.showAlert(title: "Sorry, but recipe is unavailable")
+            return
+        }
+        delegate?.showRecipesWebView(link: link, title: title)
+        
+    }
 }

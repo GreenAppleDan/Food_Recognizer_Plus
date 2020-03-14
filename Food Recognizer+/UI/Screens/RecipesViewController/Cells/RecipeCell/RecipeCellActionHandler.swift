@@ -20,10 +20,10 @@ class RecipeCellActionHandler: TableViewAdapterCellActionHandler {
         
         switch identifier {
         case .overlappingButtonDidTap:
-            if let linkString = action.data as? String {
-                storedDelegate?.recipeCellOverlappingButtonDidTap(recipeCell, linkString: linkString)
+            if let dataTuple = action.data as? (String, String) {
+                storedDelegate?.recipeCellOverlappingButtonDidTap(recipeCell, linkString: dataTuple.0, title: dataTuple.1)
             } else {
-                storedDelegate?.recipeCellOverlappingButtonDidTap(recipeCell, linkString: nil)
+                storedDelegate?.recipeCellOverlappingButtonDidTap(recipeCell, linkString: nil, title: nil)
             }
         }
     }
