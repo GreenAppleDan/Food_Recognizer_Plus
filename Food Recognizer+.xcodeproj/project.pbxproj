@@ -136,19 +136,6 @@
 		D76008B8241BD3A4009B6AE9 /* RecipesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D76008B7241BD3A4009B6AE9 /* RecipesViewController.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		14B2AD242414F012005E1B2F /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		142187BA239D4C4C002FE7C2 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		142187BC239D4CD2002FE7C2 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -196,6 +183,7 @@
 		145C9E382416A565000D4F70 /* IngridientProbabilityPredictionCellActionHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientProbabilityPredictionCellActionHandlerDelegate.swift; sourceTree = "<group>"; };
 		145C9E3B2416BD89000D4F70 /* RecipePuppyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePuppyService.swift; sourceTree = "<group>"; };
 		145C9E422416BECB000D4F70 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		145D3E31241D570900783F0B /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		146122F823AAC5DB00107582 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		146122FB23AACE9C00107582 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
 		146122FD23AACEBF00107582 /* ImageViewCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCellData.swift; sourceTree = "<group>"; };
@@ -618,6 +606,7 @@
 		14B2AD092414EFB7005E1B2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				145D3E31241D570900783F0B /* AFNetworking.framework */,
 				14B2AD6A2414F536005E1B2F /* UIKit.framework */,
 				14B2AD682414F52A005E1B2F /* libz.tbd */,
 				14B2AD662414F51E005E1B2F /* libsqlite3.tbd */,
@@ -890,7 +879,6 @@
 				142AF90323983C9800AC1164 /* Sources */,
 				142AF90423983C9800AC1164 /* Frameworks */,
 				142AF90523983C9800AC1164 /* Resources */,
-				14B2AD242414F012005E1B2F /* Embed Frameworks */,
 				14B2AD6C2414F545005E1B2F /* ShellScript */,
 				064660650FFB3038456C44CB /* [CP] Embed Pods Frameworks */,
 			);
