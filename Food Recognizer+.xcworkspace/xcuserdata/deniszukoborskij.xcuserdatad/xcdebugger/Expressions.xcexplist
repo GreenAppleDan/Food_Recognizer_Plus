@@ -3,6 +3,39 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "RecipeCell.fill(data:):RecipeCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "foodImage?.image == UIImage(named: &quot;placeHolderRecipePuppy&quot;)">
+            </PersistentString>
+            <PersistentString
+               value = "UIImage(named: &quot;placeHolderRecipePuppy&quot;)">
+            </PersistentString>
+            <PersistentString
+               value = "foodImage?.image">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static CellItemsFactory.recipeItem(cellIdentifier:recipe:):CellItemsFactory.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "URL(fileURLWithPath: recipe.thumbnail ?? &quot;&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #2 in RecipeCell.fill(data:):RecipeCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.foodImage?.image">
+            </PersistentString>
+            <PersistentString
+               value = "UIImage(named: &quot;placeholderRecipePuppy&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ActivityIndicatorView.startActivityIndicator(disableTimeout:bgAlpha:color:):ActivityIndicatorView.swift">
          <PersistentStrings>
             <PersistentString
@@ -10,6 +43,14 @@
             </PersistentString>
             <PersistentString
                value = "activityIndicatorBackgroundView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "UIImage.compareTo(_:):UIImage.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.pngData() == self.pngData()">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

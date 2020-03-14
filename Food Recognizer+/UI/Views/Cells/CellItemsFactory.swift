@@ -46,7 +46,9 @@ class CellItemsFactory {
     }
     
     static public func recipeItem(cellIdentifier: String? = nil, recipe: Recipe) -> TableViewAdapterItem {
-        let cellData = RecipeCellData(cellIdentifier: cellIdentifier, recipe: recipe)
+        
+        let imageLoaderItem = ImageLoaderItem(placeholderImage: nil, imageURL: URL(string: recipe.thumbnail ?? ""), needPlaceholder: false)
+        let cellData = RecipeCellData(cellIdentifier: cellIdentifier, recipe: recipe, imageLoaderItem: imageLoaderItem)
         let item = TableViewAdapterItem(cellClass: RecipeCell.self, cellData: cellData, cellHandler: RecipeCellActionHandler())
         return item
     }

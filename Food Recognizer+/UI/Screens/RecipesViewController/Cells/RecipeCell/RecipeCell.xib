@@ -15,8 +15,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtj-32-AAp">
-                        <rect key="frame" x="183" y="2" width="48.5" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtj-32-AAp">
+                        <rect key="frame" x="16" y="5" width="382" height="16"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -56,17 +56,19 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Vtj-32-AAp" firstAttribute="top" secondItem="RvY-T7-t4e" secondAttribute="top" constant="2" id="9Wj-25-6ut"/>
+                    <constraint firstItem="Vtj-32-AAp" firstAttribute="top" secondItem="RvY-T7-t4e" secondAttribute="top" constant="5" id="9Wj-25-6ut"/>
                     <constraint firstItem="wmx-v5-XmU" firstAttribute="leading" secondItem="RvY-T7-t4e" secondAttribute="leading" constant="16" id="ADr-nW-UBK"/>
+                    <constraint firstAttribute="trailing" secondItem="Vtj-32-AAp" secondAttribute="trailing" constant="16" id="IV9-gD-kqi"/>
                     <constraint firstAttribute="bottom" secondItem="Aj0-sH-cNn" secondAttribute="bottom" id="MRR-c5-djL"/>
                     <constraint firstItem="wmx-v5-XmU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Vtj-32-AAp" secondAttribute="bottom" constant="5" id="Ob3-GC-w0T"/>
-                    <constraint firstItem="eSX-5j-5Gf" firstAttribute="top" secondItem="Vtj-32-AAp" secondAttribute="bottom" id="Q6W-WD-Pdb"/>
+                    <constraint firstItem="eSX-5j-5Gf" firstAttribute="top" secondItem="Vtj-32-AAp" secondAttribute="bottom" constant="2" id="Q6W-WD-Pdb"/>
                     <constraint firstItem="Vtl-R4-urc" firstAttribute="leading" secondItem="RvY-T7-t4e" secondAttribute="leading" constant="16" id="RSu-aW-Zy9"/>
                     <constraint firstAttribute="trailing" secondItem="Aj0-sH-cNn" secondAttribute="trailing" id="TWv-vO-jdu"/>
                     <constraint firstItem="Vtj-32-AAp" firstAttribute="centerX" secondItem="RvY-T7-t4e" secondAttribute="centerX" id="Yo1-05-2Kc"/>
                     <constraint firstAttribute="trailing" secondItem="e8t-N9-sLd" secondAttribute="trailing" constant="16" id="acM-Bu-4sB"/>
                     <constraint firstItem="e8t-N9-sLd" firstAttribute="leading" secondItem="eSX-5j-5Gf" secondAttribute="trailing" constant="8" id="cT3-Fn-NsY"/>
                     <constraint firstItem="wmx-v5-XmU" firstAttribute="centerY" secondItem="eSX-5j-5Gf" secondAttribute="centerY" id="eYi-YI-Xig"/>
+                    <constraint firstItem="Vtj-32-AAp" firstAttribute="leading" secondItem="RvY-T7-t4e" secondAttribute="leading" constant="16" id="eeg-85-NJR"/>
                     <constraint firstItem="Aj0-sH-cNn" firstAttribute="leading" secondItem="RvY-T7-t4e" secondAttribute="leading" id="ffE-iz-olU"/>
                     <constraint firstItem="Aj0-sH-cNn" firstAttribute="top" secondItem="RvY-T7-t4e" secondAttribute="top" id="hXP-bF-gCx"/>
                     <constraint firstAttribute="bottom" secondItem="eSX-5j-5Gf" secondAttribute="bottom" constant="4" id="qbI-PO-R6q"/>

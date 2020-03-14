@@ -14,6 +14,7 @@ class FoodPredictionsViewController: ViewController<FoodPredictionsViewControlle
     // MARK: - Properties
     var clarifaiPredictions: [ClarifaiFoodPrediction]?
     var recipePuppyService: RecipePuppyService?
+    var screensFactory: ScreensFactory?
     
     private var chosenIngridientNames = Set<String>()
     // MARK: - Lifecycle
@@ -68,7 +69,12 @@ extension FoodPredictionsViewController: IngridientProbabilityPredictionCellActi
     }
 }
 
-extension FoodPredictionsViewController: FoodPredictionsViewControllerProtocol{
+extension FoodPredictionsViewController: FoodPredictionsViewControllerProtocol {
+    func moveToRecipesViewController(_ recipes: [Recipe]?) {
+        guard let recipesViewController = screensFactory?.recipesViewController(recipes: recipes) else { return }
+        pushViewController(recipesViewController)
+    }
+    
     
 }
 

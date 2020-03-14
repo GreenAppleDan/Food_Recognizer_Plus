@@ -22,9 +22,9 @@ class FoodPredictionsViewControllerPresenter: TableViewAdapterPresenter<FoodPred
         recipePuppyService.getRecipesWithIngridientNames(names: ingridientNames) { (response) in
             if let error = response.2 {
                 self.delegate?.show(error)
-            } else if let recipes = response.1 {
-                //Переходим на другую вьюшку
-                print(recipes)
+            } else {
+                //recipes
+                self.delegate?.moveToRecipesViewController(response.1)
             }
         }
     }

@@ -40,6 +40,14 @@ class ScreensFactory {
         let viewController: FoodPredictionsViewController = .fromStoryboard()
         viewController.clarifaiPredictions = clarifaiPredictions
         viewController.recipePuppyService = recipePuppyService
+        viewController.screensFactory = self
+        return viewController
+    }
+    
+    func recipesViewController(recipes: [Recipe]?) -> RecipesViewController {
+        let viewController: RecipesViewController = .fromStoryboard()
+        viewController.screensFactory = self
+        viewController.recipes = recipes
         return viewController
     }
 }

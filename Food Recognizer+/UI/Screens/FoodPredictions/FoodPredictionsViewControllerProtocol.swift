@@ -9,5 +9,5 @@
 import Foundation
 
 protocol FoodPredictionsViewControllerProtocol: ViewControllerProtocol {
-    
+    func moveToRecipesViewController(_ recipes: [Recipe]?)
 }

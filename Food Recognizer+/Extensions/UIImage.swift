@@ -25,4 +25,9 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return image
     }
+    
+    public func compareTo(_ image: UIImage) -> Bool{
+        return self.pngData() == image.pngData()
+    }
+    
 }

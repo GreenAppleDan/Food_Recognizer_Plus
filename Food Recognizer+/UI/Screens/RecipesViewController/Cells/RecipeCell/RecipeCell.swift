@@ -28,10 +28,15 @@ class RecipeCell: TableViewAdapterCell {
         guard let data = data as? RecipeCellData else { return }
         
         self.data = data
-        titleLabel?.text = data.recipe.title ?? ""
+        titleLabel?.text = (data.recipe.title ?? "").filter { !$0.isNewline && !"\t".contains($0) }.trimmingCharacters(in: .whitespaces)
         ingridientsLabel?.text = "Ingridients: " + (data.recipe.ingredients ?? "")
         
         arrowImage?.isHidden = data.recipe.href != nil ? false : true
+        
+        if  let imageView = foodImage {
+            ImageLoader.loadImage(item: data.imageLoaderItem, into: imageView) {
+            }
+        }
         
         //осталось задать картинку используя ссылку thumbnail
     }

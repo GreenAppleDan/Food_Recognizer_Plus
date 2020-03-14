@@ -10,9 +10,11 @@ import UIKit
 
 class RecipeCellData: TableViewAdapterItemData {
     let recipe: Recipe
+    let imageLoaderItem: ImageLoaderItem
     
-    public init(cellIdentifier: String? = nil, recipe: Recipe) {
+    public init(cellIdentifier: String? = nil, recipe: Recipe, imageLoaderItem: ImageLoaderItem) {
         self.recipe = recipe
+        self.imageLoaderItem = imageLoaderItem
         super.init(cellIdentifier: cellIdentifier)
     }
     
