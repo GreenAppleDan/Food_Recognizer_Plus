@@ -18,15 +18,15 @@ class IngridientProbabilityPredictionCellActionHandler: TableViewAdapterCellActi
     // MARK: - Interface
     
     override func handle(_ action: TableViewAdapterCellAction, cell: TableViewAdapterCell?) {
-        guard let propabilityPredictionCell = cell as? IngridientProbabilityPredictionCell else { return }
+        guard let probabilityPredictionCell = cell as? IngridientProbabilityPredictionCell else { return }
         
         guard let identifier = IngridientProbabilityPredictionCellActionIdentifier(rawValue: action.identifier) else { return }
         
         switch identifier {
         case .buttonDidTap:
-            guard let cellIdentifier = propabilityPredictionCell.cellData?.cellIdentifier else { return }
+            guard let cellIdentifier = probabilityPredictionCell.cellData?.cellIdentifier else { return }
             
-            storedDelegate?.ingridientProbabilityCellOverlayingbuttonDidTap(propabilityPredictionCell, cellIdentifier: cellIdentifier)
+            storedDelegate?.ingridientProbabilityCellOverlayingbuttonDidTap(probabilityPredictionCell, cellIdentifier: cellIdentifier)
         }
     }
 }

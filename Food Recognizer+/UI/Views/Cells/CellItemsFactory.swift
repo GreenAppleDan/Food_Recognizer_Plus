@@ -45,4 +45,10 @@ class CellItemsFactory {
         return item
     }
     
+    static public func recipeItem(cellIdentifier: String? = nil, recipe: Recipe) -> TableViewAdapterItem {
+        let cellData = RecipeCellData(cellIdentifier: cellIdentifier, recipe: recipe)
+        let item = TableViewAdapterItem(cellClass: RecipeCell.self, cellData: cellData, cellHandler: RecipeCellActionHandler())
+        return item
+    }
+    
 }

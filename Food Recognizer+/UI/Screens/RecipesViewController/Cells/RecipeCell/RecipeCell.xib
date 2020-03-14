@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="96" id="LML-Lp-xAa" customClass="RecipeCell" customModule="Food_Recognizer_" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LML-Lp-xAa" id="RvY-T7-t4e">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtj-32-AAp">
+                        <rect key="frame" x="183" y="2" width="48.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmx-v5-XmU">
+                        <rect key="frame" x="16" y="47.5" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eSX-5j-5Gf">
+                        <rect key="frame" x="287" y="23" width="79" height="69"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="79" id="87T-GP-b9v"/>
+                            <constraint firstAttribute="height" constant="69" id="SVd-X5-ljM"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="e8t-N9-sLd">
+                        <rect key="frame" x="374" y="36" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="MVX-i9-ME6"/>
+                            <constraint firstAttribute="height" constant="24" id="wbR-5x-G4f"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vtl-R4-urc">
+                        <rect key="frame" x="16" y="95" width="382" height="1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="fL6-D6-qi4"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aj0-sH-cNn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                        <connections>
+                            <action selector="overlappingButtonDidTap:" destination="LML-Lp-xAa" eventType="touchUpInside" id="WKR-Dv-t8b"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Vtj-32-AAp" firstAttribute="top" secondItem="RvY-T7-t4e" secondAttribute="top" constant="2" id="9Wj-25-6ut"/>
+                    <constraint firstItem="wmx-v5-XmU" firstAttribute="leading" secondItem="RvY-T7-t4e" secondAttribute="leading" constant="16" id="ADr-nW-UBK"/>
+                    <constraint firstAttribute="bottom" secondItem="Aj0-sH-cNn" secondAttribute="bottom" id="MRR-c5-djL"/>
+                    <constraint firstItem="wmx-v5-XmU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Vtj-32-AAp" secondAttribute="bottom" constant="5" id="Ob3-GC-w0T"/>
+                    <constraint firstItem="eSX-5j-5Gf" firstAttribute="top" secondItem="Vtj-32-AAp" secondAttribute="bottom" id="Q6W-WD-Pdb"/>
+                    <constraint firstItem="Vtl-R4-urc" firstAttribute="leading" secondItem="RvY-T7-t4e" secondAttribute="leading" constant="16" id="RSu-aW-Zy9"/>
+                    <constraint firstAttribute="trailing" secondItem="Aj0-sH-cNn" secondAttribute="trailing" id="TWv-vO-jdu"/>
+                    <constraint firstItem="Vtj-32-AAp" firstAttribute="centerX" secondItem="RvY-T7-t4e" secondAttribute="centerX" id="Yo1-05-2Kc"/>
+                    <constraint firstAttribute="trailing" secondItem="e8t-N9-sLd" secondAttribute="trailing" constant="16" id="acM-Bu-4sB"/>
+                    <constraint firstItem="e8t-N9-sLd" firstAttribute="leading" secondItem="eSX-5j-5Gf" secondAttribute="trailing" constant="8" id="cT3-Fn-NsY"/>
+                    <constraint firstItem="wmx-v5-XmU" firstAttribute="centerY" secondItem="eSX-5j-5Gf" secondAttribute="centerY" id="eYi-YI-Xig"/>
+                    <constraint firstItem="Aj0-sH-cNn" firstAttribute="leading" secondItem="RvY-T7-t4e" secondAttribute="leading" id="ffE-iz-olU"/>
+                    <constraint firstItem="Aj0-sH-cNn" firstAttribute="top" secondItem="RvY-T7-t4e" secondAttribute="top" id="hXP-bF-gCx"/>
+                    <constraint firstAttribute="bottom" secondItem="eSX-5j-5Gf" secondAttribute="bottom" constant="4" id="qbI-PO-R6q"/>
+                    <constraint firstAttribute="trailing" secondItem="Vtl-R4-urc" secondAttribute="trailing" constant="16" id="sSB-rC-DKE"/>
+                    <constraint firstItem="e8t-N9-sLd" firstAttribute="centerY" secondItem="RvY-T7-t4e" secondAttribute="centerY" id="tLj-2d-naw"/>
+                    <constraint firstAttribute="bottom" secondItem="Vtl-R4-urc" secondAttribute="bottom" id="xwv-BT-yCY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="arrowImage" destination="e8t-N9-sLd" id="LXh-Fi-DNo"/>
+                <outlet property="foodImage" destination="eSX-5j-5Gf" id="qXp-GL-XyM"/>
+                <outlet property="ingridientsLabel" destination="wmx-v5-XmU" id="8SE-3K-UMw"/>
+                <outlet property="separatorView" destination="Vtl-R4-urc" id="VBv-7r-lM8"/>
+                <outlet property="titleLabel" destination="Vtj-32-AAp" id="g04-JM-a6V"/>
+            </connections>
+            <point key="canvasLocation" x="11.594202898550726" y="89.0625"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="rightArrow" width="24" height="24"/>
+    </resources>
+</document>

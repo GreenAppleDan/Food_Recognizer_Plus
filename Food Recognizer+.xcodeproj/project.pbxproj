@@ -59,6 +59,13 @@
 		1461230523AAD20600107582 /* CellItemsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1461230423AAD20600107582 /* CellItemsFactory.swift */; };
 		1461230923AADBBA00107582 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1461230823AADBB900107582 /* UIImage.swift */; };
 		1461230C23AAE6BF00107582 /* ScaledHeightImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1461230B23AAE6BF00107582 /* ScaledHeightImageView.swift */; };
+		146B8DED241CED650055B8B2 /* RecipesViewControllerItemsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B8DEC241CED650055B8B2 /* RecipesViewControllerItemsFactory.swift */; };
+		146B8DF1241CEF3E0055B8B2 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B8DF0241CEF3E0055B8B2 /* RecipeCell.swift */; };
+		146B8DF3241CEF7A0055B8B2 /* RecipeCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B8DF2241CEF7A0055B8B2 /* RecipeCellData.swift */; };
+		146B8DF5241CEF860055B8B2 /* RecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 146B8DF4241CEF860055B8B2 /* RecipeCell.xib */; };
+		146B8DF7241CF9460055B8B2 /* RecipeCellActionHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B8DF6241CF9460055B8B2 /* RecipeCellActionHandlerDelegate.swift */; };
+		146B8DF9241CFDC70055B8B2 /* RecipeCellActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B8DF8241CFDC70055B8B2 /* RecipeCellActionHandler.swift */; };
+		146B8DFB241CFE280055B8B2 /* RecipeCellActionIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B8DFA241CFE280055B8B2 /* RecipeCellActionIdentifier.swift */; };
 		14724E7523F9726E00809B80 /* SingleButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14724E7423F9726E00809B80 /* SingleButtonCell.swift */; };
 		14724E7723F9728000809B80 /* SingleButtonCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14724E7623F9728000809B80 /* SingleButtonCellData.swift */; };
 		14724E7923F9737600809B80 /* SingleButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14724E7823F9737600809B80 /* SingleButtonCell.xib */; };
@@ -190,6 +197,13 @@
 		1461230423AAD20600107582 /* CellItemsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellItemsFactory.swift; sourceTree = "<group>"; };
 		1461230823AADBB900107582 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		1461230B23AAE6BF00107582 /* ScaledHeightImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledHeightImageView.swift; sourceTree = "<group>"; };
+		146B8DEC241CED650055B8B2 /* RecipesViewControllerItemsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewControllerItemsFactory.swift; sourceTree = "<group>"; };
+		146B8DF0241CEF3E0055B8B2 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		146B8DF2241CEF7A0055B8B2 /* RecipeCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCellData.swift; sourceTree = "<group>"; };
+		146B8DF4241CEF860055B8B2 /* RecipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCell.xib; sourceTree = "<group>"; };
+		146B8DF6241CF9460055B8B2 /* RecipeCellActionHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCellActionHandlerDelegate.swift; sourceTree = "<group>"; };
+		146B8DF8241CFDC70055B8B2 /* RecipeCellActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCellActionHandler.swift; sourceTree = "<group>"; };
+		146B8DFA241CFE280055B8B2 /* RecipeCellActionIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCellActionIdentifier.swift; sourceTree = "<group>"; };
 		14724E7423F9726E00809B80 /* SingleButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleButtonCell.swift; sourceTree = "<group>"; };
 		14724E7623F9728000809B80 /* SingleButtonCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleButtonCellData.swift; sourceTree = "<group>"; };
 		14724E7823F9737600809B80 /* SingleButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleButtonCell.xib; sourceTree = "<group>"; };
@@ -527,6 +541,27 @@
 			path = ScaledHeightImageView;
 			sourceTree = "<group>";
 		};
+		146B8DEE241CEF240055B8B2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				146B8DEF241CEF300055B8B2 /* RecipeCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		146B8DEF241CEF300055B8B2 /* RecipeCell */ = {
+			isa = PBXGroup;
+			children = (
+				146B8DF0241CEF3E0055B8B2 /* RecipeCell.swift */,
+				146B8DF2241CEF7A0055B8B2 /* RecipeCellData.swift */,
+				146B8DF4241CEF860055B8B2 /* RecipeCell.xib */,
+				146B8DF6241CF9460055B8B2 /* RecipeCellActionHandlerDelegate.swift */,
+				146B8DF8241CFDC70055B8B2 /* RecipeCellActionHandler.swift */,
+				146B8DFA241CFE280055B8B2 /* RecipeCellActionIdentifier.swift */,
+			);
+			path = RecipeCell;
+			sourceTree = "<group>";
+		};
 		14724E7323F9724C00809B80 /* SingleButtonCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -789,10 +824,12 @@
 		D76008B0241BD02A009B6AE9 /* RecipesViewController */ = {
 			isa = PBXGroup;
 			children = (
+				146B8DEE241CEF240055B8B2 /* Cells */,
 				D76008B1241BD0B3009B6AE9 /* RecipesViewController.swift */,
 				D76008B3241BD0E7009B6AE9 /* RecipesViewControllerProtocol.swift */,
 				D76008B5241BD149009B6AE9 /* RecipesViewControllerPresenter.swift */,
 				D76008B7241BD3A4009B6AE9 /* RecipesViewController.storyboard */,
+				146B8DEC241CED650055B8B2 /* RecipesViewControllerItemsFactory.swift */,
 			);
 			path = RecipesViewController;
 			sourceTree = "<group>";
@@ -875,6 +912,7 @@
 				142187C2239D50D1002FE7C2 /* MainNavigationTabBarButtonView.xib in Resources */,
 				142187E2239D8109002FE7C2 /* NavigationView.xib in Resources */,
 				145C9DE2241657B0000D4F70 /* ActivityIndicatorView.xib in Resources */,
+				146B8DF5241CEF860055B8B2 /* RecipeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -971,6 +1009,7 @@
 				142187CB239D582C002FE7C2 /* UIColor.swift in Sources */,
 				142AF90B23983C9800AC1164 /* AppDelegate.swift in Sources */,
 				14C8CA2823A97A2A006FBBFB /* TableCellActionHandlerDelegate.swift in Sources */,
+				146B8DF1241CEF3E0055B8B2 /* RecipeCell.swift in Sources */,
 				D760089E241B893B009B6AE9 /* ViewControllerRouter.swift in Sources */,
 				142187BB239D4C4C002FE7C2 /* XibView.swift in Sources */,
 				14C8CA1223A977EC006FBBFB /* TableViewAdapterDelegate.swift in Sources */,
@@ -986,6 +1025,7 @@
 				142187D1239D5F82002FE7C2 /* MainNavigationTabBarViewDelegate.swift in Sources */,
 				14C8CA0023A976E7006FBBFB /* TableViewAdapterUpdateCommandAppend.swift in Sources */,
 				142AF90D23983C9800AC1164 /* SceneDelegate.swift in Sources */,
+				146B8DFB241CFE280055B8B2 /* RecipeCellActionIdentifier.swift in Sources */,
 				145C9E17241675CF000D4F70 /* ClarifaiService.swift in Sources */,
 				14C8CA1823A97830006FBBFB /* TableViewAdapterCell.swift in Sources */,
 				14C8CA2E23A97B56006FBBFB /* Macro.swift in Sources */,
@@ -995,8 +1035,10 @@
 				142187D3239D6414002FE7C2 /* MainNavigationViewControllerPresenterBarItemIdentifier.swift in Sources */,
 				142187C9239D5526002FE7C2 /* MainNavigationTabBarView.swift in Sources */,
 				D76008A9241BAB7F009B6AE9 /* AlertHandler.swift in Sources */,
+				146B8DF3241CEF7A0055B8B2 /* RecipeCellData.swift in Sources */,
 				146122FC23AACE9D00107582 /* ImageViewCell.swift in Sources */,
 				D76008A3241B9A6A009B6AE9 /* PhotoAnalyserViewControllerProtocol.swift in Sources */,
+				146B8DED241CED650055B8B2 /* RecipesViewControllerItemsFactory.swift in Sources */,
 				145C9E2024167D1D000D4F70 /* ErrorsFactory.swift in Sources */,
 				145C9DDB24165639000D4F70 /* EmptySpaceCellData.swift in Sources */,
 				14C8CA0A23A9777C006FBBFB /* TableViewAdapterUpdateCommand.swift in Sources */,
@@ -1008,6 +1050,7 @@
 				14C341CD23998DAD007A2D97 /* UIViewController.swift in Sources */,
 				14C8CA1423A97807006FBBFB /* TableViewAdapterScrollDirection.swift in Sources */,
 				142187C0239D50A2002FE7C2 /* MainNavigationTabBarButtonView.swift in Sources */,
+				146B8DF7241CF9460055B8B2 /* RecipeCellActionHandlerDelegate.swift in Sources */,
 				14724E7B23F975D000809B80 /* PhotoAnalyserViewControllerPresenterItemIdentifier.swift in Sources */,
 				145C9E3124169CCC000D4F70 /* IngridientProbabilityPredictionCellData.swift in Sources */,
 				14C8CA2023A9788A006FBBFB /* TableViewAdapterItemData.swift in Sources */,
@@ -1023,6 +1066,7 @@
 				14C8CA0223A97702006FBBFB /* TableViewAdapterUpdateCommandRemove.swift in Sources */,
 				14C341E223999F81007A2D97 /* ViewController.swift in Sources */,
 				14C8CA0823A97759006FBBFB /* TableViewAdapterUpdateCommandReload.swift in Sources */,
+				146B8DF9241CFDC70055B8B2 /* RecipeCellActionHandler.swift in Sources */,
 				142187C4239D5223002FE7C2 /* MainNavigationTabBarButtonViewData.swift in Sources */,
 				142187E4239D841D002FE7C2 /* NavigationViewDelegate.swift in Sources */,
 				14724E7523F9726E00809B80 /* SingleButtonCell.swift in Sources */,

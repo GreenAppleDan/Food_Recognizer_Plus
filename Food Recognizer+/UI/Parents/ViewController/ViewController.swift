@@ -28,7 +28,8 @@ open class ViewController<T>: UIViewController, UIGestureRecognizerDelegate, Nav
         navigationView?.delegate = self
 
         tableView?.keyboardDismissMode = .onDrag
-
+        tableView?.separatorStyle = .none
+        
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardNotification(notification:)),
                                                name: UIResponder.keyboardWillChangeFrameNotification,

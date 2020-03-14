@@ -23,7 +23,6 @@ class FoodPredictionsViewController: ViewController<FoodPredictionsViewControlle
         presenter = FoodPredictionsViewControllerPresenter(delegate: self, recipePuppyService: recipePuppyService)
         
         
-        tableViewAdapter?.tableView?.separatorStyle = .none
         setupNavigationView()
         
         reloadItems()

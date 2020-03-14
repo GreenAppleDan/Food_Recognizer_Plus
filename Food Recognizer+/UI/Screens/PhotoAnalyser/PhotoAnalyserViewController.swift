@@ -24,7 +24,6 @@ class PhotoAnalyserViewController: BaseViewController<PhotoAnalyserViewControlle
         
         imagePicker.delegate = self
         imagePicker.allowsEditing = false
-        tableViewAdapter?.tableView?.separatorStyle = .none
         
         setupNavigationView()
         
