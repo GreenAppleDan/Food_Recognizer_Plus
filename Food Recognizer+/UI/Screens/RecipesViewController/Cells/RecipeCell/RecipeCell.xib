@@ -21,7 +21,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmx-v5-XmU">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmx-v5-XmU">
                         <rect key="frame" x="16" y="47.5" width="42" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -59,6 +59,7 @@
                     <constraint firstItem="Vtj-32-AAp" firstAttribute="top" secondItem="RvY-T7-t4e" secondAttribute="top" constant="5" id="9Wj-25-6ut"/>
                     <constraint firstItem="wmx-v5-XmU" firstAttribute="leading" secondItem="RvY-T7-t4e" secondAttribute="leading" constant="16" id="ADr-nW-UBK"/>
                     <constraint firstAttribute="trailing" secondItem="Vtj-32-AAp" secondAttribute="trailing" constant="16" id="IV9-gD-kqi"/>
+                    <constraint firstItem="Vtl-R4-urc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wmx-v5-XmU" secondAttribute="bottom" constant="5" id="Kab-bK-7j2"/>
                     <constraint firstAttribute="bottom" secondItem="Aj0-sH-cNn" secondAttribute="bottom" id="MRR-c5-djL"/>
                     <constraint firstItem="wmx-v5-XmU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Vtj-32-AAp" secondAttribute="bottom" constant="5" id="Ob3-GC-w0T"/>
                     <constraint firstItem="eSX-5j-5Gf" firstAttribute="top" secondItem="Vtj-32-AAp" secondAttribute="bottom" constant="2" id="Q6W-WD-Pdb"/>
