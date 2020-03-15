@@ -71,7 +71,7 @@ extension FoodPredictionsViewController: IngridientProbabilityPredictionCellActi
 
 extension FoodPredictionsViewController: FoodPredictionsViewControllerProtocol {
     func moveToRecipesViewController(_ recipes: [Recipe]?) {
-        guard let recipesViewController = screensFactory?.recipesViewController(recipes: recipes) else { return }
+        guard let recipesViewController = screensFactory?.recipesViewController(recipes: recipes, state: .recipesFromApi) else { return }
         pushViewController(recipesViewController)
     }
     

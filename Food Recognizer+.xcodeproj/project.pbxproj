@@ -80,6 +80,7 @@
 		1497F432241E865B003CB8D6 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1497F431241E865B003CB8D6 /* RealmService.swift */; };
 		1497F435241E88EA003CB8D6 /* RealmRecipesRecordsCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1497F434241E88EA003CB8D6 /* RealmRecipesRecordsCleaner.swift */; };
 		1497F437241E8AEE003CB8D6 /* RecipeRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1497F436241E8AEE003CB8D6 /* RecipeRealm.swift */; };
+		1497F439241EA329003CB8D6 /* RecipesViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1497F438241EA329003CB8D6 /* RecipesViewControllerState.swift */; };
 		14B2AD5F2414F4FA005E1B2F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD5E2414F4F9005E1B2F /* Accelerate.framework */; };
 		14B2AD612414F500005E1B2F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD602414F500005E1B2F /* CoreGraphics.framework */; };
 		14B2AD632414F507005E1B2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD622414F507005E1B2F /* Foundation.framework */; };
@@ -216,6 +217,7 @@
 		1497F431241E865B003CB8D6 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		1497F434241E88EA003CB8D6 /* RealmRecipesRecordsCleaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRecipesRecordsCleaner.swift; sourceTree = "<group>"; };
 		1497F436241E8AEE003CB8D6 /* RecipeRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRealm.swift; sourceTree = "<group>"; };
+		1497F438241EA329003CB8D6 /* RecipesViewControllerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewControllerState.swift; sourceTree = "<group>"; };
 		14B2AD5E2414F4F9005E1B2F /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		14B2AD602414F500005E1B2F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		14B2AD622414F507005E1B2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -889,6 +891,7 @@
 				D76008B5241BD149009B6AE9 /* RecipesViewControllerPresenter.swift */,
 				D76008B7241BD3A4009B6AE9 /* RecipesViewController.storyboard */,
 				146B8DEC241CED650055B8B2 /* RecipesViewControllerItemsFactory.swift */,
+				1497F438241EA329003CB8D6 /* RecipesViewControllerState.swift */,
 			);
 			path = RecipesViewController;
 			sourceTree = "<group>";
@@ -1118,6 +1121,7 @@
 				142187D5239D6C65002FE7C2 /* Array.swift in Sources */,
 				14C8CA2423A978D8006FBBFB /* TableViewAdapterBorderPosition.swift in Sources */,
 				14C8C9F923A975D2006FBBFB /* TableViewAdapterCellActionHandler.swift in Sources */,
+				1497F439241EA329003CB8D6 /* RecipesViewControllerState.swift in Sources */,
 				14C341CD23998DAD007A2D97 /* UIViewController.swift in Sources */,
 				14C8CA1423A97807006FBBFB /* TableViewAdapterScrollDirection.swift in Sources */,
 				142187C0239D50A2002FE7C2 /* MainNavigationTabBarButtonView.swift in Sources */,

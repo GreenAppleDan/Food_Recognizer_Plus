@@ -44,10 +44,11 @@ class ScreensFactory {
         return viewController
     }
     
-    func recipesViewController(recipes: [Recipe]?) -> RecipesViewController {
+    func recipesViewController(recipes: [Recipe]?, state: RecipesViewControllerState) -> RecipesViewController {
         let viewController: RecipesViewController = .fromStoryboard()
         viewController.screensFactory = self
         viewController.recipes = recipes
+        viewController.state = state
         return viewController
     }
     

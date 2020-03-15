@@ -17,7 +17,6 @@ class PhotoAnalyserViewControllerPresenter: TableViewAdapterPresenter<PhotoAnaly
         super.init(delegate: delegate)
     }
     
-    // MARK: - Private. Setup
     
     func getFoodPredictions(for image: UIImage) {
         clarifaiService.getFoodPredictions(from: image) { (result) in
@@ -29,5 +28,14 @@ class PhotoAnalyserViewControllerPresenter: TableViewAdapterPresenter<PhotoAnaly
             }
         }
     }
-
+    
+    func getRecipesFromDB() -> [Recipe]? {
+        RealmService.getAllRecordsFromDB(of: RecipeRealm())?.map{ $0.asSimpleRecipe()}
+        
+    }
+    
+    func handleRightButtonNavigationViewTap() {
+        delegate?.pushRecipesViewController(recipes: getRecipesFromDB())
+    }
+    
 }

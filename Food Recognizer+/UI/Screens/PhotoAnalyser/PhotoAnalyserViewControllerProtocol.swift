@@ -10,4 +10,5 @@ import Foundation
 
 protocol PhotoAnalyserViewControllerProtocol: ViewControllerProtocol {
     func pushFoodPredictionsViewController(predictions: [ClarifaiFoodPrediction])
+    func pushRecipesViewController(recipes: [Recipe]?)
 }

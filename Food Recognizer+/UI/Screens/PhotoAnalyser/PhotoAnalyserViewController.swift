@@ -33,10 +33,16 @@ class PhotoAnalyserViewController: BaseViewController<PhotoAnalyserViewControlle
         presenter?.viewDidLoad()
     }
     
+    // MARK: - // MARK: - NavigationViewDelegate
+    
+    override func navigationViewDidTapRightButton(_ view: NavigationView) {
+        presenter?.handleRightButtonNavigationViewTap()
+    }
     // MARK: - Private. Setup
     private func setupNavigationView() {
         setNavigationViewLeftButtonIsHidden(true)
-        setNavigationViewRightButtonIsHidden(true)
+        setNavigationViewRightButtonIsHidden(false)
+        setNavigationViewRightButton(title: "Recipes", image: nil)
         setNavigationViewTitle("Analyser")
     }
     
@@ -83,6 +89,11 @@ extension PhotoAnalyserViewController: UINavigationControllerDelegate, UIImagePi
 }
 
 extension PhotoAnalyserViewController: PhotoAnalyserViewControllerProtocol {
+    func pushRecipesViewController(recipes: [Recipe]?) {
+        guard let recipesViewController = screensFactory?.recipesViewController(recipes: recipes, state: .recipesFromDB) else { return }
+        pushViewController(recipesViewController)
+    }
+    
     func pushFoodPredictionsViewController(predictions: [ClarifaiFoodPrediction]) {
         guard let foodPredictionsViewController = screensFactory?.foodPredictionsViewController(clarifaiPredictions: predictions) else { return }
         pushViewController(foodPredictionsViewController, animated: true)

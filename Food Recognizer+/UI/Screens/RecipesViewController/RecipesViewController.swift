@@ -14,6 +14,7 @@ class RecipesViewController: ViewController<RecipesViewControllerPresenter> {
     var screensFactory: ScreensFactory?
     
     var recipes: [Recipe]?
+    var state: RecipesViewControllerState = .recipesFromApi
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,11 @@ class RecipesViewController: ViewController<RecipesViewControllerPresenter> {
     // MARK: - Private. Setup
     private func setupNavigationView() {
         setNavigationViewRightButtonIsHidden(true)
-        setNavigationViewTitle("Recipes")
+        switch state {
+        case .recipesFromApi: setNavigationViewTitle("Recipes")
+        case .recipesFromDB: setNavigationViewTitle("Saved Recipes")
+        }
+        
     }
     
     private func reloadItems(){

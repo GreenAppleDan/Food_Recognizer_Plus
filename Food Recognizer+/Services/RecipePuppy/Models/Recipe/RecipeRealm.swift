@@ -29,4 +29,8 @@ class RecipeRealm: Object {
         return "href"
     }
     
+    func asSimpleRecipe() -> Recipe {
+        return Recipe(title: title, href: href, ingredients: ingredients, thumbnail: thumbnail)
+    }
+    
 }
