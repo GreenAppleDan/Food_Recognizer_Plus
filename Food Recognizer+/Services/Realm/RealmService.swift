@@ -22,6 +22,16 @@ class RealmService {
         }
     }
     
+    static func getAllRecordsFromDB<T:Object>(of: T) -> [T]? {
+        do{
+            let realm = try Realm()
+            let objects = realm.objects(T.self)
+            return objects.map { $0 }
+        } catch {
+            return nil
+        }
+    }
+    
     
 }
 
