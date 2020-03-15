@@ -15,6 +15,7 @@ class RecipeCell: TableViewAdapterCell {
     @IBOutlet private weak var foodImage: UIImageView?
     @IBOutlet private weak var arrowImage: UIImageView?
     @IBOutlet private weak var separatorView: UIView?
+    @IBOutlet private weak var overlappingButton: UIButton?
     
     var data: RecipeCellData?
     override func awakeFromNib() {
@@ -31,7 +32,9 @@ class RecipeCell: TableViewAdapterCell {
         titleLabel?.text = (data.recipe.title ?? "").filter { !$0.isNewline && !"\t".contains($0) }.trimmingCharacters(in: .whitespaces)
         ingridientsLabel?.text = "Ingridients: " + (data.recipe.ingredients ?? "")
         
-        arrowImage?.isHidden = data.recipe.href != nil ? false : true
+        let shouldCellBeClickable = data.recipe.href != nil ? false : true
+        arrowImage?.isHidden = shouldCellBeClickable
+        overlappingButton?.isHidden = shouldCellBeClickable
         
         if  let imageView = foodImage {
             ImageLoader.loadImage(item: data.imageLoaderItem, into: imageView)

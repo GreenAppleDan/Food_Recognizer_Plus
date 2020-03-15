@@ -18,4 +18,9 @@ class RecipesViewControllerPresenter: TableViewAdapterPresenter<RecipesViewContr
         delegate?.showRecipesWebView(link: link, title: title)
         
     }
+    
+    func saveClickedRecipeToDB(recipe: Recipe?) {
+        guard let recipe = recipe?.asRecipeRealm() else { return }
+        RealmService.addToDB(objects: [recipe])
+    }
 }

@@ -51,6 +51,7 @@ extension RecipesViewController: RecipesViewControllerProtocol {
 
 extension RecipesViewController: RecipeCellActionHandlerDelegate {
     func recipeCellOverlappingButtonDidTap(_ recipeCell: RecipeCell, linkString: String?, title: String?) {
+        presenter?.saveClickedRecipeToDB(recipe: recipeCell.data?.recipe)
         presenter?.processRecipeLinkAndTitle(link: linkString, title: title)
     }
     

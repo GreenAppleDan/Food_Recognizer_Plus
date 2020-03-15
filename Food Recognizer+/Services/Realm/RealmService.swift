@@ -32,11 +32,13 @@ extension RealmService: RealmRecipesRecordsCleaner {
             autoreleasepool{
                 do {
                     let realm = try Realm()
-                    let recipes = realm.objects(RecipeRealm.self).sorted(byKeyPath: "dateOfAdding")
-                    guard recipes.count >= 10 else { return }
+                    let recipes = realm.objects(RecipeRealm.self).sorted(byKeyPath: "dateOfAdding", ascending: false)
+                    guard recipes.count > 20 else { return }
                     
                     try realm.write {
-                        realm.delete(recipes[10...(recipes.count - 1)])
+                        for i in (20..<recipes.count).reversed() {
+                        realm.delete(recipes[i])
+                        }
                     }
                 } catch {
                     DispatchQueue.main.async {

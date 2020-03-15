@@ -70,6 +70,7 @@
                     <constraint firstItem="wmx-v5-XmU" firstAttribute="centerY" secondItem="eSX-5j-5Gf" secondAttribute="centerY" id="eYi-YI-Xig"/>
                     <constraint firstItem="Vtj-32-AAp" firstAttribute="leading" secondItem="RvY-T7-t4e" secondAttribute="leading" constant="16" id="eeg-85-NJR"/>
                     <constraint firstItem="Aj0-sH-cNn" firstAttribute="leading" secondItem="RvY-T7-t4e" secondAttribute="leading" id="ffE-iz-olU"/>
+                    <constraint firstItem="eSX-5j-5Gf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wmx-v5-XmU" secondAttribute="trailing" constant="16" id="ggZ-B9-2NO"/>
                     <constraint firstItem="Aj0-sH-cNn" firstAttribute="top" secondItem="RvY-T7-t4e" secondAttribute="top" id="hXP-bF-gCx"/>
                     <constraint firstAttribute="bottom" secondItem="eSX-5j-5Gf" secondAttribute="bottom" constant="4" id="qbI-PO-R6q"/>
                     <constraint firstAttribute="trailing" secondItem="Vtl-R4-urc" secondAttribute="trailing" constant="16" id="sSB-rC-DKE"/>
@@ -81,6 +82,7 @@
                 <outlet property="arrowImage" destination="e8t-N9-sLd" id="LXh-Fi-DNo"/>
                 <outlet property="foodImage" destination="eSX-5j-5Gf" id="qXp-GL-XyM"/>
                 <outlet property="ingridientsLabel" destination="wmx-v5-XmU" id="8SE-3K-UMw"/>
+                <outlet property="overlappingButton" destination="Aj0-sH-cNn" id="7Mk-Zw-GGc"/>
                 <outlet property="separatorView" destination="Vtl-R4-urc" id="VBv-7r-lM8"/>
                 <outlet property="titleLabel" destination="Vtj-32-AAp" id="g04-JM-a6V"/>
             </connections>
