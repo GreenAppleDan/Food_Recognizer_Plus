@@ -10,4 +10,5 @@ target 'Food Recognizer+' do
   pod 'Alamofire', '~> 5.0'
   pod 'Nuke', '~> 8.0'
   pod 'HandyJSON', '~> 5.0.1'
+  pod 'RealmSwift'
 end

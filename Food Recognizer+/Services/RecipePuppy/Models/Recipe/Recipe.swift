@@ -16,4 +16,8 @@ class Recipe: HandyJSON {
     var thumbnail: String?
     
     required init() {}
+    
+    func asRecipeRealm() -> RecipeRealm {
+        return RecipeRealm(title: title, href: href ?? "", ingridients: ingredients, thumbnail: thumbnail, dateOfAdding: Date())
+    }
 }

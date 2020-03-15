@@ -77,6 +77,9 @@
 		14724E7723F9728000809B80 /* SingleButtonCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14724E7623F9728000809B80 /* SingleButtonCellData.swift */; };
 		14724E7923F9737600809B80 /* SingleButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14724E7823F9737600809B80 /* SingleButtonCell.xib */; };
 		14724E7B23F975D000809B80 /* PhotoAnalyserViewControllerPresenterItemIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14724E7A23F975D000809B80 /* PhotoAnalyserViewControllerPresenterItemIdentifier.swift */; };
+		1497F432241E865B003CB8D6 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1497F431241E865B003CB8D6 /* RealmService.swift */; };
+		1497F435241E88EA003CB8D6 /* RealmRecipesRecordsCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1497F434241E88EA003CB8D6 /* RealmRecipesRecordsCleaner.swift */; };
+		1497F437241E8AEE003CB8D6 /* RecipeRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1497F436241E8AEE003CB8D6 /* RecipeRealm.swift */; };
 		14B2AD5F2414F4FA005E1B2F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD5E2414F4F9005E1B2F /* Accelerate.framework */; };
 		14B2AD612414F500005E1B2F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD602414F500005E1B2F /* CoreGraphics.framework */; };
 		14B2AD632414F507005E1B2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B2AD622414F507005E1B2F /* Foundation.framework */; };
@@ -210,6 +213,9 @@
 		14724E7623F9728000809B80 /* SingleButtonCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleButtonCellData.swift; sourceTree = "<group>"; };
 		14724E7823F9737600809B80 /* SingleButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleButtonCell.xib; sourceTree = "<group>"; };
 		14724E7A23F975D000809B80 /* PhotoAnalyserViewControllerPresenterItemIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAnalyserViewControllerPresenterItemIdentifier.swift; sourceTree = "<group>"; };
+		1497F431241E865B003CB8D6 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		1497F434241E88EA003CB8D6 /* RealmRecipesRecordsCleaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRecipesRecordsCleaner.swift; sourceTree = "<group>"; };
+		1497F436241E8AEE003CB8D6 /* RecipeRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRealm.swift; sourceTree = "<group>"; };
 		14B2AD5E2414F4F9005E1B2F /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		14B2AD602414F500005E1B2F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		14B2AD622414F507005E1B2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -419,6 +425,7 @@
 		145C9E1424167587000D4F70 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1497F430241E8649003CB8D6 /* Realm */,
 				145C9E3A2416BD6F000D4F70 /* RecipePuppy */,
 				145C9E15241675A5000D4F70 /* Clarifai */,
 			);
@@ -505,6 +512,7 @@
 			isa = PBXGroup;
 			children = (
 				145C9E422416BECB000D4F70 /* Recipe.swift */,
+				1497F436241E8AEE003CB8D6 /* RecipeRealm.swift */,
 			);
 			path = Recipe;
 			sourceTree = "<group>";
@@ -601,6 +609,23 @@
 				14724E7823F9737600809B80 /* SingleButtonCell.xib */,
 			);
 			path = SingleButtonCell;
+			sourceTree = "<group>";
+		};
+		1497F430241E8649003CB8D6 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				1497F433241E88C4003CB8D6 /* Protocols */,
+				1497F431241E865B003CB8D6 /* RealmService.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		1497F433241E88C4003CB8D6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1497F434241E88EA003CB8D6 /* RealmRecipesRecordsCleaner.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		14B2AD092414EFB7005E1B2F /* Frameworks */ = {
@@ -965,6 +990,8 @@
 				"${BUILT_PRODUCTS_DIR}/Clarifai/Clarifai.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -973,6 +1000,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Clarifai.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1020,8 +1049,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				14C341D423999072007A2D97 /* MainNavigationViewController.swift in Sources */,
+				1497F432241E865B003CB8D6 /* RealmService.swift in Sources */,
 				146B26E0241D29DF007AACDA /* WebViewController.swift in Sources */,
 				145C9E2524168600000D4F70 /* FoodPredictionsViewController.swift in Sources */,
+				1497F435241E88EA003CB8D6 /* RealmRecipesRecordsCleaner.swift in Sources */,
 				D760089A241B8792009B6AE9 /* TableViewAdapterPresenterProtocol.swift in Sources */,
 				145C9E352416A4C8000D4F70 /* IngridientProbabilityPredictionCellActionIdentifier.swift in Sources */,
 				14C341E62399A36E007A2D97 /* PhotoAnalyserViewControllerPresenter.swift in Sources */,
@@ -1078,6 +1109,7 @@
 				146122FC23AACE9D00107582 /* ImageViewCell.swift in Sources */,
 				D76008A3241B9A6A009B6AE9 /* PhotoAnalyserViewControllerProtocol.swift in Sources */,
 				146B8DED241CED650055B8B2 /* RecipesViewControllerItemsFactory.swift in Sources */,
+				1497F437241E8AEE003CB8D6 /* RecipeRealm.swift in Sources */,
 				145C9E2024167D1D000D4F70 /* ErrorsFactory.swift in Sources */,
 				145C9DDB24165639000D4F70 /* EmptySpaceCellData.swift in Sources */,
 				14C8CA0A23A9777C006FBBFB /* TableViewAdapterUpdateCommand.swift in Sources */,

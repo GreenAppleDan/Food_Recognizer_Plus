@@ -14,17 +14,23 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - Alamofire (5.0.2)
+  - Alamofire (5.0.3)
   - Clarifai (2.3.2):
     - AFNetworking (~> 3.1)
   - HandyJSON (5.0.1)
   - Nuke (8.4.0)
+  - Realm (4.3.2):
+    - Realm/Headers (= 4.3.2)
+  - Realm/Headers (4.3.2)
+  - RealmSwift (4.3.2):
+    - Realm (= 4.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0)
   - Clarifai
   - HandyJSON (~> 5.0.1)
   - Nuke (~> 8.0)
+  - RealmSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -33,14 +39,18 @@ SPEC REPOS:
     - Clarifai
     - HandyJSON
     - Nuke
+    - Realm
+    - RealmSwift
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
+  Alamofire: 7c444099d8ccb6ae7e6fc8f343646d3821d8679b
   Clarifai: 6d6cce2b31aefcf33893f2c3a18588b266771d11
   HandyJSON: d45b8415c501e3affc59ca9762c1197ff0feb646
   Nuke: fa6f784c4f7e1c0f9313668510186c68b7af2509
+  Realm: 5e92902e2875dff4bb0fd02f67bb737c3d5db2bc
+  RealmSwift: 9a360fc7bae04fc2e308a34fbd899d5faa2d6b22
 
-PODFILE CHECKSUM: 58a18509fb88221ca18336828944c56c9ae801fe
+PODFILE CHECKSUM: af9053e1061d01cdcf2ed08107060122e5495bde
 
 COCOAPODS: 1.5.2
