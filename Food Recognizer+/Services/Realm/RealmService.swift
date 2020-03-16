@@ -22,7 +22,19 @@ class RealmService {
         }
     }
     
-    static func getAllRecordsFromDB<T:Object>(of: T) -> [T]? {
+    static func deleteAllRecordsFromDBWithPredicate<T:Object>(of type: T.Type, _ predicate: NSPredicate){
+        do {
+            let realm = try Realm()
+            try realm.write {
+                let objects = realm.objects(type).filter(predicate)
+                realm.delete(objects)
+            }
+        } catch {
+            NSLog("Error in deleting objects from Realm")
+        }
+    }
+    
+    static func getAllRecordsFromDB<T:Object>(of type: T.Type) -> [T]? {
         do{
             let realm = try Realm()
             let objects = realm.objects(T.self)

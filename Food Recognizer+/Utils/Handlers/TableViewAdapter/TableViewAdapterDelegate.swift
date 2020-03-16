@@ -15,4 +15,6 @@ public protocol TableViewAdapterDelegate: class {
     func tableViewAdapter(_ adapter: TableViewAdapter,
                           didReachBorderPosition borderPosition: TableViewAdapterBorderPosition,
                           offset: CGFloat)
+    func tableViewAdapterNeedsActionsForCellEditing(adapter: TableViewAdapter, cell: TableViewAdapterCell) -> [UITableViewRowAction]?
+    func tableViewAdapterUserDidDeleteCell(adapter: TableViewAdapter, cell: TableViewAdapterCell?)
 }

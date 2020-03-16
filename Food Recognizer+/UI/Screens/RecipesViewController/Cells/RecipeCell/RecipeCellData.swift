@@ -19,4 +19,7 @@ class RecipeCellData: TableViewAdapterItemData {
     }
     
     
+    override func canEdit() -> Bool {
+        return true
+    }
 }

@@ -195,6 +195,12 @@ public class TableViewAdapter: NSObject {
 
 extension TableViewAdapter: UITableViewDelegate {
     
+    
+    public func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        guard let cell = cellAt(indexPath) else { return nil}
+        return delegate?.tableViewAdapterNeedsActionsForCellEditing(adapter: self, cell: cell)
+    }
+    
     public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         guard let item = items.entityAt(indexPath.row) else { return false }
         return item.canEdit()
@@ -205,9 +211,11 @@ extension TableViewAdapter: UITableViewDelegate {
                           forRowAt indexPath: IndexPath) {
         debugPrint("commit: \(editingStyle)")
         if editingStyle == .delete {
+            let cell = cellAt(indexPath)
             guard items.entityAt(indexPath.row) != nil else { return }
             items.remove(at: indexPath.row)
             reloadData(animated: true)
+            delegate?.tableViewAdapterUserDidDeleteCell(adapter: self, cell: cell)
         }
     }
     

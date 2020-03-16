@@ -30,12 +30,12 @@ class PhotoAnalyserViewControllerPresenter: TableViewAdapterPresenter<PhotoAnaly
     }
     
     func getRecipesFromDB() -> [Recipe]? {
-        RealmService.getAllRecordsFromDB(of: RecipeRealm())?.map{ $0.asSimpleRecipe()}
+        return RealmService.getAllRecordsFromDB(of: RecipeRealm.self)?.map{ $0.asSimpleRecipe()}
         
     }
     
     func handleRightButtonNavigationViewTap() {
-        delegate?.pushRecipesViewController(recipes: getRecipesFromDB())
+        delegate?.pushRecipesViewController(recipes: getRecipesFromDB()?.reversed())
     }
     
 }

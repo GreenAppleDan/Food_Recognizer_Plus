@@ -20,7 +20,13 @@ class RecipesViewControllerPresenter: TableViewAdapterPresenter<RecipesViewContr
     }
     
     func saveClickedRecipeToDB(recipe: Recipe?) {
-        guard let recipe = recipe?.asRecipeRealm() else { return }
-        RealmService.addToDB(objects: [recipe])
+        guard let recipeRealm = recipe?.asRecipeRealm() else { return }
+        RealmService.addToDB(objects: [recipeRealm])
+    }
+    
+    func deleteRecipeFromDB(recipe: Recipe?) {
+        guard let recipeRealm = recipe?.asRecipeRealm() else { return }
+        let predicate = NSPredicate(format: "href = %@", recipeRealm.href)
+        RealmService.deleteAllRecordsFromDBWithPredicate(of: RecipeRealm.self, predicate)
     }
 }

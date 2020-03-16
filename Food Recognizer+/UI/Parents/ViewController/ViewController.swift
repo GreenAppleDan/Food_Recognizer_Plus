@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class ViewController<T>: UIViewController, UIGestureRecognizerDelegate, NavigationViewDelegate {
+open class ViewController<T>: UIViewController, UIGestureRecognizerDelegate, NavigationViewDelegate, TableViewAdapterDelegate {
     
     @IBOutlet public weak var tableView: UITableView?
     @IBOutlet weak var navigationView: NavigationView?
@@ -132,6 +132,42 @@ open class ViewController<T>: UIViewController, UIGestureRecognizerDelegate, Nav
     func navigationViewDidTapRightButton(_ view: NavigationView) {
 
     }
+    
+    // MARK: - TableViewAdapterDelegate
+    
+    public func tableViewAdapterUserDidDeleteCell(adapter: TableViewAdapter, cell: TableViewAdapterCell?){
+        //for overriding
+    }
+     
+    public func tableViewAdapterNeedsActionsForCellEditing(adapter: TableViewAdapter, cell: TableViewAdapterCell) -> [UITableViewRowAction]? {
+        // default implementation is
+        return nil
+    }
+    
+    public func tableViewAdapterTableViewDidScroll(adapter: TableViewAdapter, contentOffset: CGPoint) {
+        tableViewAdapterPresenter()?.tableViewAdapterTableViewDidScroll(adapter: adapter,
+                                                                        contentOffset: contentOffset)
+    }
+    
+    public func tableViewAdapterTableViewWillScroll(adapter: TableViewAdapter, contentPosition: TableViewAdapterScrollPosition, direction: TableViewAdapterScrollDirection) {
+        tableViewAdapterPresenter()?.tableViewAdapterTableViewWillScroll(adapter: adapter,
+                                                                         contentPosition: contentPosition,
+                                                                         direction: direction)
+    }
+    
+    public func tableViewAdapterCellWillAppear(adapter: TableViewAdapter, cell: TableViewAdapterCell) {
+
+    }
+    
+    public func tableViewAdapterCellWillDissappear(adapter: TableViewAdapter, cell: TableViewAdapterCell) {
+
+    }
+
+    
+    public func tableViewAdapter(_ adapter: TableViewAdapter, didReachBorderPosition borderPosition: TableViewAdapterBorderPosition, offset: CGFloat) {
+        tableViewAdapterPresenter()?.tableViewAdapter(adapter, didReachBorderPosition: borderPosition, offset: offset)
+    }
+    
     // MARK: - getting visible cell with identifier
     public func visibleCellWithIdentifier(_ identifier: String) -> TableViewAdapterCell? {
         guard
@@ -264,33 +300,6 @@ extension ViewController: ViewControllerRouter {
     public func dissmiss(animated: Bool) {
         self.dismiss(animated: animated, completion: nil)
     }
-}
-
-extension ViewController: TableViewAdapterDelegate {
-    public func tableViewAdapterTableViewDidScroll(adapter: TableViewAdapter, contentOffset: CGPoint) {
-        tableViewAdapterPresenter()?.tableViewAdapterTableViewDidScroll(adapter: adapter,
-                                                                        contentOffset: contentOffset)
-    }
-    
-    public func tableViewAdapterTableViewWillScroll(adapter: TableViewAdapter, contentPosition: TableViewAdapterScrollPosition, direction: TableViewAdapterScrollDirection) {
-        tableViewAdapterPresenter()?.tableViewAdapterTableViewWillScroll(adapter: adapter,
-                                                                         contentPosition: contentPosition,
-                                                                         direction: direction)
-    }
-    
-    public func tableViewAdapterCellWillAppear(adapter: TableViewAdapter, cell: TableViewAdapterCell) {
-
-    }
-    
-    public func tableViewAdapterCellWillDissappear(adapter: TableViewAdapter, cell: TableViewAdapterCell) {
-
-    }
-
-    
-    public func tableViewAdapter(_ adapter: TableViewAdapter, didReachBorderPosition borderPosition: TableViewAdapterBorderPosition, offset: CGFloat) {
-        tableViewAdapterPresenter()?.tableViewAdapter(adapter, didReachBorderPosition: borderPosition, offset: offset)
-    }
-    
 }
 
 extension ViewController: TableCellActionHandlerDelegate {

@@ -42,6 +42,20 @@ class RecipesViewController: ViewController<RecipesViewControllerPresenter> {
         
         set(items: items, animated: false)
     }
+    
+    // MARK: - tableViewAdapterDelegate. Overriding
+    override func tableViewAdapterNeedsActionsForCellEditing(adapter: TableViewAdapter, cell: TableViewAdapterCell) -> [UITableViewRowAction]? {
+        guard let cellData = cell.cellData as? RecipeCellData, state == .recipesFromApi else { return nil }
+            let saveAction = UITableViewRowAction(style: .normal, title: "Save") { _, _ in
+                self.presenter?.saveClickedRecipeToDB(recipe: cellData.recipe)
+            }
+        return [saveAction]
+    }
+    
+    override func tableViewAdapterUserDidDeleteCell(adapter: TableViewAdapter, cell: TableViewAdapterCell?) {
+        let cellData = cell?.cellData as? RecipeCellData
+        presenter?.deleteRecipeFromDB(recipe: cellData?.recipe)
+    }
 }
 
 
