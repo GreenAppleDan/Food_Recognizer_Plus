@@ -26,7 +26,7 @@ open class TableViewAdapterItemData {
         return UITableView.automaticDimension
     }
     
-    open func canDelete() -> Bool {
+    open func canEdit() -> Bool {
         return false
     }
     

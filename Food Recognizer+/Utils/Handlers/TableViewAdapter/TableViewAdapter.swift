@@ -197,13 +197,18 @@ extension TableViewAdapter: UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         guard let item = items.entityAt(indexPath.row) else { return false }
-        return item.canDelete()
+        return item.canEdit()
     }
     
     public func tableView(_ tableView: UITableView,
                           commit editingStyle: UITableViewCell.EditingStyle,
                           forRowAt indexPath: IndexPath) {
         debugPrint("commit: \(editingStyle)")
+        if editingStyle == .delete {
+            guard items.entityAt(indexPath.row) != nil else { return }
+            items.remove(at: indexPath.row)
+            reloadData(animated: true)
+        }
     }
     
     public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {

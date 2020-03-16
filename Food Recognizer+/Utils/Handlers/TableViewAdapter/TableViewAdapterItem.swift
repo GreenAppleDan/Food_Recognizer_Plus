@@ -36,8 +36,8 @@ public class TableViewAdapterItem {
         return cellData?.cellHeight() ?? UITableView.automaticDimension
     }
     
-    func canDelete() -> Bool {
-        return cellData?.canDelete() ?? false
+    func canEdit() -> Bool {
+        return cellData?.canEdit() ?? false
     }
 }
 
