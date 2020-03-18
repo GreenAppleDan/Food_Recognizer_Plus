@@ -15,12 +15,14 @@ class RecipesViewController: ViewController<RecipesViewControllerPresenter> {
     
     var recipes: [Recipe]?
     var state: RecipesViewControllerState = .recipesFromApi
+    private var topNotificationsController: TopNotificationsController?
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         presenter = RecipesViewControllerPresenter(delegate: self)
         
+        topNotificationsController = TopNotificationsController(view: self.view, maxNotificationsAmount: 1)
         setupNavigationView()
         reloadItems()
         
@@ -60,6 +62,10 @@ class RecipesViewController: ViewController<RecipesViewControllerPresenter> {
 
 
 extension RecipesViewController: RecipesViewControllerProtocol {
+    func showTopNotification(item: TopNotificationsControllerCollectionViewItem) {
+        topNotificationsController?.add(item: item)
+    }
+    
     func showRecipesWebView(link: String?, title: String?) {
         guard let viewController = screensFactory?.webViewController(refference: link, title: title) else { return }
         pushViewController(viewController)

@@ -10,4 +10,5 @@ import Foundation
 
 protocol RecipesViewControllerProtocol: ViewControllerProtocol {
     func showRecipesWebView(link: String?, title: String?)
+    func showTopNotification(item: TopNotificationsControllerCollectionViewItem)
 }

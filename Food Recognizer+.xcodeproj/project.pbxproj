@@ -138,6 +138,28 @@
 		D76008B4241BD0E7009B6AE9 /* RecipesViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76008B3241BD0E7009B6AE9 /* RecipesViewControllerProtocol.swift */; };
 		D76008B6241BD149009B6AE9 /* RecipesViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76008B5241BD149009B6AE9 /* RecipesViewControllerPresenter.swift */; };
 		D76008B8241BD3A4009B6AE9 /* RecipesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D76008B7241BD3A4009B6AE9 /* RecipesViewController.storyboard */; };
+		D76167D124229875002A2F40 /* CollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76167D024229875002A2F40 /* CollectionViewAdapter.swift */; };
+		D76167D3242298A1002A2F40 /* CollectionViewAdapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76167D2242298A1002A2F40 /* CollectionViewAdapterCell.swift */; };
+		D76167D5242298BD002A2F40 /* CollectionViewAdapterCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76167D4242298BD002A2F40 /* CollectionViewAdapterCellDelegate.swift */; };
+		D76167D7242298DA002A2F40 /* CollectionViewAdapterCellAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76167D6242298DA002A2F40 /* CollectionViewAdapterCellAction.swift */; };
+		D76167D924229903002A2F40 /* CollectionViewAdapterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76167D824229903002A2F40 /* CollectionViewAdapterDelegate.swift */; };
+		D76167DB24229923002A2F40 /* CollectionViewAdapterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76167DA24229923002A2F40 /* CollectionViewAdapterItem.swift */; };
+		D76167DD24229954002A2F40 /* CollectionViewAdapterItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76167DC24229954002A2F40 /* CollectionViewAdapterItemData.swift */; };
+		D76167DF2422996A002A2F40 /* CollectionViewAdapterScrollDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76167DE2422996A002A2F40 /* CollectionViewAdapterScrollDirection.swift */; };
+		D76167E124229982002A2F40 /* CollectionViewAdapterScrollPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76167E024229982002A2F40 /* CollectionViewAdapterScrollPosition.swift */; };
+		D76167E32422999E002A2F40 /* CollectionsActionCellsIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76167E22422999E002A2F40 /* CollectionsActionCellsIdentifiers.swift */; };
+		D76167E5242299B6002A2F40 /* CollectionViewAdapterCellActionHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76167E4242299B6002A2F40 /* CollectionViewAdapterCellActionHandlerDelegate.swift */; };
+		D76167E7242299D0002A2F40 /* CollectionViewActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76167E6242299D0002A2F40 /* CollectionViewActions.swift */; };
+		D76167EB24229AE5002A2F40 /* TopNotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76167EA24229AE5002A2F40 /* TopNotificationsController.swift */; };
+		D76167ED24229B7A002A2F40 /* TopNotificationsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76167EC24229B7A002A2F40 /* TopNotificationsCollectionView.swift */; };
+		D76167EF24229B9E002A2F40 /* TopNotificationsCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D76167EE24229B9E002A2F40 /* TopNotificationsCollectionView.xib */; };
+		D76167F324229CA0002A2F40 /* DeviceDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76167F224229CA0002A2F40 /* DeviceDescriptor.swift */; };
+		D76167F524229CE8002A2F40 /* DeviceSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76167F424229CE8002A2F40 /* DeviceSize.swift */; };
+		D76167F824229D67002A2F40 /* SimpleTextCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76167F724229D67002A2F40 /* SimpleTextCollectionViewCell.swift */; };
+		D76167FA24229DF6002A2F40 /* SimpleTextCollectionViewCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76167F924229DF5002A2F40 /* SimpleTextCollectionViewCellData.swift */; };
+		D76167FC24229E11002A2F40 /* SimpleTextCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D76167FB24229E11002A2F40 /* SimpleTextCollectionViewCell.xib */; };
+		D76167FF2422A08A002A2F40 /* TopNotificationsControllerCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76167FE2422A08A002A2F40 /* TopNotificationsControllerCollectionViewItem.swift */; };
+		D76168012422A15B002A2F40 /* CollectionViewCellItemsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76168002422A15B002A2F40 /* CollectionViewCellItemsFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -277,6 +299,28 @@
 		D76008B3241BD0E7009B6AE9 /* RecipesViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewControllerProtocol.swift; sourceTree = "<group>"; };
 		D76008B5241BD149009B6AE9 /* RecipesViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewControllerPresenter.swift; sourceTree = "<group>"; };
 		D76008B7241BD3A4009B6AE9 /* RecipesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipesViewController.storyboard; sourceTree = "<group>"; };
+		D76167D024229875002A2F40 /* CollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapter.swift; sourceTree = "<group>"; };
+		D76167D2242298A1002A2F40 /* CollectionViewAdapterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapterCell.swift; sourceTree = "<group>"; };
+		D76167D4242298BD002A2F40 /* CollectionViewAdapterCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapterCellDelegate.swift; sourceTree = "<group>"; };
+		D76167D6242298DA002A2F40 /* CollectionViewAdapterCellAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapterCellAction.swift; sourceTree = "<group>"; };
+		D76167D824229903002A2F40 /* CollectionViewAdapterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapterDelegate.swift; sourceTree = "<group>"; };
+		D76167DA24229923002A2F40 /* CollectionViewAdapterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapterItem.swift; sourceTree = "<group>"; };
+		D76167DC24229954002A2F40 /* CollectionViewAdapterItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapterItemData.swift; sourceTree = "<group>"; };
+		D76167DE2422996A002A2F40 /* CollectionViewAdapterScrollDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapterScrollDirection.swift; sourceTree = "<group>"; };
+		D76167E024229982002A2F40 /* CollectionViewAdapterScrollPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapterScrollPosition.swift; sourceTree = "<group>"; };
+		D76167E22422999E002A2F40 /* CollectionsActionCellsIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsActionCellsIdentifiers.swift; sourceTree = "<group>"; };
+		D76167E4242299B6002A2F40 /* CollectionViewAdapterCellActionHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapterCellActionHandlerDelegate.swift; sourceTree = "<group>"; };
+		D76167E6242299D0002A2F40 /* CollectionViewActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewActions.swift; sourceTree = "<group>"; };
+		D76167EA24229AE5002A2F40 /* TopNotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNotificationsController.swift; sourceTree = "<group>"; };
+		D76167EC24229B7A002A2F40 /* TopNotificationsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNotificationsCollectionView.swift; sourceTree = "<group>"; };
+		D76167EE24229B9E002A2F40 /* TopNotificationsCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopNotificationsCollectionView.xib; sourceTree = "<group>"; };
+		D76167F224229CA0002A2F40 /* DeviceDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDescriptor.swift; sourceTree = "<group>"; };
+		D76167F424229CE8002A2F40 /* DeviceSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSize.swift; sourceTree = "<group>"; };
+		D76167F724229D67002A2F40 /* SimpleTextCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTextCollectionViewCell.swift; sourceTree = "<group>"; };
+		D76167F924229DF5002A2F40 /* SimpleTextCollectionViewCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTextCollectionViewCellData.swift; sourceTree = "<group>"; };
+		D76167FB24229E11002A2F40 /* SimpleTextCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleTextCollectionViewCell.xib; sourceTree = "<group>"; };
+		D76167FE2422A08A002A2F40 /* TopNotificationsControllerCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNotificationsControllerCollectionViewItem.swift; sourceTree = "<group>"; };
+		D76168002422A15B002A2F40 /* CollectionViewCellItemsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellItemsFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +345,7 @@
 		142187B8239D4C37002FE7C2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D76167F624229D58002A2F40 /* CollectionViewCells */,
 				145C9DDE24165714000D4F70 /* ActivityIndicatorView */,
 				1461230A23AAE68C00107582 /* ScaledHeightImageView */,
 				14C8CA2923A97AAA006FBBFB /* Cells */,
@@ -383,6 +428,7 @@
 		142AF90923983C9800AC1164 /* Food Recognizer+ */ = {
 			isa = PBXGroup;
 			children = (
+				D76167E824229AAD002A2F40 /* Controllers */,
 				145C9E1424167587000D4F70 /* Services */,
 				14C8C9F423A97408006FBBFB /* Utils */,
 				14C341CB23998D9A007A2D97 /* Extensions */,
@@ -747,6 +793,8 @@
 		14C8C9F423A97408006FBBFB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D76167F124229C8E002A2F40 /* DeviceDescriptor */,
+				D76167CF2422985B002A2F40 /* CollectionViewAdapter */,
 				146B26D6241D1614007AACDA /* ImageLoader */,
 				145C9E1E24167D05000D4F70 /* ErrorsFactory */,
 				146122F723AAC5D100107582 /* Color */,
@@ -896,6 +944,72 @@
 			path = RecipesViewController;
 			sourceTree = "<group>";
 		};
+		D76167CF2422985B002A2F40 /* CollectionViewAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				D76167D024229875002A2F40 /* CollectionViewAdapter.swift */,
+				D76167D2242298A1002A2F40 /* CollectionViewAdapterCell.swift */,
+				D76167D4242298BD002A2F40 /* CollectionViewAdapterCellDelegate.swift */,
+				D76167D6242298DA002A2F40 /* CollectionViewAdapterCellAction.swift */,
+				D76167D824229903002A2F40 /* CollectionViewAdapterDelegate.swift */,
+				D76167DA24229923002A2F40 /* CollectionViewAdapterItem.swift */,
+				D76167DC24229954002A2F40 /* CollectionViewAdapterItemData.swift */,
+				D76167DE2422996A002A2F40 /* CollectionViewAdapterScrollDirection.swift */,
+				D76167E024229982002A2F40 /* CollectionViewAdapterScrollPosition.swift */,
+				D76167E22422999E002A2F40 /* CollectionsActionCellsIdentifiers.swift */,
+				D76167E4242299B6002A2F40 /* CollectionViewAdapterCellActionHandlerDelegate.swift */,
+				D76167E6242299D0002A2F40 /* CollectionViewActions.swift */,
+			);
+			path = CollectionViewAdapter;
+			sourceTree = "<group>";
+		};
+		D76167E824229AAD002A2F40 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D76167E924229AB4002A2F40 /* TopNotificationsController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D76167E924229AB4002A2F40 /* TopNotificationsController */ = {
+			isa = PBXGroup;
+			children = (
+				D76167FD2422A06C002A2F40 /* Protocols */,
+				D76167EA24229AE5002A2F40 /* TopNotificationsController.swift */,
+				D76167EC24229B7A002A2F40 /* TopNotificationsCollectionView.swift */,
+				D76167EE24229B9E002A2F40 /* TopNotificationsCollectionView.xib */,
+			);
+			path = TopNotificationsController;
+			sourceTree = "<group>";
+		};
+		D76167F124229C8E002A2F40 /* DeviceDescriptor */ = {
+			isa = PBXGroup;
+			children = (
+				D76167F224229CA0002A2F40 /* DeviceDescriptor.swift */,
+				D76167F424229CE8002A2F40 /* DeviceSize.swift */,
+			);
+			path = DeviceDescriptor;
+			sourceTree = "<group>";
+		};
+		D76167F624229D58002A2F40 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				D76167F724229D67002A2F40 /* SimpleTextCollectionViewCell.swift */,
+				D76167F924229DF5002A2F40 /* SimpleTextCollectionViewCellData.swift */,
+				D76167FB24229E11002A2F40 /* SimpleTextCollectionViewCell.xib */,
+				D76168002422A15B002A2F40 /* CollectionViewCellItemsFactory.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		D76167FD2422A06C002A2F40 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D76167FE2422A08A002A2F40 /* TopNotificationsControllerCollectionViewItem.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -963,9 +1077,11 @@
 				D76008B8241BD3A4009B6AE9 /* RecipesViewController.storyboard in Resources */,
 				145C9E3324169D8A000D4F70 /* IngridientProbabilityPredictionCell.xib in Resources */,
 				145C9E292416868A000D4F70 /* FoodPredictionsViewController.storyboard in Resources */,
+				D76167FC24229E11002A2F40 /* SimpleTextCollectionViewCell.xib in Resources */,
 				145C9DDD24165657000D4F70 /* EmptySpaceCell.xib in Resources */,
 				142AF93C23984DAD00AC1164 /* ScreensRouterViewController.storyboard in Resources */,
 				142AF91723983C9A00AC1164 /* LaunchScreen.storyboard in Resources */,
+				D76167EF24229B9E002A2F40 /* TopNotificationsCollectionView.xib in Resources */,
 				142187DD239D7582002FE7C2 /* ConfigurationViewController.storyboard in Resources */,
 				14C341D62399912C007A2D97 /* MainNavigationViewController.storyboard in Resources */,
 				14724E7923F9737600809B80 /* SingleButtonCell.xib in Resources */,
@@ -1051,6 +1167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D76167F324229CA0002A2F40 /* DeviceDescriptor.swift in Sources */,
 				14C341D423999072007A2D97 /* MainNavigationViewController.swift in Sources */,
 				1497F432241E865B003CB8D6 /* RealmService.swift in Sources */,
 				146B26E0241D29DF007AACDA /* WebViewController.swift in Sources */,
@@ -1059,11 +1176,14 @@
 				D760089A241B8792009B6AE9 /* TableViewAdapterPresenterProtocol.swift in Sources */,
 				145C9E352416A4C8000D4F70 /* IngridientProbabilityPredictionCellActionIdentifier.swift in Sources */,
 				14C341E62399A36E007A2D97 /* PhotoAnalyserViewControllerPresenter.swift in Sources */,
+				D76167ED24229B7A002A2F40 /* TopNotificationsCollectionView.swift in Sources */,
 				D76008A1241B8A58009B6AE9 /* BaseViewController.swift in Sources */,
 				14C8CA1C23A9785F006FBBFB /* TableViewAdapterCellAction.swift in Sources */,
+				D76167EB24229AE5002A2F40 /* TopNotificationsController.swift in Sources */,
 				14C341D123998E8E007A2D97 /* ScreensFactory.swift in Sources */,
 				D76008B6241BD149009B6AE9 /* RecipesViewControllerPresenter.swift in Sources */,
 				142187DB239D7546002FE7C2 /* ConfigurationViewControllerPresenter.swift in Sources */,
+				D76167D3242298A1002A2F40 /* CollectionViewAdapterCell.swift in Sources */,
 				D76008AF241BBB0F009B6AE9 /* FoodPredictionsViewControllerProtocol.swift in Sources */,
 				14C8CA0E23A977B0006FBBFB /* TableViewAdapter.swift in Sources */,
 				145C9DE024165789000D4F70 /* ActivityIndicatorView.swift in Sources */,
@@ -1071,6 +1191,8 @@
 				14C341E42399A0B1007A2D97 /* MainNavigationViewControllerPresenter.swift in Sources */,
 				14C341E023999ED8007A2D97 /* TableViewAdapterPresenter.swift in Sources */,
 				14C341D923999455007A2D97 /* PhotoAnalyserViewController.swift in Sources */,
+				D76167D5242298BD002A2F40 /* CollectionViewAdapterCellDelegate.swift in Sources */,
+				D76167E32422999E002A2F40 /* CollectionsActionCellsIdentifiers.swift in Sources */,
 				146B26DD241D165F007AACDA /* ImageLoaderItem.swift in Sources */,
 				14C8CA1A23A9784C006FBBFB /* TableViewAdapterItem.swift in Sources */,
 				142187D9239D751E002FE7C2 /* ConfigurationViewController.swift in Sources */,
@@ -1087,6 +1209,7 @@
 				D76008B4241BD0E7009B6AE9 /* RecipesViewControllerProtocol.swift in Sources */,
 				145C9E372416A53C000D4F70 /* IngridientProbabilityPredictionCellActionHandler.swift in Sources */,
 				14C8CA0423A97719006FBBFB /* TableViewAdapterUpdateCommandReplace.swift in Sources */,
+				D76167D7242298DA002A2F40 /* CollectionViewAdapterCellAction.swift in Sources */,
 				D76008B2241BD0B3009B6AE9 /* RecipesViewController.swift in Sources */,
 				14C8C9FD23A976B7006FBBFB /* TableViewAdapterUpdater.swift in Sources */,
 				1461230C23AAE6BF00107582 /* ScaledHeightImageView.swift in Sources */,
@@ -1097,28 +1220,35 @@
 				146B26D8241D1624007AACDA /* ImageLoader.swift in Sources */,
 				14C8CA0023A976E7006FBBFB /* TableViewAdapterUpdateCommandAppend.swift in Sources */,
 				142AF90D23983C9800AC1164 /* SceneDelegate.swift in Sources */,
+				D76167FF2422A08A002A2F40 /* TopNotificationsControllerCollectionViewItem.swift in Sources */,
 				146B8DFB241CFE280055B8B2 /* RecipeCellActionIdentifier.swift in Sources */,
 				145C9E17241675CF000D4F70 /* ClarifaiService.swift in Sources */,
 				14C8CA1823A97830006FBBFB /* TableViewAdapterCell.swift in Sources */,
 				14C8CA2E23A97B56006FBBFB /* Macro.swift in Sources */,
 				14724E7723F9728000809B80 /* SingleButtonCellData.swift in Sources */,
 				D76008AD241BB395009B6AE9 /* ConfigurationViewControllerProtocol.swift in Sources */,
+				D76167DD24229954002A2F40 /* CollectionViewAdapterItemData.swift in Sources */,
 				142187C6239D533B002FE7C2 /* MainNavigationTabBarButtonViewDelegate.swift in Sources */,
 				142187D3239D6414002FE7C2 /* MainNavigationViewControllerPresenterBarItemIdentifier.swift in Sources */,
+				D76167D924229903002A2F40 /* CollectionViewAdapterDelegate.swift in Sources */,
 				142187C9239D5526002FE7C2 /* MainNavigationTabBarView.swift in Sources */,
 				146B26E2241D29F5007AACDA /* WebViewControllerProtocol.swift in Sources */,
+				D76167E5242299B6002A2F40 /* CollectionViewAdapterCellActionHandlerDelegate.swift in Sources */,
 				D76008A9241BAB7F009B6AE9 /* AlertHandler.swift in Sources */,
 				146B8DF3241CEF7A0055B8B2 /* RecipeCellData.swift in Sources */,
 				146122FC23AACE9D00107582 /* ImageViewCell.swift in Sources */,
 				D76008A3241B9A6A009B6AE9 /* PhotoAnalyserViewControllerProtocol.swift in Sources */,
 				146B8DED241CED650055B8B2 /* RecipesViewControllerItemsFactory.swift in Sources */,
 				1497F437241E8AEE003CB8D6 /* RecipeRealm.swift in Sources */,
+				D76167DB24229923002A2F40 /* CollectionViewAdapterItem.swift in Sources */,
+				D76167E7242299D0002A2F40 /* CollectionViewActions.swift in Sources */,
 				145C9E2024167D1D000D4F70 /* ErrorsFactory.swift in Sources */,
 				145C9DDB24165639000D4F70 /* EmptySpaceCellData.swift in Sources */,
 				14C8CA0A23A9777C006FBBFB /* TableViewAdapterUpdateCommand.swift in Sources */,
 				14C8CA1E23A97873006FBBFB /* TableViewAdapterCellDelegate.swift in Sources */,
 				D760089C241B88E8009B6AE9 /* ViewControllerProtocol.swift in Sources */,
 				142187D5239D6C65002FE7C2 /* Array.swift in Sources */,
+				D76167D124229875002A2F40 /* CollectionViewAdapter.swift in Sources */,
 				14C8CA2423A978D8006FBBFB /* TableViewAdapterBorderPosition.swift in Sources */,
 				14C8C9F923A975D2006FBBFB /* TableViewAdapterCellActionHandler.swift in Sources */,
 				1497F439241EA329003CB8D6 /* RecipesViewControllerState.swift in Sources */,
@@ -1126,13 +1256,16 @@
 				14C8CA1423A97807006FBBFB /* TableViewAdapterScrollDirection.swift in Sources */,
 				142187C0239D50A2002FE7C2 /* MainNavigationTabBarButtonView.swift in Sources */,
 				146B8DF7241CF9460055B8B2 /* RecipeCellActionHandlerDelegate.swift in Sources */,
+				D76167E124229982002A2F40 /* CollectionViewAdapterScrollPosition.swift in Sources */,
 				14724E7B23F975D000809B80 /* PhotoAnalyserViewControllerPresenterItemIdentifier.swift in Sources */,
 				145C9E3124169CCC000D4F70 /* IngridientProbabilityPredictionCellData.swift in Sources */,
 				14C8CA2023A9788A006FBBFB /* TableViewAdapterItemData.swift in Sources */,
 				145C9E2B24169233000D4F70 /* FoodPredictionsViewControllerPresenterItemsFactory.swift in Sources */,
+				D76167FA24229DF6002A2F40 /* SimpleTextCollectionViewCellData.swift in Sources */,
 				146122F923AAC5DB00107582 /* Colors.swift in Sources */,
 				146122FE23AACEBF00107582 /* ImageViewCellData.swift in Sources */,
 				14C8CA0C23A9779D006FBBFB /* TableViewAdapterError.swift in Sources */,
+				D76168012422A15B002A2F40 /* CollectionViewCellItemsFactory.swift in Sources */,
 				14C8CA1023A977D5006FBBFB /* TableViewAdapterActions.swift in Sources */,
 				14C8CA2B23A97AB7006FBBFB /* CellsActionIdentifiers.swift in Sources */,
 				142187E0239D80EA002FE7C2 /* NavigationView.swift in Sources */,
@@ -1144,10 +1277,13 @@
 				14C8CA0823A97759006FBBFB /* TableViewAdapterUpdateCommandReload.swift in Sources */,
 				146B8DF9241CFDC70055B8B2 /* RecipeCellActionHandler.swift in Sources */,
 				142187C4239D5223002FE7C2 /* MainNavigationTabBarButtonViewData.swift in Sources */,
+				D76167F824229D67002A2F40 /* SimpleTextCollectionViewCell.swift in Sources */,
 				142187E4239D841D002FE7C2 /* NavigationViewDelegate.swift in Sources */,
 				14724E7523F9726E00809B80 /* SingleButtonCell.swift in Sources */,
+				D76167DF2422996A002A2F40 /* CollectionViewAdapterScrollDirection.swift in Sources */,
 				145C9E2724168627000D4F70 /* FoodPredictionsViewControllerPresenter.swift in Sources */,
 				14C8CA2223A978A4006FBBFB /* TableViewAdapterCellActionHandlerDelegate.swift in Sources */,
+				D76167F524229CE8002A2F40 /* DeviceSize.swift in Sources */,
 				1461230923AADBBA00107582 /* UIImage.swift in Sources */,
 				14C8CA0623A9772F006FBBFB /* TableViewAdapterUpdateCommandInsert.swift in Sources */,
 				145C9E1A24167719000D4F70 /* ClarifaiFoodPrediction.swift in Sources */,

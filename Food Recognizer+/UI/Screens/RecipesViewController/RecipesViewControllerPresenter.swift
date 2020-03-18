@@ -22,11 +22,15 @@ class RecipesViewControllerPresenter: TableViewAdapterPresenter<RecipesViewContr
     func saveClickedRecipeToDB(recipe: Recipe?) {
         guard let recipeRealm = recipe?.asRecipeRealm() else { return }
         RealmService.addToDB(objects: [recipeRealm])
+        let item = CollectionViewCellItemsFactory.simpleTextCollectionViewItem(labelText: "Recipe Saved Successfully!")
+        delegate?.showTopNotification(item: item)
     }
     
     func deleteRecipeFromDB(recipe: Recipe?) {
         guard let recipeRealm = recipe?.asRecipeRealm() else { return }
         let predicate = NSPredicate(format: "href = %@", recipeRealm.href)
         RealmService.deleteAllRecordsFromDBWithPredicate(of: RecipeRealm.self, predicate)
+        let item = CollectionViewCellItemsFactory.simpleTextCollectionViewItem(labelText: "Recipe Deleted Successfully")
+        delegate?.showTopNotification(item: item)
     }
 }
