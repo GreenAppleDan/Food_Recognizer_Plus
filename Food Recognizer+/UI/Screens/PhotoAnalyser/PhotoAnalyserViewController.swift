@@ -42,8 +42,8 @@ class PhotoAnalyserViewController: BaseViewController<PhotoAnalyserViewControlle
     override func setupNavigationView() {
         setNavigationViewLeftButtonIsHidden(true)
         setNavigationViewRightButtonIsHidden(false)
-        setNavigationViewRightButton(title: "Recipes", image: nil)
-        setNavigationViewTitle("Analyser")
+        setNavigationViewRightButton(title: _L("LNG_RECIPES"), image: nil)
+        setNavigationViewTitle(_L("LNG_ANALYSER"))
     }
     
     // MARK: - Private. Setup
@@ -70,7 +70,7 @@ extension PhotoAnalyserViewController: TableViewAdapterCellActionHandlerDelegate
             self.present(imagePicker, animated: true, completion: nil)
         case .analysePicture:
             guard let chosenImage = chosenImage else {
-                self.showAlert(title: "Image is not chosen")
+                self.showAlert(title: _L("LNG_IMAGE_NOT_CHOSEN"))
                 return
             }
             activityIndicatorView?.startActivityIndicator()

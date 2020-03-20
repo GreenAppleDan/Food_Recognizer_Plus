@@ -40,7 +40,7 @@ class RecipesViewController: ViewController<RecipesViewControllerPresenter> {
     // MARK: - tableViewAdapterDelegate. Overriding
     override func tableViewAdapterNeedsActionsForCellEditing(adapter: TableViewAdapter, cell: TableViewAdapterCell) -> [UITableViewRowAction]? {
         guard let cellData = cell.cellData as? RecipeCellData, state == .recipesFromApi else { return nil }
-            let saveAction = UITableViewRowAction(style: .normal, title: "Save") { _, _ in
+            let saveAction = UITableViewRowAction(style: .normal, title: _L("LNG_SAVE")) { _, _ in
                 self.presenter?.saveClickedRecipeToDB(recipe: cellData.recipe)
             }
         return [saveAction]
@@ -55,8 +55,8 @@ class RecipesViewController: ViewController<RecipesViewControllerPresenter> {
     override func setupNavigationView() {
         setNavigationViewRightButtonIsHidden(true)
         switch state {
-        case .recipesFromApi: setNavigationViewTitle("Recipes")
-        case .recipesFromDB: setNavigationViewTitle("Saved Recipes")
+        case .recipesFromApi: setNavigationViewTitle(_L("LNG_RECIPES"))
+        case .recipesFromDB: setNavigationViewTitle(_L("LNG_SAVED_RECIPES"))
         }
         
     }

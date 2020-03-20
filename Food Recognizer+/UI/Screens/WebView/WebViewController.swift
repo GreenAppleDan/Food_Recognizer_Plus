@@ -29,7 +29,7 @@ class WebViewController: ViewController<WebViewControllerPresenter> {
     // MARK: - Setup
     override func setupNavigationView() {
         setNavigationViewRightButtonIsHidden(true)
-        setNavigationViewTitle(navigationBarTitle ?? "Website")
+        setNavigationViewTitle(navigationBarTitle ?? _L("LNG_WEBSITE"))
     }
 }
 

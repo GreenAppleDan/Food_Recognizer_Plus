@@ -35,10 +35,6 @@ open class ViewController<T>: UIViewController, UIGestureRecognizerDelegate, Nav
                                                name: UIResponder.keyboardWillChangeFrameNotification,
                                                object: nil)
         
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(localizationChanged),
-                                               name: Notification.Name.notificationLanguageChanged,
-                                               object: nil)
     }
 
     deinit {
@@ -68,11 +64,6 @@ open class ViewController<T>: UIViewController, UIGestureRecognizerDelegate, Nav
         tableViewAdapterPresenter()?.detach()
         super.dismiss(animated: flag, completion: completion)
     }
-    
-    @objc open func localizationChanged() {
-    //        debugPrint("Unimplemented localizationChanged() method in \(String(describing: self))")
-            tableViewAdapterPresenter()?.localizationChanged()
-        }
     
     // MARK: - UIGestureRecognizerDelegate
     

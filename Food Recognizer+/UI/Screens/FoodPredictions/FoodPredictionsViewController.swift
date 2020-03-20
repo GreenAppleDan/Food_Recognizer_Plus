@@ -42,14 +42,14 @@ class FoodPredictionsViewController: ViewController<FoodPredictionsViewControlle
     // MARK: - ViewControllerProtocol. Overriding
     override func setupNavigationView() {
         navigationView?.backButtonIsHidden = false
-        navigationView?.set(title: "Predictions")
-        navigationView?.setRightButton(title: "Get recipes", image: nil)
+        navigationView?.set(title: _L("LNG_PREDICTIONS"))
+        navigationView?.setRightButton(title: _L("LNG_GET_RECIPES"), image: nil)
     }
    // MARK: - NavigationViewDelegate
     
     override func navigationViewDidTapRightButton(_ view: NavigationView) {
         if chosenIngridientNames.isEmpty {
-            showAlert(title: "You have not chosen any ingridients")
+            showAlert(title: _L("LNG_YOU_HAVE_NOT_CHOSEN_INGRIDIENTS"))
         } else {
             presenter?.getRecipesWithIngridientNames(ingridientNames: Array(chosenIngridientNames))
         }

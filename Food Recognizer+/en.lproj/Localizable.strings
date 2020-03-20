@@ -8,7 +8,14 @@
 
 "LNG_ANALYSER" = "Analyser";
 "LNG_RECIPES" = "Recipes";
+"LNG_SAVED_RECIPES" = "Saved Recipes";
 "LNG_CHOOSE_PHOTO" = "Choose photo";
 "LNG_TAKE_A_PICTURE" = "Take a picture";
 "LNG_ANALYSE_CHOSEN_PICTURE" = "Analyse chosen picture";
 "LNG_CONFIGURATION" = "Configuration";
+"LNG_IMAGE_NOT_CHOSEN" = "Image is not chosen";
+"LNG_PREDICTIONS" = "Predictions";
+"LNG_GET_RECIPES" = "Get Recipes";
+"LNG_YOU_HAVE_NOT_CHOSEN_INGRIDIENTS" = "You have not chosen any ingridients";
+"LNG_WEBSITE" = "Website";
+"LNG_SAVE" = "Save";

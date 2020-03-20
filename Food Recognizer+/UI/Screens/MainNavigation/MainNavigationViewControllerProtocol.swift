@@ -9,5 +9,6 @@
 import Foundation
 
 protocol MainNavigationViewControllerProtocol: ViewControllerProtocol {
-    
+    func prepareTabBarView()
+    func prepareViewControllers()
 }

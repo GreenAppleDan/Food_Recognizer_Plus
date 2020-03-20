@@ -11,7 +11,7 @@ import UIKit
 open class TableViewAdapterPresenter<T>: TableViewAdapterPresenterProtocol {
     
     // MARK: - Properties
-
+    
     public var delegate: T?
     
     // MARK: - Life-cycle
@@ -19,10 +19,17 @@ open class TableViewAdapterPresenter<T>: TableViewAdapterPresenterProtocol {
     public init(delegate: T) {
         
         attach(delegate: delegate)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(localizationChanged),
+                                               name: Notification.Name.notificationLanguageChanged,
+                                               object: nil)
     }
     
     deinit {
         detach()
+        
+        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: - Actions
@@ -50,7 +57,7 @@ open class TableViewAdapterPresenter<T>: TableViewAdapterPresenterProtocol {
     }
     // MARK: - Localization Manager
     
-    open func localizationChanged() {
+    @objc public func localizationChanged() {
         delegateNormalized()?.reloadData(animated: false)
         delegateNormalized()?.setupNavigationView()
     }

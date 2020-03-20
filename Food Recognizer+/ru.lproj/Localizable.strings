@@ -5,3 +5,17 @@
   Created by dev on 20.03.2020.
   Copyright © 2020 Денис Жукоборский. All rights reserved.
 */
+
+"LNG_ANALYSER" = "Анализатор";
+"LNG_RECIPES" = "Рецепты";
+"LNG_SAVED_RECIPES" = "Сохраненные рецепты";
+"LNG_CHOOSE_PHOTO" = "Выбрать фото";
+"LNG_TAKE_A_PICTURE" = "Сфотографировать";
+"LNG_ANALYSE_CHOSEN_PICTURE" = "Анализировать выбранное фото";
+"LNG_CONFIGURATION" = "Настройки";
+"LNG_IMAGE_NOT_CHOSEN" = "Картинка не выбрана";
+"LNG_PREDICTIONS" = "Предсказания";
+"LNG_GET_RECIPES" = "Рецепты";
+"LNG_YOU_HAVE_NOT_CHOSEN_INGRIDIENTS" = "Вы не выбрали ингридиентов";
+"LNG_WEBSITE" = "Вебсайт";
+"LNG_SAVE" = "Сохранить";

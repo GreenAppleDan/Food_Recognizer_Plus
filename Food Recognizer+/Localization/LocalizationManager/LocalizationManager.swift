@@ -17,7 +17,7 @@ open class LocalizationManager {
     // MARK: - Properties
     
     public private(set) static var locale: Locale = .current
-    public static var availableLocales: [String] = ["en"]
+    public static var availableLocales: [String] = ["en", "ru"]
     
     private static var languageCode: String = ""
     private static var regionCode: String = ""

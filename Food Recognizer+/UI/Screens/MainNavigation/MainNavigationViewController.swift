@@ -64,42 +64,8 @@ class MainNavigationViewController: ViewController<MainNavigationViewControllerP
         }
     }
     
+    
     // MARK: - Private
-    
-    private func prepareTabBarView() {
-        mainNavigationTabBarView?.clear()
-        
-        let photoAnalyserTabBarButtonData = MainNavigationTabBarButtonViewData(identifier: MainNavigationViewControllerPresenterBarItemIdentifier.photoAnalyser.rawValue, image: UIImage(named: "Face"), labelText: "Analyser")
-        mainNavigationTabBarView?.add(data: photoAnalyserTabBarButtonData)
-        
-        let configurationViewTabBarButtonData = MainNavigationTabBarButtonViewData(identifier: MainNavigationViewControllerPresenterBarItemIdentifier.configuration.rawValue, image: UIImage(named: "Configuration"), labelText: "Configuration")
-        
-        mainNavigationTabBarView?.delegate = self
-        mainNavigationTabBarView?.add(data: configurationViewTabBarButtonData)
-        
-        mainNavigationTabBarView?.arrangeStackViewSubviews()
-    }
-    
-    private func prepareViewControllers() {
-        var viewControllers: [UIViewController] = []
-        
-        photoAnalyserViewController = screensFactory?.photoAnalyserViewController()
-        guard let photoAnalyserViewController = photoAnalyserViewController else { return }
-        viewControllers.append(photoAnalyserViewController)
-        
-        configurationViewController = screensFactory?.configurationViewController()
-        guard let configurationViewController = configurationViewController else { return }
-        viewControllers.append(configurationViewController)
-        
-        pageViewController?.viewControllers = viewControllers
-        
-        identifierToViewController.removeAll()
-        viewControllerToIdentifier.removeAll()
-        
-        link(identifier: .photoAnalyser, with: photoAnalyserViewController)
-        link(identifier: .configuration, with: configurationViewController)
-    }
-    
     private func link(identifier: MainNavigationViewControllerPresenterBarItemIdentifier, with viewController: UIViewController?) {
         guard let viewController = viewController else { return }
         
@@ -121,5 +87,37 @@ extension MainNavigationViewController: MainNavigationTabBarViewDelegate {
 }
 
 extension MainNavigationViewController: MainNavigationViewControllerProtocol {
+    func prepareTabBarView() {
+        mainNavigationTabBarView?.clear()
+        
+        let photoAnalyserTabBarButtonData = MainNavigationTabBarButtonViewData(identifier: MainNavigationViewControllerPresenterBarItemIdentifier.photoAnalyser.rawValue, image: UIImage(named: "Face"), labelText: _L("LNG_ANALYSER"))
+        mainNavigationTabBarView?.add(data: photoAnalyserTabBarButtonData)
+        
+        let configurationViewTabBarButtonData = MainNavigationTabBarButtonViewData(identifier: MainNavigationViewControllerPresenterBarItemIdentifier.configuration.rawValue, image: UIImage(named: "Configuration"), labelText: _L("LNG_CONFIGURATION"))
+        
+        mainNavigationTabBarView?.delegate = self
+        mainNavigationTabBarView?.add(data: configurationViewTabBarButtonData)
+        
+        mainNavigationTabBarView?.arrangeStackViewSubviews()
+    }
     
+    func prepareViewControllers() {
+        var viewControllers: [UIViewController] = []
+        
+        photoAnalyserViewController = screensFactory?.photoAnalyserViewController()
+        guard let photoAnalyserViewController = photoAnalyserViewController else { return }
+        viewControllers.append(photoAnalyserViewController)
+        
+        configurationViewController = screensFactory?.configurationViewController()
+        guard let configurationViewController = configurationViewController else { return }
+        viewControllers.append(configurationViewController)
+        
+        pageViewController?.viewControllers = viewControllers
+        
+        identifierToViewController.removeAll()
+        viewControllerToIdentifier.removeAll()
+        
+        link(identifier: .photoAnalyser, with: photoAnalyserViewController)
+        link(identifier: .configuration, with: configurationViewController)
+    }
 }

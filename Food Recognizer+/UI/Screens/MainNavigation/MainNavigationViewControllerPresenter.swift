@@ -9,7 +9,12 @@
 import UIKit
 
 class MainNavigationViewControllerPresenter: TableViewAdapterPresenter<MainNavigationViewControllerProtocol> {
-
+    
+    override func localizationChanged() {
+        super.localizationChanged()
+        delegate?.prepareViewControllers()
+        delegate?.prepareTabBarView()
+    }
 }
 
 

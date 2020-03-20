@@ -20,7 +20,7 @@ class ConfigurationViewController: ViewController<ConfigurationViewControllerPre
     
     override func setupNavigationView() {
         navigationView?.backButtonIsHidden = true
-        navigationView?.set(title: "Configuration")
+        navigationView?.set(title: _L("LNG_CONFIGURATION"))
     }
 }
 
