@@ -12,8 +12,14 @@ class MainNavigationViewControllerPresenter: TableViewAdapterPresenter<MainNavig
     
     override func localizationChanged() {
         super.localizationChanged()
+        let selected = delegate?.getCurrentlySelectedTabBarIdentifier()
         delegate?.prepareViewControllers()
         delegate?.prepareTabBarView()
+        
+        if let selected = selected {
+            self.delegate?.setTabBarViewIdentifier(identifier: selected)
+            
+        }
     }
 }
 

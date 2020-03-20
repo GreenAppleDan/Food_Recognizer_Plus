@@ -11,4 +11,6 @@ import Foundation
 protocol MainNavigationViewControllerProtocol: ViewControllerProtocol {
     func prepareTabBarView()
     func prepareViewControllers()
+    func getCurrentlySelectedTabBarIdentifier() -> String?
+    func setTabBarViewIdentifier(identifier: String)
 }

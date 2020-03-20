@@ -87,6 +87,15 @@ extension MainNavigationViewController: MainNavigationTabBarViewDelegate {
 }
 
 extension MainNavigationViewController: MainNavigationViewControllerProtocol {
+    
+    func setTabBarViewIdentifier(identifier: String) {
+        mainNavigationTabBarView?.set(selected: true, identifier: identifier, animated: false)
+    }
+    
+    func getCurrentlySelectedTabBarIdentifier() -> String? {
+        return mainNavigationTabBarView?.selected()
+    }
+    
     func prepareTabBarView() {
         mainNavigationTabBarView?.clear()
         
