@@ -9,11 +9,7 @@
 import UIKit
 
 public protocol ViewControllerProtocol: class, ActivityIndicatorHandler, AlertHandler  {
-    func setNavigationViewTitle(_ title: String, font: UIFont?)
-    func setNavigationViewRightButton(title: String?, image: UIImage?)
-    func setNavigationViewLeftButton(title: String?, image: UIImage?)
-    func setNavigationViewRightButtonIsHidden(_ isHidden: Bool)
-    func setNavigationViewLeftButtonIsHidden(_ isHidden: Bool)
+    func setupNavigationView()
     func set(items: [TableViewAdapterItem], reload: Bool, animated: Bool)
     func reloadData(animated: Bool)
 

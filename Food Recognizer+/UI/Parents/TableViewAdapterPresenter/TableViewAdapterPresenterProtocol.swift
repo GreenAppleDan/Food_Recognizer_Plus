@@ -20,6 +20,10 @@ public protocol TableViewAdapterPresenterProtocol {
     func viewWillAppear()
     func viewWillDisappear()
     func reloadData()
+    
+    // MARK: - Localization Manager
+    
+    func localizationChanged()
 
     // MARK: - TableViewAdapterDelegate
 

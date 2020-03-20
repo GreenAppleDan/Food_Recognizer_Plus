@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  Food Recognizer+
+
+  Created by dev on 20.03.2020.
+  Copyright © 2020 Денис Жукоборский. All rights reserved.
+*/
+
+"LNG_ANALYSER" = "Analyser";
+"LNG_RECIPES" = "Recipes";
+"LNG_CHOOSE_PHOTO" = "Choose photo";
+"LNG_TAKE_A_PICTURE" = "Take a picture";
+"LNG_ANALYSE_CHOSEN_PICTURE" = "Analyse chosen picture";
+"LNG_CONFIGURATION" = "Configuration";

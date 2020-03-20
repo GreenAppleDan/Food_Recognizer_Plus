@@ -30,14 +30,6 @@ class RecipesViewController: ViewController<RecipesViewControllerPresenter> {
     }
     
     // MARK: - Private. Setup
-    private func setupNavigationView() {
-        setNavigationViewRightButtonIsHidden(true)
-        switch state {
-        case .recipesFromApi: setNavigationViewTitle("Recipes")
-        case .recipesFromDB: setNavigationViewTitle("Saved Recipes")
-        }
-        
-    }
     
     private func reloadItems(){
         let items = RecipesViewControllerItemsFactory.items(recipes)
@@ -57,6 +49,16 @@ class RecipesViewController: ViewController<RecipesViewControllerPresenter> {
     override func tableViewAdapterUserDidDeleteCell(adapter: TableViewAdapter, cell: TableViewAdapterCell?) {
         let cellData = cell?.cellData as? RecipeCellData
         presenter?.deleteRecipeFromDB(recipe: cellData?.recipe)
+    }
+    
+    // MARK: - ViewControllerProtocol. Overriding
+    override func setupNavigationView() {
+        setNavigationViewRightButtonIsHidden(true)
+        switch state {
+        case .recipesFromApi: setNavigationViewTitle("Recipes")
+        case .recipesFromDB: setNavigationViewTitle("Saved Recipes")
+        }
+        
     }
 }
 

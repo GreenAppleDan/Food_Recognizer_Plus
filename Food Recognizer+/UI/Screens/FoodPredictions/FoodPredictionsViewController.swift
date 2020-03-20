@@ -32,11 +32,6 @@ class FoodPredictionsViewController: ViewController<FoodPredictionsViewControlle
     }
     
     // MARK: - Private
-    private func setupNavigationView() {
-        navigationView?.backButtonIsHidden = false
-        navigationView?.set(title: "Predictions")
-        navigationView?.setRightButton(title: "Get recipes", image: nil)
-    }
     
     private func reloadItems(){
         let items = FoodPredictionsViewControllerPresenterItemsFactory.items(predictions: clarifaiPredictions ?? [])
@@ -44,6 +39,12 @@ class FoodPredictionsViewController: ViewController<FoodPredictionsViewControlle
         set(items: items, animated: false)
     }
     
+    // MARK: - ViewControllerProtocol. Overriding
+    override func setupNavigationView() {
+        navigationView?.backButtonIsHidden = false
+        navigationView?.set(title: "Predictions")
+        navigationView?.setRightButton(title: "Get recipes", image: nil)
+    }
    // MARK: - NavigationViewDelegate
     
     override func navigationViewDidTapRightButton(_ view: NavigationView) {

@@ -42,7 +42,18 @@ open class TableViewAdapterPresenter<T>: TableViewAdapterPresenterProtocol {
     open func isShouldSwipeOut() -> Bool {
         return true
     }
-
+    
+    // MARK: - T as ViewControllerProtocol
+    
+    private func delegateNormalized() -> ViewControllerProtocol? {
+        return delegate as? ViewControllerProtocol
+    }
+    // MARK: - Localization Manager
+    
+    open func localizationChanged() {
+        delegateNormalized()?.reloadData(animated: false)
+        delegateNormalized()?.setupNavigationView()
+    }
     // MARK: - Life cycle
     
     open func viewDidLoad() {

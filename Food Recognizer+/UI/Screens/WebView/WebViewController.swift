@@ -26,8 +26,8 @@ class WebViewController: ViewController<WebViewControllerPresenter> {
         presenter?.viewDidLoad()
     }
     
-    // MARK: - Private. Setup
-    private func setupNavigationView() {
+    // MARK: - Setup
+    override func setupNavigationView() {
         setNavigationViewRightButtonIsHidden(true)
         setNavigationViewTitle(navigationBarTitle ?? "Website")
     }

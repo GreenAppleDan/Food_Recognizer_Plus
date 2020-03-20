@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class ViewController<T>: UIViewController, UIGestureRecognizerDelegate, NavigationViewDelegate, TableViewAdapterDelegate {
+open class ViewController<T>: UIViewController, UIGestureRecognizerDelegate, NavigationViewDelegate, TableViewAdapterDelegate, ViewControllerProtocol {
     
     @IBOutlet public weak var tableView: UITableView?
     @IBOutlet weak var navigationView: NavigationView?
@@ -33,6 +33,11 @@ open class ViewController<T>: UIViewController, UIGestureRecognizerDelegate, Nav
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardNotification(notification:)),
                                                name: UIResponder.keyboardWillChangeFrameNotification,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(localizationChanged),
+                                               name: Notification.Name.notificationLanguageChanged,
                                                object: nil)
     }
 
@@ -63,6 +68,11 @@ open class ViewController<T>: UIViewController, UIGestureRecognizerDelegate, Nav
         tableViewAdapterPresenter()?.detach()
         super.dismiss(animated: flag, completion: completion)
     }
+    
+    @objc open func localizationChanged() {
+    //        debugPrint("Unimplemented localizationChanged() method in \(String(describing: self))")
+            tableViewAdapterPresenter()?.localizationChanged()
+        }
     
     // MARK: - UIGestureRecognizerDelegate
     
@@ -133,6 +143,28 @@ open class ViewController<T>: UIViewController, UIGestureRecognizerDelegate, Nav
 
     }
     
+    // MARK: - Setting up NavigationView
+    public func setNavigationViewTitle(_ title: String, font: UIFont? = nil) {
+        navigationView?.set(title: title)
+    }
+
+    public func setNavigationViewRightButton(title: String?, image: UIImage?) {
+        navigationView?.setRightButton(title: title,
+                                       image: image)
+    }
+
+    public func setNavigationViewLeftButton(title: String?, image: UIImage?) {
+        navigationView?.setLeftButton(title: title,
+                                      image: image)
+    }
+
+    public func setNavigationViewRightButtonIsHidden(_ isHidden: Bool) {
+        navigationView?.rightButtonIsHidden = isHidden
+    }
+
+    public func setNavigationViewLeftButtonIsHidden(_ isHidden: Bool) {
+        navigationView?.backButtonIsHidden = isHidden
+    }
     // MARK: - TableViewAdapterDelegate
     
     public func tableViewAdapterUserDidDeleteCell(adapter: TableViewAdapter, cell: TableViewAdapterCell?){
@@ -168,6 +200,90 @@ open class ViewController<T>: UIViewController, UIGestureRecognizerDelegate, Nav
         tableViewAdapterPresenter()?.tableViewAdapter(adapter, didReachBorderPosition: borderPosition, offset: offset)
     }
     
+    // MARK: - ActivityIndicatorHandler
+       public func startActivityIndicator() {
+           activityIndicatorView?.startActivityIndicator()
+       }
+       
+       public func stopActivityIndicator() {
+           activityIndicatorView?.stopActivityIndicator()
+       }
+       
+       // MARK: - ViewControllerProtocol
+       
+       public func setupNavigationView() {
+           //its for overriding (localization)
+       }
+
+       public func set(items: [TableViewAdapterItem], reload: Bool = true , animated: Bool = false) {
+           tableViewAdapter?.clear()
+           items.forEach {
+               tableViewAdapter?.unsafeAdd(item: $0)
+               $0.cellHandler?.delegate = self
+           }
+           if reload { reloadData(animated: animated) }
+       }
+
+       public func reloadData(animated: Bool) {
+           tableViewAdapter?.reloadData(animated: animated)
+       }
+       
+       // MARK: - AlertHandler
+       public func showAlert(title: String, message: String?, completion: (() -> Void)?) {
+           
+           let alertViewController = UIAlertController(
+               title: title,
+               message: message,
+               preferredStyle: .alert
+           )
+           
+           let okAction = UIAlertAction(
+               title: "OK",
+               style: .default,
+               handler: { _ in
+                   if let completion = completion {
+                       completion()
+                   }
+               }
+           )
+           
+           alertViewController.addAction(okAction)
+           present(alertViewController, animated: true, completion: nil)
+       }
+       
+       public func show(_ error: Error) {
+           showAlert(title: error.localizedDescription)
+       }
+       
+       public func showPrompt(title: String,
+                              message: String? = nil,
+                              yesBlock: @escaping ()-> Void) {
+           let alertViewController = UIAlertController(
+               title: title,
+               message: message,
+               preferredStyle: .alert
+           )
+           
+           let yesAction = UIAlertAction(
+               title: "YES",
+               style: .destructive,
+               handler: { (_) in
+                   yesBlock()
+               }
+           )
+           
+           let noAction = UIAlertAction(
+               title: "NO",
+               style: .cancel,
+               handler: nil
+           )
+           
+           alertViewController.addAction(yesAction)
+           alertViewController.addAction(noAction)
+           present(alertViewController, animated: true, completion: nil)
+
+       }
+    
     // MARK: - getting visible cell with identifier
     public func visibleCellWithIdentifier(_ identifier: String) -> TableViewAdapterCell? {
         guard
@@ -179,112 +295,6 @@ open class ViewController<T>: UIViewController, UIGestureRecognizerDelegate, Nav
         return visibleCells.filter {($0.cellData?.cellIdentifier == identifier)}.first
     }
 
-}
-
-extension ViewController: ViewControllerProtocol {
-    
-    // MARK: - ActivityIndicatorHandler
-    public func startActivityIndicator() {
-        activityIndicatorView?.startActivityIndicator()
-    }
-    
-    public func stopActivityIndicator() {
-        activityIndicatorView?.stopActivityIndicator()
-    }
-    
-    // MARK: - ViewControllerProtocol
-
-    public func setNavigationViewTitle(_ title: String, font: UIFont? = nil) {
-        navigationView?.set(title: title)
-    }
-
-    public func setNavigationViewRightButton(title: String?, image: UIImage?) {
-        navigationView?.setRightButton(title: title,
-                                       image: image)
-    }
-
-    public func setNavigationViewLeftButton(title: String?, image: UIImage?) {
-        navigationView?.setLeftButton(title: title,
-                                      image: image)
-    }
-
-    public func setNavigationViewRightButtonIsHidden(_ isHidden: Bool) {
-        navigationView?.rightButtonIsHidden = isHidden
-    }
-
-    public func setNavigationViewLeftButtonIsHidden(_ isHidden: Bool) {
-        navigationView?.backButtonIsHidden = isHidden
-    }
-
-    public func set(items: [TableViewAdapterItem], reload: Bool = true , animated: Bool = false) {
-        tableViewAdapter?.clear()
-        items.forEach {
-            tableViewAdapter?.unsafeAdd(item: $0)
-            $0.cellHandler?.delegate = self
-        }
-        if reload { reloadData(animated: animated) }
-    }
-
-    public func reloadData(animated: Bool) {
-        tableViewAdapter?.reloadData(animated: animated)
-    }
-    
-    // MARK: - AlertHandler
-    public func showAlert(title: String, message: String?, completion: (() -> Void)?) {
-        
-        let alertViewController = UIAlertController(
-            title: title,
-            message: message,
-            preferredStyle: .alert
-        )
-        
-        let okAction = UIAlertAction(
-            title: "OK",
-            style: .default,
-            handler: { _ in
-                if let completion = completion {
-                    completion()
-                }
-            }
-        )
-        
-        alertViewController.addAction(okAction)
-        present(alertViewController, animated: true, completion: nil)
-    }
-    
-    public func show(_ error: Error) {
-        showAlert(title: error.localizedDescription)
-    }
-    
-    public func showPrompt(title: String,
-                           message: String? = nil,
-                           yesBlock: @escaping ()-> Void) {
-        let alertViewController = UIAlertController(
-            title: title,
-            message: message,
-            preferredStyle: .alert
-        )
-        
-        let yesAction = UIAlertAction(
-            title: "YES",
-            style: .destructive,
-            handler: { (_) in
-                yesBlock()
-            }
-        )
-        
-        let noAction = UIAlertAction(
-            title: "NO",
-            style: .cancel,
-            handler: nil
-        )
-        
-        alertViewController.addAction(yesAction)
-        alertViewController.addAction(noAction)
-        present(alertViewController, animated: true, completion: nil)
-
-    }
-    
 }
 
 extension ViewController: ViewControllerRouter {

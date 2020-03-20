@@ -38,14 +38,15 @@ class PhotoAnalyserViewController: BaseViewController<PhotoAnalyserViewControlle
     override func navigationViewDidTapRightButton(_ view: NavigationView) {
         presenter?.handleRightButtonNavigationViewTap()
     }
-    // MARK: - Private. Setup
-    private func setupNavigationView() {
+    
+    override func setupNavigationView() {
         setNavigationViewLeftButtonIsHidden(true)
         setNavigationViewRightButtonIsHidden(false)
         setNavigationViewRightButton(title: "Recipes", image: nil)
         setNavigationViewTitle("Analyser")
     }
     
+    // MARK: - Private. Setup
     private func reloadItems(){
         let items = PhotoAnalyserViewControllerItemsFactory.items(photoImage: chosenImage)
         
