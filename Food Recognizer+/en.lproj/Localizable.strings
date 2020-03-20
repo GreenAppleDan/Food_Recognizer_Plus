@@ -19,3 +19,6 @@
 "LNG_YOU_HAVE_NOT_CHOSEN_INGRIDIENTS" = "You have not chosen any ingridients";
 "LNG_WEBSITE" = "Website";
 "LNG_SAVE" = "Save";
+"LNG_INTERFACE_LANGUAGE" = "Interface language";
+"LNG_LANGUAGE" = "Language";
+"LNG_CANCEL" = "Cancel";

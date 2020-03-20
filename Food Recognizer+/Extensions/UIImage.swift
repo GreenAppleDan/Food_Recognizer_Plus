@@ -30,4 +30,18 @@ extension UIImage {
         return self.pngData() == image.pngData()
     }
     
+    public func scaledToSize(size: CGSize) -> UIImage {
+        //avoid redundant drawing
+        if self.size == size {
+            return self;
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(size, false, 0.0);
+        draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+        let image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        return image ?? self;
+    }
+    
 }

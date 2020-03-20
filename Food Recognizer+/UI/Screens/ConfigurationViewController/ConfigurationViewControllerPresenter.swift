@@ -9,4 +9,16 @@
 import UIKit
 
 class ConfigurationViewControllerPresenter: TableViewAdapterPresenter<ConfigurationViewControllerProtocol> {
+    
+    func getAvailableLocales() -> [String] {
+        return LocalizationManager.availableLocales
+    }
+    
+    func getLanguageName(with code: String) -> String {
+        return LocalizationManager.languageName(withCode: code).capitalized
+    }
+    
+    func setCurrentLocale(code: String) {
+        LocalizationManager.setCurrentLocale(code: code)
+    }
 }

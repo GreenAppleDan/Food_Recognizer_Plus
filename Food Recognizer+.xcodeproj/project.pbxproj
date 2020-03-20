@@ -164,6 +164,11 @@
 		D767A4232424E897004186B8 /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767A4222424E897004186B8 /* LocalizationManager.swift */; };
 		D767A4252424E95A004186B8 /* LocalizeFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767A4242424E95A004186B8 /* LocalizeFuncs.swift */; };
 		D767A4272424E9F0004186B8 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767A4262424E9F0004186B8 /* String.swift */; };
+		D767F1562425320400BB6342 /* CustomTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F1552425320400BB6342 /* CustomTextCell.swift */; };
+		D767F1582425321B00BB6342 /* CustomTextCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F1572425321B00BB6342 /* CustomTextCellData.swift */; };
+		D767F15A2425323400BB6342 /* CustomTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D767F1592425323400BB6342 /* CustomTextCell.xib */; };
+		D767F15C24253A3100BB6342 /* ConfigurationViewControllerItemsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F15B24253A3100BB6342 /* ConfigurationViewControllerItemsFactory.swift */; };
+		D767F15E24253B9600BB6342 /* ConfigurationViewControllerItemIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F15D24253B9600BB6342 /* ConfigurationViewControllerItemIdentifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -332,6 +337,11 @@
 		D767A4222424E897004186B8 /* LocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationManager.swift; sourceTree = "<group>"; };
 		D767A4242424E95A004186B8 /* LocalizeFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizeFuncs.swift; sourceTree = "<group>"; };
 		D767A4262424E9F0004186B8 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		D767F1552425320400BB6342 /* CustomTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextCell.swift; sourceTree = "<group>"; };
+		D767F1572425321B00BB6342 /* CustomTextCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextCellData.swift; sourceTree = "<group>"; };
+		D767F1592425323400BB6342 /* CustomTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextCell.xib; sourceTree = "<group>"; };
+		D767F15B24253A3100BB6342 /* ConfigurationViewControllerItemsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewControllerItemsFactory.swift; sourceTree = "<group>"; };
+		D767F15D24253B9600BB6342 /* ConfigurationViewControllerItemIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewControllerItemIdentifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -404,6 +414,8 @@
 				142187DA239D7546002FE7C2 /* ConfigurationViewControllerPresenter.swift */,
 				142187DC239D7582002FE7C2 /* ConfigurationViewController.storyboard */,
 				D76008AC241BB395009B6AE9 /* ConfigurationViewControllerProtocol.swift */,
+				D767F15B24253A3100BB6342 /* ConfigurationViewControllerItemsFactory.swift */,
+				D767F15D24253B9600BB6342 /* ConfigurationViewControllerItemIdentifier.swift */,
 			);
 			path = ConfigurationViewController;
 			sourceTree = "<group>";
@@ -890,6 +902,7 @@
 		14C8CA2923A97AAA006FBBFB /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D767F1542425318600BB6342 /* CustomTextCell */,
 				145C9DCB2416543C000D4F70 /* EmptySpaceCell */,
 				14724E7323F9724C00809B80 /* SingleButtonCell */,
 				146122FA23AACE8200107582 /* ImageViewCell */,
@@ -1041,6 +1054,16 @@
 			path = LocalizationManager;
 			sourceTree = "<group>";
 		};
+		D767F1542425318600BB6342 /* CustomTextCell */ = {
+			isa = PBXGroup;
+			children = (
+				D767F1552425320400BB6342 /* CustomTextCell.swift */,
+				D767F1572425321B00BB6342 /* CustomTextCellData.swift */,
+				D767F1592425323400BB6342 /* CustomTextCell.xib */,
+			);
+			path = CustomTextCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1120,6 +1143,7 @@
 				14724E7923F9737600809B80 /* SingleButtonCell.xib in Resources */,
 				1461230023AACF1A00107582 /* ImageViewCell.xib in Resources */,
 				142AF91423983C9A00AC1164 /* Assets.xcassets in Resources */,
+				D767F15A2425323400BB6342 /* CustomTextCell.xib in Resources */,
 				142187C2239D50D1002FE7C2 /* MainNavigationTabBarButtonView.xib in Resources */,
 				142187E2239D8109002FE7C2 /* NavigationView.xib in Resources */,
 				145C9DE2241657B0000D4F70 /* ActivityIndicatorView.xib in Resources */,
@@ -1213,6 +1237,7 @@
 				D76008A1241B8A58009B6AE9 /* BaseViewController.swift in Sources */,
 				14C8CA1C23A9785F006FBBFB /* TableViewAdapterCellAction.swift in Sources */,
 				D76167EB24229AE5002A2F40 /* TopNotificationsController.swift in Sources */,
+				D767F1562425320400BB6342 /* CustomTextCell.swift in Sources */,
 				14C341D123998E8E007A2D97 /* ScreensFactory.swift in Sources */,
 				D76008B6241BD149009B6AE9 /* RecipesViewControllerPresenter.swift in Sources */,
 				142187DB239D7546002FE7C2 /* ConfigurationViewControllerPresenter.swift in Sources */,
@@ -1234,6 +1259,7 @@
 				146B26DB241D163E007AACDA /* CachedImage.swift in Sources */,
 				142187CB239D582C002FE7C2 /* UIColor.swift in Sources */,
 				142AF90B23983C9800AC1164 /* AppDelegate.swift in Sources */,
+				D767F15C24253A3100BB6342 /* ConfigurationViewControllerItemsFactory.swift in Sources */,
 				14C8CA2823A97A2A006FBBFB /* TableCellActionHandlerDelegate.swift in Sources */,
 				146B8DF1241CEF3E0055B8B2 /* RecipeCell.swift in Sources */,
 				D760089E241B893B009B6AE9 /* ViewControllerRouter.swift in Sources */,
@@ -1281,11 +1307,13 @@
 				14C8CA1E23A97873006FBBFB /* TableViewAdapterCellDelegate.swift in Sources */,
 				D767A4252424E95A004186B8 /* LocalizeFuncs.swift in Sources */,
 				D760089C241B88E8009B6AE9 /* ViewControllerProtocol.swift in Sources */,
+				D767F15E24253B9600BB6342 /* ConfigurationViewControllerItemIdentifier.swift in Sources */,
 				142187D5239D6C65002FE7C2 /* Array.swift in Sources */,
 				D76167D124229875002A2F40 /* CollectionViewAdapter.swift in Sources */,
 				14C8CA2423A978D8006FBBFB /* TableViewAdapterBorderPosition.swift in Sources */,
 				14C8C9F923A975D2006FBBFB /* TableViewAdapterCellActionHandler.swift in Sources */,
 				1497F439241EA329003CB8D6 /* RecipesViewControllerState.swift in Sources */,
+				D767F1582425321B00BB6342 /* CustomTextCellData.swift in Sources */,
 				14C341CD23998DAD007A2D97 /* UIViewController.swift in Sources */,
 				14C8CA1423A97807006FBBFB /* TableViewAdapterScrollDirection.swift in Sources */,
 				142187C0239D50A2002FE7C2 /* MainNavigationTabBarButtonView.swift in Sources */,

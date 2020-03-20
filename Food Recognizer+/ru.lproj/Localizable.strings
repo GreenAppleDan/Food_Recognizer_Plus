@@ -19,3 +19,6 @@
 "LNG_YOU_HAVE_NOT_CHOSEN_INGRIDIENTS" = "Вы не выбрали ингридиентов";
 "LNG_WEBSITE" = "Вебсайт";
 "LNG_SAVE" = "Сохранить";
+"LNG_INTERFACE_LANGUAGE" = "Язык интерфейса";
+"LNG_LANGUAGE" = "Язык";
+"LNG_CANCEL" = "Отменить";

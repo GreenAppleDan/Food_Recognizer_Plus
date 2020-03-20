@@ -53,4 +53,22 @@ class CellItemsFactory {
         return item
     }
     
+    static public func customTextItem(cellIdentifier: String? = nil,
+                                      leftLabelText: String,
+                                      leftLabelColor: UIColor = Colors.gray,
+                                      rightLabelText: String?,
+                                      rightLabelColor: UIColor? = Colors.black,
+                                      alternativeImage: UIImage?,
+                                      isArrowHidden: Bool = false) -> TableViewAdapterItem {
+        let cellData = CustomTextCellData(cellIdentifier: cellIdentifier,
+                                          leftLabelText: leftLabelText,
+                                          leftLabelColor: leftLabelColor,
+                                          rightLabelText: rightLabelText,
+                                          rightLabelColor: rightLabelColor,
+                                          alternativeImage: alternativeImage,
+                                          isArrowHidden: isArrowHidden)
+        let item = TableViewAdapterItem(cellClass: CustomTextCell.self, cellData: cellData, cellHandler: TableViewAdapterCellActionHandler())
+        return item
+    }
+    
 }
