@@ -28,7 +28,7 @@ class RecipePuppyService {
         _ = manager.request(urlAddress,
                             method: HTTPMethod.get).responseJSON { (response) in
                                 if let error = response.error {
-                                    main { completion((response.response, nil, error))}
+                                    completion((response.response, nil, error))
                                     
                                 } else if let data = response.data {
                                     do {
@@ -38,13 +38,13 @@ class RecipePuppyService {
                                                 guard let recipe = Recipe.deserialize(from: rawRecipe) else { continue }
                                                 recipes.append(recipe)
                                             }
-                                            main { completion((response.response, recipes, nil))}
+                                            completion((response.response, recipes, nil))
                                         }
                                     } catch {
-                                        main { completion((nil, nil, ErrorsFactory.unknownError()))}
+                                        completion((nil, nil, ErrorsFactory.unknownError()))
                                     }
                                 } else {
-                                    main { completion((nil, nil, ErrorsFactory.unknownError()))}
+                                    completion((nil, nil, ErrorsFactory.unknownError()))
                                 }
         }
     }
