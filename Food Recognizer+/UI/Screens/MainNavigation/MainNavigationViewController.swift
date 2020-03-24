@@ -19,6 +19,7 @@ class MainNavigationViewController: ViewController<MainNavigationViewControllerP
     
     // MARK: - IBOutlets
     @IBOutlet private weak var mainNavigationTabBarView: MainNavigationTabBarView?
+    @IBOutlet private weak var shadowView: UIView?
     
     
     // MARK: - ViewControllers
@@ -33,6 +34,7 @@ class MainNavigationViewController: ViewController<MainNavigationViewControllerP
         
         pageViewController?.tabBar.isHidden = true
         
+        setupShadowView()
         prepareTabBarView()
         
         prepareViewControllers()
@@ -66,6 +68,10 @@ class MainNavigationViewController: ViewController<MainNavigationViewControllerP
     
     
     // MARK: - Private
+    private func setupShadowView() {
+        shadowView?.addShadow(shadowOffset: CGSize(width: 0, height: 0))
+    }
+    
     private func link(identifier: MainNavigationViewControllerPresenterBarItemIdentifier, with viewController: UIViewController?) {
         guard let viewController = viewController else { return }
         
