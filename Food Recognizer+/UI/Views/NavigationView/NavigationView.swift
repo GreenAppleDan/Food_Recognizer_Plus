@@ -15,9 +15,14 @@ class NavigationView: XibView {
     @IBOutlet private weak var imageWithLeftArrow: UIImageView?
     @IBOutlet private weak var backButton: UIButton?
     @IBOutlet private weak var rightButton: UIButton?
+    @IBOutlet private weak var bottomLineView: UIView?
     
     weak var delegate: NavigationViewDelegate?
     
+    
+    override func awakeFromNib() {
+        bottomLineView?.backgroundColor = Colors.silver
+    }
     // MARK: - Interface
         
         public var backButtonIsHidden: Bool = false {
