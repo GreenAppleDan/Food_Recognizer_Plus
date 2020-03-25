@@ -9,8 +9,6 @@
 import UIKit
 
 class FoodPredictionsViewController: ViewController<FoodPredictionsViewControllerPresenter> {
-    // MARK: - Outlets
-    
     // MARK: - Properties
     var clarifaiPredictions: [ClarifaiFoodPrediction]?
     var recipePuppyService: RecipePuppyService?

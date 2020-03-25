@@ -19,11 +19,13 @@ class RecipesViewControllerPresenter: TableViewAdapterPresenter<RecipesViewContr
         
     }
     
-    func saveClickedRecipeToDB(recipe: Recipe?) {
+    func saveClickedRecipeToDB(recipe: Recipe?, showTopNotification: Bool) {
         guard let recipeRealm = recipe?.asRecipeRealm() else { return }
         RealmService.addToDB(objects: [recipeRealm])
+        if showTopNotification {
         let item = CollectionViewCellItemsFactory.simpleTextCollectionViewItem(labelText: "Recipe Saved Successfully!")
         delegate?.showTopNotification(item: item)
+        }
     }
     
     func deleteRecipeFromDB(recipe: Recipe?) {

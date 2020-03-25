@@ -22,3 +22,5 @@
 "LNG_INTERFACE_LANGUAGE" = "Язык интерфейса";
 "LNG_LANGUAGE" = "Язык";
 "LNG_CANCEL" = "Отменить";
+"LNG_NO_RECIPES_FOR_SPECIFIED_SET_OF_INGRIDINETS" = "Нет доступных рецептов по данному набору ингридиетов.\nПожалуйста, попробуйте другой набор ингридиентов";
+

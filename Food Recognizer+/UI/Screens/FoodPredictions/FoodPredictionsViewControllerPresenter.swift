@@ -19,12 +19,17 @@ class FoodPredictionsViewControllerPresenter: TableViewAdapterPresenter<FoodPred
     
     
     func getRecipesWithIngridientNames(ingridientNames: [String]) {
+        delegate?.startActivityIndicator()
         recipePuppyService.getRecipesWithIngridientNames(names: ingridientNames) { (response) in
+            self.delegate?.stopActivityIndicator()
             if let error = response.2 {
                 self.delegate?.show(error)
             } else {
-                //recipes
-                self.delegate?.moveToRecipesViewController(response.1)
+                guard let recipes = response.1, recipes.count > 0 else {
+                    self.delegate?.showAlert(title: _L("LNG_NO_RECIPES_FOR_SPECIFIED_SET_OF_INGRIDINETS"))
+                    return
+                }
+                self.delegate?.moveToRecipesViewController(recipes)
             }
         }
     }

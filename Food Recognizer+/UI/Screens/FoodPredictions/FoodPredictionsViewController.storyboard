@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fqc-e9-Vuh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fqc-e9-Vuh">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,13 +26,21 @@
                                 <rect key="frame" x="0.0" y="40" width="414" height="696"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CgN-AA-HVA" customClass="ActivityIndicatorView" customModule="Food_Recognizer_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="CgN-AA-HVA" firstAttribute="leading" secondItem="Gg4-UF-ugs" secondAttribute="leading" id="9LF-pN-9N9"/>
+                            <constraint firstItem="CgN-AA-HVA" firstAttribute="trailing" secondItem="Gg4-UF-ugs" secondAttribute="trailing" id="9bX-dN-9zl"/>
                             <constraint firstItem="Z4g-v3-aHd" firstAttribute="leading" secondItem="Gg4-UF-ugs" secondAttribute="leading" id="EHH-An-dtM"/>
                             <constraint firstItem="Xi2-at-RsN" firstAttribute="leading" secondItem="Gg4-UF-ugs" secondAttribute="leading" id="HVY-pt-FEr"/>
                             <constraint firstItem="Xi2-at-RsN" firstAttribute="trailing" secondItem="Gg4-UF-ugs" secondAttribute="trailing" id="Ikg-Rc-tOf"/>
+                            <constraint firstItem="CgN-AA-HVA" firstAttribute="top" secondItem="Gg4-UF-ugs" secondAttribute="top" id="KUI-Vq-3rV"/>
                             <constraint firstItem="Z4g-v3-aHd" firstAttribute="trailing" secondItem="Gg4-UF-ugs" secondAttribute="trailing" id="MCI-zT-x0I"/>
+                            <constraint firstItem="CgN-AA-HVA" firstAttribute="bottom" secondItem="Gg4-UF-ugs" secondAttribute="bottom" id="QeK-Fs-w9M"/>
                             <constraint firstItem="Xi2-at-RsN" firstAttribute="top" secondItem="Z4g-v3-aHd" secondAttribute="bottom" id="iH0-p7-oEK"/>
                             <constraint firstItem="Z4g-v3-aHd" firstAttribute="top" secondItem="Gg4-UF-ugs" secondAttribute="top" id="oZn-68-Q1S"/>
                             <constraint firstItem="Xi2-at-RsN" firstAttribute="bottom" secondItem="Gg4-UF-ugs" secondAttribute="bottom" id="sO4-8S-Ld3"/>
@@ -40,6 +48,7 @@
                         <viewLayoutGuide key="safeArea" id="Gg4-UF-ugs"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="CgN-AA-HVA" id="9Ok-vq-o98"/>
                         <outlet property="navigationView" destination="Z4g-v3-aHd" id="1Wg-kQ-7ou"/>
                         <outlet property="tableView" destination="Xi2-at-RsN" id="OfA-eT-QkR"/>
                     </connections>

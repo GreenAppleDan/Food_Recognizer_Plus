@@ -41,7 +41,7 @@ class RecipesViewController: ViewController<RecipesViewControllerPresenter> {
     override func tableViewAdapterNeedsActionsForCellEditing(adapter: TableViewAdapter, cell: TableViewAdapterCell) -> [UITableViewRowAction]? {
         guard let cellData = cell.cellData as? RecipeCellData, state == .recipesFromApi else { return nil }
             let saveAction = UITableViewRowAction(style: .normal, title: _L("LNG_SAVE")) { _, _ in
-                self.presenter?.saveClickedRecipeToDB(recipe: cellData.recipe)
+                self.presenter?.saveClickedRecipeToDB(recipe: cellData.recipe, showTopNotification: true)
             }
         return [saveAction]
     }
@@ -78,7 +78,7 @@ extension RecipesViewController: RecipesViewControllerProtocol {
 
 extension RecipesViewController: RecipeCellActionHandlerDelegate {
     func recipeCellOverlappingButtonDidTap(_ recipeCell: RecipeCell, linkString: String?, title: String?) {
-        presenter?.saveClickedRecipeToDB(recipe: recipeCell.data?.recipe)
+        presenter?.saveClickedRecipeToDB(recipe: recipeCell.data?.recipe, showTopNotification: false)
         presenter?.processRecipeLinkAndTitle(link: linkString, title: title)
     }
     

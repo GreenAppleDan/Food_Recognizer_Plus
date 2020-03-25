@@ -13,7 +13,7 @@ class RecipePuppyService {
     private var manager: Session = Alamofire.Session.default
     
     public func getRecipesWithIngridientNames(names: [String], completion: @escaping (((HTTPURLResponse?, [Recipe]?, Error?)) -> ()))  {
-        let stringToAppendToRequestAddress = names.joined(separator: ",")
+        let stringToAppendToRequestAddress = names.map{$0.replacingOccurrences(of: " ", with: "%20")}.joined(separator: ",")
         let initialAdress = "http://www.recipepuppy.com/api/?i="
         
         guard let urlAddress = URL(string: initialAdress + stringToAppendToRequestAddress) else { return }

@@ -22,3 +22,4 @@
 "LNG_INTERFACE_LANGUAGE" = "Interface language";
 "LNG_LANGUAGE" = "Language";
 "LNG_CANCEL" = "Cancel";
+"LNG_NO_RECIPES_FOR_SPECIFIED_SET_OF_INGRIDINETS" = "No recipes for specified set of ingridients available.\n Please try different set of ingridients";
