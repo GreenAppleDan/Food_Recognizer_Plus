@@ -15,6 +15,9 @@ class PhotoAnalyserViewController: BaseViewController<PhotoAnalyserViewControlle
     private var chosenImage: UIImage?
     
     private var imagePicker: UIImagePickerController = UIImagePickerController()
+    
+    // MARK: - delegate
+    weak var delegate: TabBarHandler?
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +76,6 @@ extension PhotoAnalyserViewController: TableViewAdapterCellActionHandlerDelegate
                 self.showAlert(title: _L("LNG_IMAGE_NOT_CHOSEN"))
                 return
             }
-            activityIndicatorView?.startActivityIndicator()
             presenter?.getFoodPredictions(for: chosenImage)
         }
     }
@@ -100,5 +102,8 @@ extension PhotoAnalyserViewController: PhotoAnalyserViewControllerProtocol {
         pushViewController(foodPredictionsViewController, animated: true)
     }
     
+    func toggleTabBarInteractable(_ isInteractable: Bool) {
+        delegate?.toggleTabBarInteractable(isInteractable)
+    }
     
 }

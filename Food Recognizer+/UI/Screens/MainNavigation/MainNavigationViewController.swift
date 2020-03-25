@@ -119,7 +119,7 @@ extension MainNavigationViewController: MainNavigationViewControllerProtocol {
     func prepareViewControllers() {
         var viewControllers: [UIViewController] = []
         
-        photoAnalyserViewController = screensFactory?.photoAnalyserViewController()
+        photoAnalyserViewController = screensFactory?.photoAnalyserViewController(delegate: self)
         guard let photoAnalyserViewController = photoAnalyserViewController else { return }
         viewControllers.append(photoAnalyserViewController)
         
@@ -134,5 +134,11 @@ extension MainNavigationViewController: MainNavigationViewControllerProtocol {
         
         link(identifier: .photoAnalyser, with: photoAnalyserViewController)
         link(identifier: .configuration, with: configurationViewController)
+    }
+}
+
+extension MainNavigationViewController: TabBarHandler {
+    func toggleTabBarInteractable(_ isInteractable: Bool) {
+        mainNavigationTabBarView?.isUserInteractionEnabled = isInteractable
     }
 }

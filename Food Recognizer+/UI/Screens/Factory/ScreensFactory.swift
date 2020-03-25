@@ -24,8 +24,9 @@ class ScreensFactory {
         return viewController
     }
     
-    func photoAnalyserViewController() -> PhotoAnalyserViewController {
+    func photoAnalyserViewController(delegate: TabBarHandler?) -> PhotoAnalyserViewController {
         let viewController: PhotoAnalyserViewController = .fromStoryboard()
+        viewController.delegate = delegate
         viewController.clarifaiService = clarifaiService
         viewController.screensFactory = self
         return viewController

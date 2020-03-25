@@ -169,6 +169,7 @@
 		D767F15A2425323400BB6342 /* CustomTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D767F1592425323400BB6342 /* CustomTextCell.xib */; };
 		D767F15C24253A3100BB6342 /* ConfigurationViewControllerItemsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F15B24253A3100BB6342 /* ConfigurationViewControllerItemsFactory.swift */; };
 		D767F15E24253B9600BB6342 /* ConfigurationViewControllerItemIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F15D24253B9600BB6342 /* ConfigurationViewControllerItemIdentifier.swift */; };
+		D76ADDBB242BFBF5003C4E30 /* TabBarHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76ADDBA242BFBF5003C4E30 /* TabBarHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -342,6 +343,7 @@
 		D767F1592425323400BB6342 /* CustomTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextCell.xib; sourceTree = "<group>"; };
 		D767F15B24253A3100BB6342 /* ConfigurationViewControllerItemsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewControllerItemsFactory.swift; sourceTree = "<group>"; };
 		D767F15D24253B9600BB6342 /* ConfigurationViewControllerItemIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewControllerItemIdentifier.swift; sourceTree = "<group>"; };
+		D76ADDBA242BFBF5003C4E30 /* TabBarHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -765,6 +767,7 @@
 		14C341D22399900D007A2D97 /* MainNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				D76ADDB9242BFBC9003C4E30 /* HelperProtocols */,
 				14C341D323999072007A2D97 /* MainNavigationViewController.swift */,
 				14C341E32399A0B1007A2D97 /* MainNavigationViewControllerPresenter.swift */,
 				14C341D52399912C007A2D97 /* MainNavigationViewController.storyboard */,
@@ -1064,6 +1067,14 @@
 			path = CustomTextCell;
 			sourceTree = "<group>";
 		};
+		D76ADDB9242BFBC9003C4E30 /* HelperProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				D76ADDBA242BFBF5003C4E30 /* TabBarHandler.swift */,
+			);
+			path = HelperProtocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1311,6 +1322,7 @@
 				142187D5239D6C65002FE7C2 /* Array.swift in Sources */,
 				D76167D124229875002A2F40 /* CollectionViewAdapter.swift in Sources */,
 				14C8CA2423A978D8006FBBFB /* TableViewAdapterBorderPosition.swift in Sources */,
+				D76ADDBB242BFBF5003C4E30 /* TabBarHandler.swift in Sources */,
 				14C8C9F923A975D2006FBBFB /* TableViewAdapterCellActionHandler.swift in Sources */,
 				1497F439241EA329003CB8D6 /* RecipesViewControllerState.swift in Sources */,
 				D767F1582425321B00BB6342 /* CustomTextCellData.swift in Sources */,
