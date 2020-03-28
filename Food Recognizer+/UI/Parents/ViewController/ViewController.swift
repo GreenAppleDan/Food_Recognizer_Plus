@@ -127,7 +127,7 @@ open class ViewController<T>: UIViewController, UIGestureRecognizerDelegate, Nav
 
     // MARK: - NavigationViewDelegate
     func navigationViewDidTapBackButton(_ view: NavigationView) {
-        navigationController?.popViewController(animated: true)
+       popViewController(animated: true)
     }
 
     func navigationViewDidTapRightButton(_ view: NavigationView) {
