@@ -10,6 +10,11 @@ import Foundation
 
 class RecipesViewControllerPresenter: TableViewAdapterPresenter<RecipesViewControllerProtocol>{
     
+    func getUniqueRecipes(recipes: [Recipe]?) -> [Recipe]? {
+        guard let recipes = recipes else { return nil}
+        return Array(Set(recipes))
+    }
+    
     func processRecipeLinkAndTitle(link: String?, title: String?) {
         guard let link = link else {
             delegate?.showAlert(title: "Sorry, but the recipe is unavailable")

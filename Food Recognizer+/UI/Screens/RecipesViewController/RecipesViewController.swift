@@ -28,7 +28,7 @@ class RecipesViewController: BaseViewController<RecipesViewControllerPresenter> 
         guard let recipes = recipes else { return }
         switch state {
         case .recipesFromApi:
-            for recipe in Set(recipes) {
+            for recipe in recipes {
                 presenter?.saveRecipeToDB(recipe: recipe, showTopNotification: false)
             }
             presenter?.showTopNotification(text: "Recipes saved successfully!")
@@ -48,6 +48,7 @@ class RecipesViewController: BaseViewController<RecipesViewControllerPresenter> 
         
         presenter = RecipesViewControllerPresenter(delegate: self)
         
+        recipes = presenter?.getUniqueRecipes(recipes: recipes)
         topNotificationsController = TopNotificationsController(view: self.view, maxNotificationsAmount: 1)
         setupNavigationView()
         setupMovingBottomView()
