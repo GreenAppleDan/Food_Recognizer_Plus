@@ -8,7 +8,7 @@
 
 import UIKit
 import WebKit
-class WebViewController: ViewController<WebViewControllerPresenter> {
+class WebViewController: BaseViewController<WebViewControllerPresenter> {
     // MARK: - Outlets
     @IBOutlet private weak var webView: WKWebView?
     

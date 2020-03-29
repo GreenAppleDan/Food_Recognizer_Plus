@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConfigurationViewController: ViewController<ConfigurationViewControllerPresenter>{
+class ConfigurationViewController: BaseViewController<ConfigurationViewControllerPresenter>{
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()

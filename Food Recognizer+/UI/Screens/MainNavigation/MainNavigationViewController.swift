@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainNavigationViewController: ViewController<MainNavigationViewControllerPresenter> {
+class MainNavigationViewController: BaseViewController<MainNavigationViewControllerPresenter> {
     
     // MARK: - Properties
     private weak var pageViewController: UITabBarController?

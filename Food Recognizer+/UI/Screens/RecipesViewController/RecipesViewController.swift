@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecipesViewController: ViewController<RecipesViewControllerPresenter> {
+class RecipesViewController: BaseViewController<RecipesViewControllerPresenter> {
     
     // MARK: - Properties
     var screensFactory: ScreensFactory?
@@ -20,8 +20,28 @@ class RecipesViewController: ViewController<RecipesViewControllerPresenter> {
     private var latestTableViewYOffset: CGFloat = 0
     // MARK: - IBOutlets
     @IBOutlet private weak var movingBottomView: UIView?
+    @IBOutlet private weak var movingBottomViewButton: UIButton?
     @IBOutlet private weak var topOfMovingViewToBottomOfTableView: NSLayoutConstraint?
     
+    // MARK: - IBActions
+    @IBAction func movingBottomViewButtonDidTap(_ sender: UIButton) {
+        guard let recipes = recipes else { return }
+        switch state {
+        case .recipesFromApi:
+            for recipe in Set(recipes) {
+                presenter?.saveRecipeToDB(recipe: recipe, showTopNotification: false)
+            }
+            presenter?.showTopNotification(text: "Recipes saved successfully!")
+        case .recipesFromDB:
+            for recipe in recipes {
+                presenter?.deleteRecipeFromDB(recipe: recipe)
+            }
+            presenter?.showTopNotification(text: "Recipes deleted successfully!")
+            self.recipes = nil
+            reloadItems(animated: true)
+        }
+        
+    }
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +50,7 @@ class RecipesViewController: ViewController<RecipesViewControllerPresenter> {
         
         topNotificationsController = TopNotificationsController(view: self.view, maxNotificationsAmount: 1)
         setupNavigationView()
+        setupMovingBottomView()
         reloadItems()
         
         presenter?.viewDidLoad()
@@ -37,7 +58,7 @@ class RecipesViewController: ViewController<RecipesViewControllerPresenter> {
     
     // MARK: - Private. Setup
     
-    private func reloadItems(){
+    private func reloadItems(animated: Bool = false){
         let items = RecipesViewControllerItemsFactory.items(recipes)
         
         set(items: items, animated: false)
@@ -47,7 +68,7 @@ class RecipesViewController: ViewController<RecipesViewControllerPresenter> {
     override func tableViewAdapterNeedsActionsForCellEditing(adapter: TableViewAdapter, cell: TableViewAdapterCell) -> [UITableViewRowAction]? {
         guard let cellData = cell.cellData as? RecipeCellData, state == .recipesFromApi else { return nil }
             let saveAction = UITableViewRowAction(style: .normal, title: _L("LNG_SAVE")) { _, _ in
-                self.presenter?.saveClickedRecipeToDB(recipe: cellData.recipe, showTopNotification: true)
+                self.presenter?.saveRecipeToDB(recipe: cellData.recipe, showTopNotification: true)
             }
         return [saveAction]
     }
@@ -59,7 +80,6 @@ class RecipesViewController: ViewController<RecipesViewControllerPresenter> {
     
     override func tableViewAdapterTableViewDidScroll(adapter: TableViewAdapter, contentOffset: CGPoint) {
         super.tableViewAdapterTableViewDidScroll(adapter: adapter, contentOffset: contentOffset)
-        
         guard let topOfMovingViewToBottomOfTableView = topOfMovingViewToBottomOfTableView else { return }
         let viewYOffset = topOfMovingViewToBottomOfTableView.constant
         let tableViewYOffset = contentOffset.y
@@ -90,6 +110,26 @@ class RecipesViewController: ViewController<RecipesViewControllerPresenter> {
         }
         
     }
+    // MARK: - setting up moving bottom view
+    func setupMovingViewButton() {
+        switch state {
+        case .recipesFromDB:
+            movingBottomViewButton?.setTitle("Delete all recipes", for: .normal)
+            movingBottomViewButton?.layer.cornerRadius = 10
+            movingBottomViewButton?.backgroundColor = Colors.red
+        case .recipesFromApi:
+            movingBottomViewButton?.setTitle("Save all recipes", for: .normal)
+            movingBottomViewButton?.layer.cornerRadius = 10
+            movingBottomViewButton?.backgroundColor = Colors.green
+        }
+        
+        movingBottomViewButton?.setTitleColor(Colors.white, for: .normal)
+    }
+    
+    func setupMovingBottomView(){
+        movingBottomView?.backgroundColor = Colors.gray
+        setupMovingViewButton()
+    }
 }
 
 
@@ -108,7 +148,7 @@ extension RecipesViewController: RecipesViewControllerProtocol {
 
 extension RecipesViewController: RecipeCellActionHandlerDelegate {
     func recipeCellOverlappingButtonDidTap(_ recipeCell: RecipeCell, linkString: String?, title: String?) {
-        presenter?.saveClickedRecipeToDB(recipe: recipeCell.data?.recipe, showTopNotification: false)
+        presenter?.saveRecipeToDB(recipe: recipeCell.data?.recipe, showTopNotification: false)
         presenter?.processRecipeLinkAndTitle(link: linkString, title: title)
     }
     

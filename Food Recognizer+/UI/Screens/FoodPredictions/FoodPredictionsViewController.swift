@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FoodPredictionsViewController: ViewController<FoodPredictionsViewControllerPresenter> {
+class FoodPredictionsViewController: BaseViewController<FoodPredictionsViewControllerPresenter> {
     // MARK: - Properties
     var clarifaiPredictions: [ClarifaiFoodPrediction]?
     var recipePuppyService: RecipePuppyService?

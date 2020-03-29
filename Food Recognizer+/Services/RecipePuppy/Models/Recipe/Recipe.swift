@@ -27,3 +27,14 @@ class Recipe: HandyJSON {
         return RecipeRealm(title: title, href: href ?? "", ingridients: ingredients, thumbnail: thumbnail, dateOfAdding: Date())
     }
 }
+
+extension Recipe: Hashable {
+    static func == (lhs: Recipe, rhs: Recipe) -> Bool {
+        return lhs.title == rhs.title && lhs.ingredients == rhs.ingredients
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(title)
+        hasher.combine(ingredients)
+    }
+}

@@ -28,9 +28,21 @@
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sff-ad-fgI">
                                 <rect key="frame" x="0.0" y="736" width="414" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCL-E3-mxC">
+                                        <rect key="frame" x="176" y="11" width="62" height="18"/>
+                                        <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="movingBottomViewButtonDidTap:" destination="u1r-sS-glF" eventType="touchUpInside" id="VYV-4c-i4k"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="QGw-r8-bBg"/>
+                                    <constraint firstItem="VCL-E3-mxC" firstAttribute="centerY" secondItem="sff-ad-fgI" secondAttribute="centerY" id="jhe-Dr-m6T"/>
+                                    <constraint firstItem="VCL-E3-mxC" firstAttribute="centerX" secondItem="sff-ad-fgI" secondAttribute="centerX" id="mvf-sU-UH1"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -51,6 +63,7 @@
                     </view>
                     <connections>
                         <outlet property="movingBottomView" destination="sff-ad-fgI" id="rpd-Fc-EMy"/>
+                        <outlet property="movingBottomViewButton" destination="VCL-E3-mxC" id="Xbr-0R-PJk"/>
                         <outlet property="navigationView" destination="Rqa-XS-U3m" id="4Ti-VD-zvY"/>
                         <outlet property="tableView" destination="UHd-QF-PF5" id="LtA-o2-gmJ"/>
                         <outlet property="topOfMovingViewToBottomOfTableView" destination="kqx-n2-jw2" id="Mud-Cw-Eqq"/>

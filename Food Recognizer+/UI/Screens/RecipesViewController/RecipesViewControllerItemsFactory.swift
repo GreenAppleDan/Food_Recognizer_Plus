@@ -14,7 +14,7 @@ class RecipesViewControllerItemsFactory {
         var items = [TableViewAdapterItem]()
         
         if let recipes = recipes {
-            for recipe in recipes {
+            for recipe in recipes.sorted(by: {$0.title ?? "" < $1.title ?? ""}) {
                 items.append(CellItemsFactory.recipeItem(recipe: recipe))
             }
         }

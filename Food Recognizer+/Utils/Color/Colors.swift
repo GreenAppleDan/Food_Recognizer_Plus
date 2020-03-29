@@ -32,4 +32,5 @@ import UIKit
     public static let silver = UIColor(red: 229, green: 229, blue: 229)
     public static let black = grayLevel(0)
     public static let gray = grayLevel(127)
+    static public let red = rgb(255, 59, 48)
 }
