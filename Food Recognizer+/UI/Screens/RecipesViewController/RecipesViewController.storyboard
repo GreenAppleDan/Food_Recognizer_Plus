@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u1r-sS-glF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u1r-sS-glF">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,22 +26,34 @@
                                 <rect key="frame" x="0.0" y="40" width="414" height="696"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sff-ad-fgI">
+                                <rect key="frame" x="0.0" y="736" width="414" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="QGw-r8-bBg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="UHd-QF-PF5" firstAttribute="top" secondItem="Rqa-XS-U3m" secondAttribute="bottom" id="6HQ-8Q-lun"/>
                             <constraint firstItem="UHd-QF-PF5" firstAttribute="trailing" secondItem="A9f-WW-aCX" secondAttribute="trailing" id="CHr-rT-1EJ"/>
+                            <constraint firstItem="sff-ad-fgI" firstAttribute="leading" secondItem="A9f-WW-aCX" secondAttribute="leading" id="Kgj-9A-9vo"/>
                             <constraint firstItem="UHd-QF-PF5" firstAttribute="bottom" secondItem="A9f-WW-aCX" secondAttribute="bottom" id="L42-ne-xWx"/>
+                            <constraint firstItem="A9f-WW-aCX" firstAttribute="trailing" secondItem="sff-ad-fgI" secondAttribute="trailing" id="PGM-zR-49O"/>
                             <constraint firstItem="UHd-QF-PF5" firstAttribute="leading" secondItem="A9f-WW-aCX" secondAttribute="leading" id="Q9V-vd-ZuZ"/>
                             <constraint firstItem="Rqa-XS-U3m" firstAttribute="trailing" secondItem="A9f-WW-aCX" secondAttribute="trailing" id="Zei-qh-XFd"/>
                             <constraint firstItem="Rqa-XS-U3m" firstAttribute="top" secondItem="A9f-WW-aCX" secondAttribute="top" id="aPc-OR-jQA"/>
+                            <constraint firstItem="sff-ad-fgI" firstAttribute="top" secondItem="UHd-QF-PF5" secondAttribute="bottom" id="kqx-n2-jw2"/>
                             <constraint firstItem="Rqa-XS-U3m" firstAttribute="leading" secondItem="A9f-WW-aCX" secondAttribute="leading" id="m10-wR-gVW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A9f-WW-aCX"/>
                     </view>
                     <connections>
+                        <outlet property="movingBottomView" destination="sff-ad-fgI" id="rpd-Fc-EMy"/>
                         <outlet property="navigationView" destination="Rqa-XS-U3m" id="4Ti-VD-zvY"/>
                         <outlet property="tableView" destination="UHd-QF-PF5" id="LtA-o2-gmJ"/>
+                        <outlet property="topOfMovingViewToBottomOfTableView" destination="kqx-n2-jw2" id="Mud-Cw-Eqq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fEc-uh-X9r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

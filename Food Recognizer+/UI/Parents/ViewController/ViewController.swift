@@ -91,15 +91,15 @@ open class ViewController<T>: UIViewController, UIGestureRecognizerDelegate, Nav
     // MARK: - Keyboard
 
     @objc private func keyboardNotification(notification: NSNotification) {
-        guard let userInfo = notification.userInfo else { return }
-        guard let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
-        let keyboardTopY = UIScreen.main.bounds.height - endFrame.origin.y
-        if keyboardTopY > 0 {
-            handleKeyboardAppearance(keyboardTopY: keyboardTopY)
-        }
-        else {
-            handleKeyboardDisappearance(keyboardTopY: keyboardTopY)
-        }
+//        guard let userInfo = notification.userInfo else { return }
+//        guard let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+//        let keyboardTopY = UIScreen.main.bounds.height - endFrame.origin.y
+//        if keyboardTopY > 0 {
+//            handleKeyboardAppearance(keyboardTopY: keyboardTopY)
+//        }
+//        else {
+//            handleKeyboardDisappearance(keyboardTopY: keyboardTopY)
+//        }
     }
 
     open func handleKeyboardDisappearance(keyboardTopY: CGFloat) {

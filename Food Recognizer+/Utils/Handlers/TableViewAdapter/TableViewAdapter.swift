@@ -248,6 +248,7 @@ extension TableViewAdapter: UITableViewDelegate {
 
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard let item = items.entityAt(indexPath.row) else { return 120 }
+        guard items.count != 0 else { return 0}
         return item.height()
     }
     
@@ -290,15 +291,18 @@ extension TableViewAdapter: UITableViewDelegate {
 extension TableViewAdapter: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard items.count != 0 else { return 1}
         return items.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard items.count != 0 else { return UITableViewCell()}
         let item = items[indexPath.row]
         let cell = cellAt(indexPath)
         cell?.delegate = item.cellHandler
         cell?.fill(data: item.cellData)
         
+        cell?.layoutIfNeeded()
         return cell ?? UITableViewCell()
     }
     

@@ -16,6 +16,12 @@ class RecipesViewController: ViewController<RecipesViewControllerPresenter> {
     var recipes: [Recipe]?
     var state: RecipesViewControllerState = .recipesFromApi
     private var topNotificationsController: TopNotificationsController?
+    
+    private var latestTableViewYOffset: CGFloat = 0
+    // MARK: - IBOutlets
+    @IBOutlet private weak var movingBottomView: UIView?
+    @IBOutlet private weak var topOfMovingViewToBottomOfTableView: NSLayoutConstraint?
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +55,30 @@ class RecipesViewController: ViewController<RecipesViewControllerPresenter> {
     override func tableViewAdapterUserDidDeleteCell(adapter: TableViewAdapter, cell: TableViewAdapterCell?) {
         let cellData = cell?.cellData as? RecipeCellData
         presenter?.deleteRecipeFromDB(recipe: cellData?.recipe)
+    }
+    
+    override func tableViewAdapterTableViewDidScroll(adapter: TableViewAdapter, contentOffset: CGPoint) {
+        super.tableViewAdapterTableViewDidScroll(adapter: adapter, contentOffset: contentOffset)
+        
+        guard let topOfMovingViewToBottomOfTableView = topOfMovingViewToBottomOfTableView else { return }
+        let viewYOffset = topOfMovingViewToBottomOfTableView.constant
+        let tableViewYOffset = contentOffset.y
+        guard let tableViewHeight = tableView?.contentSize.height, tableViewHeight - UIScreen.main.bounds.height + 40 - tableViewYOffset > 70 else { return }
+        guard tableViewYOffset > 0 else { return }
+        let difference = tableViewYOffset - latestTableViewYOffset
+        latestTableViewYOffset = tableViewYOffset
+        let constant = topOfMovingViewToBottomOfTableView.constant
+        if constant + difference < -40 {
+            topOfMovingViewToBottomOfTableView.constant = -40
+            tableView?.contentInset.bottom = 40
+        } else if constant + difference > 0 {
+            topOfMovingViewToBottomOfTableView.constant = 0
+            tableView?.contentInset.bottom = 0
+        } else {
+            topOfMovingViewToBottomOfTableView.constant += difference
+            tableView?.contentInset.bottom = abs(topOfMovingViewToBottomOfTableView.constant)
+        }
+        
     }
     
     // MARK: - ViewControllerProtocol. Overriding
