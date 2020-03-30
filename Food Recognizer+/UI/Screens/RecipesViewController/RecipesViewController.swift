@@ -49,6 +49,14 @@ class RecipesViewController: BaseViewController<RecipesViewControllerPresenter> 
     
     @IBAction func draggableButtonViewDidTap(_ sender: Any) {
         tableViewAdapter?.scrollToBottom(animated: true)
+        guard let draggableButtonView = draggableButtonView else { return }
+        UIView.animate(withDuration: 0.2, animations: {
+            draggableButtonView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        }) { (finished) in
+            UIView.animate(withDuration: 0.2) {
+                draggableButtonView.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }
+        }
     }
     // MARK: - Lifecycle
     override func viewDidLoad() {
