@@ -46,6 +46,10 @@ class RecipesViewController: BaseViewController<RecipesViewControllerPresenter> 
         }
         
     }
+    
+    @IBAction func draggableButtonViewDidTap(_ sender: Any) {
+        tableViewAdapter?.scrollToBottom(animated: true)
+    }
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -168,22 +172,19 @@ class RecipesViewController: BaseViewController<RecipesViewControllerPresenter> 
                 }
             }
         case .changed:
-            print("hi")
             self.view.bringSubviewToFront(draggableButtonView)
-                let location = sender.location(in: self.view)
-                draggableButtonView.center = location
-            case .ended:
-                let center = draggableButtonView.center
-         latestPositionOfDraggableButtonView = center
-            print("hi")
+            let location = sender.location(in: self.view)
+            draggableButtonView.center = location
+        case .ended:
+            let center = draggableButtonView.center
             if center.y <= 40 || center.y > self.view.bounds.height - 50 || center.x < 20 || center.x > self.view.bounds.width - 20 {
                 draggableButtonView.center = CGPoint(x: self.view.bounds.width - 32, y: self.view.bounds.height/2)
             }
+            latestPositionOfDraggableButtonView = draggableButtonView.center
             UIView.animate(withDuration: 0.3) {
                 let transform = CGAffineTransform(scaleX: 1, y: 1)
                 draggableButtonView.transform = transform
             }
-            print("hi")
         default: return
         }
         

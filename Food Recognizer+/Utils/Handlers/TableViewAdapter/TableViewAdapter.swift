@@ -160,10 +160,10 @@ public class TableViewAdapter: NSObject {
         }
     }
     
-    public func scrollToBottom() {
+    public func scrollToBottom(animated: Bool = false) {
         main { [weak self] in
             guard let lastItem = self?.items.last else { return }
-            self?.scrollTo(item: lastItem, animated: false)
+            self?.scrollTo(item: lastItem, animated: animated)
         }
     }
     

@@ -28,10 +28,23 @@
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Myd-kB-lRj">
                                 <rect key="frame" x="370" y="354" width="28" height="28"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8d-f9-l3F">
+                                        <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
+                                        <state key="normal" image="ArrowDownWhite"/>
+                                        <connections>
+                                            <action selector="draggableButtonViewDidTap:" destination="u1r-sS-glF" eventType="touchUpInside" id="hEQ-BS-RG3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="E8d-f9-l3F" secondAttribute="bottom" id="3zb-iG-51Z"/>
+                                    <constraint firstItem="E8d-f9-l3F" firstAttribute="top" secondItem="Myd-kB-lRj" secondAttribute="top" id="MGB-Qw-P1v"/>
                                     <constraint firstAttribute="width" constant="28" id="MWA-Co-auE"/>
+                                    <constraint firstAttribute="trailing" secondItem="E8d-f9-l3F" secondAttribute="trailing" id="XWZ-xg-Xwf"/>
                                     <constraint firstAttribute="height" constant="28" id="xn5-xs-TkU"/>
+                                    <constraint firstItem="E8d-f9-l3F" firstAttribute="leading" secondItem="Myd-kB-lRj" secondAttribute="leading" id="ywa-Do-det"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sff-ad-fgI">
@@ -85,4 +98,7 @@
             <point key="canvasLocation" x="-181.15942028985509" y="90.489130434782609"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ArrowDownWhite" width="480" height="480"/>
+    </resources>
 </document>
