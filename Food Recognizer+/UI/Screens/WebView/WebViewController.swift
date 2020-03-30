@@ -31,18 +31,6 @@ class WebViewController: BaseViewController<WebViewControllerPresenter> {
           
     }
     
-    deinit {
-        HTTPCookieStorage.shared.removeCookies(since: Date.distantPast)
-        print("[WebCacheCleaner] All cookies deleted")
-        
-        WKWebsiteDataStore.default().fetchDataRecords(ofTypes: WKWebsiteDataStore.allWebsiteDataTypes()) { records in
-            records.forEach { record in
-                WKWebsiteDataStore.default().removeData(ofTypes: record.dataTypes, for: [record], completionHandler: {})
-                print("[WebCacheCleaner] Record \(record) deleted")
-            }
-        }
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         guard let navigationView = navigationView, let webView = webView else { return }

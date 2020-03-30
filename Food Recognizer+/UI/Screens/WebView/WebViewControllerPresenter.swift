@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import WebKit
 class WebViewControllerPresenter: TableViewAdapterPresenter<WebViewControllerProtocol> {
     
     private let refference: String?
@@ -23,6 +23,19 @@ class WebViewControllerPresenter: TableViewAdapterPresenter<WebViewControllerPro
         if let reference = self.refference {
             if let url = URL(string: reference) {
                 delegate?.openURLRequestInWebView(URLRequest(url: url))
+            }
+        }
+    }
+    
+    override func viewWillDisappear() {
+        super.viewWillDisappear()
+        HTTPCookieStorage.shared.removeCookies(since: Date.distantPast)
+        print("[WebCacheCleaner] All cookies deleted")
+        
+        WKWebsiteDataStore.default().fetchDataRecords(ofTypes: WKWebsiteDataStore.allWebsiteDataTypes()) { records in
+            records.forEach { record in
+                WKWebsiteDataStore.default().removeData(ofTypes: record.dataTypes, for: [record], completionHandler: {})
+                print("[WebCacheCleaner] Record \(record) deleted")
             }
         }
     }
