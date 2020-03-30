@@ -63,11 +63,8 @@ extension WebViewController: WebViewControllerProtocol {
 }
 
 extension WebViewController: WKNavigationDelegate {
-    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         swiftUIView.view.removeFromSuperview()
         webView.isHidden = false
-        
-        
-        print("heya")
     }
 }
