@@ -12,4 +12,5 @@ protocol PhotoAnalyserViewControllerProtocol: ViewControllerProtocol {
     func pushFoodPredictionsViewController(predictions: [ClarifaiFoodPrediction])
     func pushRecipesViewController(recipes: [Recipe]?)
     func toggleTabBarInteractable(_ isInteractable: Bool)
+    func toggleNavigationViewInteractable(_ isInteractable: Bool)
 }

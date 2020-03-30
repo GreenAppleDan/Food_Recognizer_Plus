@@ -20,10 +20,12 @@ class PhotoAnalyserViewControllerPresenter: TableViewAdapterPresenter<PhotoAnaly
     
     func getFoodPredictions(for image: UIImage) {
         delegate?.startActivityIndicator()
+        delegate?.toggleNavigationViewInteractable(false)
         delegate?.toggleTabBarInteractable(false)
         clarifaiService.getFoodPredictions(from: image) { (result) in
             self.delegate?.stopActivityIndicator()
             self.delegate?.toggleTabBarInteractable(true)
+            self.delegate?.toggleNavigationViewInteractable(true)
             if let error = result.1 {
                 self.delegate?.show(error)
             } else if let predictions = result.0 {

@@ -92,6 +92,7 @@ extension PhotoAnalyserViewController: UINavigationControllerDelegate, UIImagePi
 }
 
 extension PhotoAnalyserViewController: PhotoAnalyserViewControllerProtocol {
+    
     func pushRecipesViewController(recipes: [Recipe]?) {
         guard let recipesViewController = screensFactory?.recipesViewController(recipes: recipes, state: .recipesFromDB) else { return }
         pushViewController(recipesViewController)
@@ -104,6 +105,10 @@ extension PhotoAnalyserViewController: PhotoAnalyserViewControllerProtocol {
     
     func toggleTabBarInteractable(_ isInteractable: Bool) {
         delegate?.toggleTabBarInteractable(isInteractable)
+    }
+    
+    func toggleNavigationViewInteractable(_ isInteractable: Bool) {
+        navigationView?.isUserInteractionEnabled = isInteractable
     }
     
 }
