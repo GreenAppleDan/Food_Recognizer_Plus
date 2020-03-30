@@ -161,6 +161,8 @@
 		D76167FC24229E11002A2F40 /* SimpleTextCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D76167FB24229E11002A2F40 /* SimpleTextCollectionViewCell.xib */; };
 		D76167FF2422A08A002A2F40 /* TopNotificationsControllerCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76167FE2422A08A002A2F40 /* TopNotificationsControllerCollectionViewItem.swift */; };
 		D76168012422A15B002A2F40 /* CollectionViewCellItemsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76168002422A15B002A2F40 /* CollectionViewCellItemsFactory.swift */; };
+		D76207F92432554F004BB088 /* ActivityIndicatorSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76207F82432554F004BB088 /* ActivityIndicatorSwiftUI.swift */; };
+		D76207FB24325FA7004BB088 /* ContainerWithActivityIndicatorSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76207FA24325FA7004BB088 /* ContainerWithActivityIndicatorSwiftUI.swift */; };
 		D767A41D2424E785004186B8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D767A41B2424E785004186B8 /* Localizable.strings */; };
 		D767A4232424E897004186B8 /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767A4222424E897004186B8 /* LocalizationManager.swift */; };
 		D767A4252424E95A004186B8 /* LocalizeFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767A4242424E95A004186B8 /* LocalizeFuncs.swift */; };
@@ -333,6 +335,8 @@
 		D76167FB24229E11002A2F40 /* SimpleTextCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleTextCollectionViewCell.xib; sourceTree = "<group>"; };
 		D76167FE2422A08A002A2F40 /* TopNotificationsControllerCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNotificationsControllerCollectionViewItem.swift; sourceTree = "<group>"; };
 		D76168002422A15B002A2F40 /* CollectionViewCellItemsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellItemsFactory.swift; sourceTree = "<group>"; };
+		D76207F82432554F004BB088 /* ActivityIndicatorSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorSwiftUI.swift; sourceTree = "<group>"; };
+		D76207FA24325FA7004BB088 /* ContainerWithActivityIndicatorSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerWithActivityIndicatorSwiftUI.swift; sourceTree = "<group>"; };
 		D767A41C2424E785004186B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = "Food Recognizer+/Base.lproj/Localizable.strings"; sourceTree = SOURCE_ROOT; };
 		D767A41E2424E78C004186B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D767A41F2424E7A7004186B8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -648,6 +652,7 @@
 		146B26DE241D29CB007AACDA /* WebView */ = {
 			isa = PBXGroup;
 			children = (
+				D76207F72432551A004BB088 /* SwiftUI Views */,
 				146B26DF241D29DF007AACDA /* WebViewController.swift */,
 				146B26E1241D29F5007AACDA /* WebViewControllerProtocol.swift */,
 				146B26E3241D2A05007AACDA /* WebViewControllerPresenter.swift */,
@@ -1042,6 +1047,15 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		D76207F72432551A004BB088 /* SwiftUI Views */ = {
+			isa = PBXGroup;
+			children = (
+				D76207F82432554F004BB088 /* ActivityIndicatorSwiftUI.swift */,
+				D76207FA24325FA7004BB088 /* ContainerWithActivityIndicatorSwiftUI.swift */,
+			);
+			path = "SwiftUI Views";
+			sourceTree = "<group>";
+		};
 		D767A4162424E67D004186B8 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -1266,6 +1280,7 @@
 				D76167D5242298BD002A2F40 /* CollectionViewAdapterCellDelegate.swift in Sources */,
 				D76167E32422999E002A2F40 /* CollectionsActionCellsIdentifiers.swift in Sources */,
 				146B26DD241D165F007AACDA /* ImageLoaderItem.swift in Sources */,
+				D76207F92432554F004BB088 /* ActivityIndicatorSwiftUI.swift in Sources */,
 				14C8CA1A23A9784C006FBBFB /* TableViewAdapterItem.swift in Sources */,
 				142187D9239D751E002FE7C2 /* ConfigurationViewController.swift in Sources */,
 				1461230323AAD1B800107582 /* PhotoAnalyserViewControllerItemsFactory.swift in Sources */,
@@ -1319,6 +1334,7 @@
 				145C9DDB24165639000D4F70 /* EmptySpaceCellData.swift in Sources */,
 				14C8CA0A23A9777C006FBBFB /* TableViewAdapterUpdateCommand.swift in Sources */,
 				14C8CA1E23A97873006FBBFB /* TableViewAdapterCellDelegate.swift in Sources */,
+				D76207FB24325FA7004BB088 /* ContainerWithActivityIndicatorSwiftUI.swift in Sources */,
 				D767A4252424E95A004186B8 /* LocalizeFuncs.swift in Sources */,
 				D760089C241B88E8009B6AE9 /* ViewControllerProtocol.swift in Sources */,
 				D767F15E24253B9600BB6342 /* ConfigurationViewControllerItemIdentifier.swift in Sources */,
